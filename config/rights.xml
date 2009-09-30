@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rights labels="ext/bookmark/locale/rights.xml">
+	<section key="panelwidgets">
+		<allow right="TodoyuPanelWidgetTaskBookmarks" comment="can see quicktaskwizard" />
+	</section>
+</rights>

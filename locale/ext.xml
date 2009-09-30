@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locallang>
+	<labels lang="en">
+		<label index="title">Bookmarks</label>
+		<label index="taskbookmarks.title">Task-bookmarks</label>
+		<label index="nobookmarksstoredyet">There are no bookmarks yet.</label>
+		<label index="contextmenu.removebookmark">Bookmark -</label>
+		<label index="contextmenu.addbookmark">Bookmark +</label>
+	</labels>
+	<labels lang="de">
+		<label index="title">Lesezeichen</label>
+		<label index="taskbookmarks.title">Task Bookmarks</label>
+		<label index="nobookmarksstoredyet">Es gibt noch keine Bookmarks.</label>
+	</labels>
+</locallang>
