@@ -26,19 +26,19 @@
  * @subpackage	Bookmark
  */
 
-
 if( ! defined('TODOYU') ) die('NO ACCESS');
 
 
-	// declare ext ID, path
+
+	// Declare ext ID, path
 define('EXTID_BOOKMARK', 103);
 define('PATH_EXT_BOOKMARK', PATH_EXT . '/bookmark');
 
-	// request configurations
+	// Register module locales
+TodoyuLocale::register('bookmark', PATH_EXT_BOOKMARK . '/locale/ext.xml');
+
+	// Request configurations
 require_once( PATH_EXT_BOOKMARK . '/config/extension.php' );
 require_once( PATH_EXT_BOOKMARK . '/config/constants.php' );
-
-	// register localization files
-TodoyuLocale::register('bookmark', PATH_EXT_BOOKMARK . '/locale/ext.xml');
 
 ?>
