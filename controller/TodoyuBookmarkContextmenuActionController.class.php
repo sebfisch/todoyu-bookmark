@@ -6,9 +6,9 @@ class TodoyuBookmarkContextmenuActionController extends TodoyuActionController {
 		$idTask		= intval($params['task']);
 		$contextMenu= new TodoyuContextMenu('TaskBookmarksPanelWidget', $idTask);
 
-		return $contextMenu->getJSON();
+		$contextMenu->printJSON();
 	}
-		
+
 }
 
 
