@@ -1,12 +1,12 @@
 /* icon */
 #panelwidget-taskbookmarks h1 .title {
-	background: url(../img/icons.png) no-repeat 5px -26px;
+	background:url(../img/icons.png) no-repeat 5px -26px;
 }
 
 #panelwidget-taskbookmarks div.bookmarks ul li {
 	height:32px;
 	padding:0;
-	background: url(../../../../core/assets/img/dottedline_hor.png) repeat-x 0 bottom;
+	background:url(../../../../core/assets/img/dottedline_hor.png) repeat-x 0 bottom;
 }
 
 /* status - bordercolors global */
@@ -16,13 +16,13 @@
 }
 
 #panelwidget-taskbookmarks div.bookmarks ul li a.info {
-	display: block;
-	padding: 2px 25px 2px 2px; /* icon space */
+	display:block;
+	padding:2px 25px 2px 2px; /* icon space */
 	cursor:pointer;
 }
 
 #panelwidget-taskbookmarks div.bookmarks .info .project {
-	display: block;
+	display:block;
 }
 
 #panelwidget-taskbookmarks div.bookmarks .info .task  {
@@ -30,14 +30,14 @@
 }
 
 #panelwidget-taskbookmarks div.bookmarks ul li a.timetracking {
-	display: block;
-	float: right;
-	clear: none;
-	width: 22px;
-	height: 22px;
-	background: url(../../../timetracking/assets/img/icons.png) no-repeat 0px -27px;
+	display:block;
+	float:right;
+	clear:none;
+	width:22px;
+	height:22px;
+	background:url(../../../timetracking/assets/img/icons.png) no-repeat 0px -27px;
 }
 
 #panelwidget-taskbookmarks div.bookmarks ul li.running a {
-	background-position: 0px 3px !important;
+	background-position:0px 3px !important;
 }
