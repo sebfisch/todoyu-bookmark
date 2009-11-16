@@ -36,7 +36,7 @@ Todoyu.Ext.bookmark = {
 		var url		= Todoyu.getUrl('bookmark', 'bookmark');
 		var options = {
 			'parameters': {
-				'cmd': 'add',
+				'action': 'add',
 				'type': type,
 				'item': idItem
 			},
@@ -59,7 +59,7 @@ Todoyu.Ext.bookmark = {
 		var url		= Todoyu.getUrl('bookmark', 'bookmark');
 		var options = {
 			'parameters': {
-				'cmd': 'remove',
+				'action': 'remove',
 				'type': type,
 				'item': idItem
 			},

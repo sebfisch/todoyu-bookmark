@@ -104,7 +104,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 		var url 	= Todoyu.getUrl('bookmark', 'refresh');	// ext, action
 		var options = {
 			'parameters': {
-				'cmd': 'update'
+				'action': 'update'
 			},
 			'onComplete': this.onRefreshed.bind(this)
 		};
