@@ -4,8 +4,5 @@
 		<label index="section.panelwidgets">Panel widgets</label>
 		<label index="right.TodoyuPanelWidgetTaskBookmarks">See bookmark widget</label>
 	</labels>
-	<labels lang="de">
-		<label index="section.panelwidgets">Panel widgets</label>
-		<label index="right.TodoyuPanelWidgetTaskBookmarks">Bookmark widget (anzeigen)</label>
-	</labels>
+	<labels lang="de"></labels>
 </locallang>
