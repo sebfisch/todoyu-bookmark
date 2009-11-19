@@ -2,7 +2,7 @@
 {if $bookmarks}
 	<ul class="contextmenutaskbookmarks">
 	{foreach $bookmarks taskBookmark}
-			<li id="{$id}-task-{$taskBookmark.id}" class="{cycle values="odd,even"} listItem bcStatus{$taskBookmark.status} {if $taskBookmark.isRunning}running{/if}" title="{Label core.task} {$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {$taskBookmark.title}">
+			<li id="{$id}-task-{$taskBookmark.id}" class="{cycle values="odd,even"} listItem bcStatus{$taskBookmark.status} {if $taskBookmark.isRunning}running{/if}" title="{Label task.task} {$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {$taskBookmark.title}">
 		{if $taskBookmark.isTrackable}
 				<a id="{$id}-task-{$taskBookmark.id}-btn" class="icon timetracking {$taskBookmark.btnClass}" href="javascript:void(0)" onclick="Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.{$taskBookmark.jsFunction}({$taskBookmark.id})" title="{$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {$taskBookmark.title}"><!-- button --></a>
 		{/if}
