@@ -41,7 +41,7 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 		parent::__construct(
 			'bookmark',								// ext key
 			'taskbookmarks',						// panel widget ID
-			'LLL:bookmark.taskbookmarks.title',		// widget title text
+			'LLL:bookmark.title',					// widget title text
 			$config,								// widget config array
 			$params,								// widget params
 			$idArea									// area ID

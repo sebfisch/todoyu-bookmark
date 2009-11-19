@@ -3,7 +3,6 @@
 	<labels lang="en">
 		<label index="ext.title">Task Bookmarks</label>
 		<label index="title">Bookmarks</label>
-		<label index="taskbookmarks.title">Task-bookmarks</label>
 		<label index="nobookmarksstoredyet">There are no bookmarks yet.</label>
 		<label index="contextmenu.removebookmark">Bookmark -</label>
 		<label index="contextmenu.addbookmark">Bookmark +</label>
