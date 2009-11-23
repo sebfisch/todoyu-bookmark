@@ -6,6 +6,7 @@
 		<label index="nobookmarksstoredyet">There are no bookmarks yet.</label>
 		<label index="contextmenu.removebookmark">Bookmark -</label>
 		<label index="contextmenu.addbookmark">Bookmark +</label>
+<!--  ......................................... added after 20091122 -->
 	</labels>
 	<labels lang="de"></labels>
 </locallang>

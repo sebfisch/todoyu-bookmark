@@ -3,6 +3,7 @@
 	<labels lang="en">
 		<label index="section.panelwidgets">Panel widgets</label>
 		<label index="right.TodoyuPanelWidgetTaskBookmarks">See bookmark widget</label>
+<!--  ......................................... added after 20091122 -->
 	</labels>
 	<labels lang="de"></labels>
 </locallang>
