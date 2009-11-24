@@ -59,8 +59,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.ContextMenu = {
 		var url		= Todoyu.getUrl('bookmark', 'contextmenu');
 		var options	= {
 			'parameters': {
-				'action': 'task',
-				'task': idTask
+				'action':	'task',
+				'task':		idTask
 			}
 		};
 
