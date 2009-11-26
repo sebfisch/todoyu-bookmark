@@ -7,7 +7,7 @@
 *
 *  This script is part of the todoyu project.
 *  The todoyu project is free software; you can redistribute it and/or modify
-*  it under the terms of the GNU General Public License, version 2, 
+*  it under the terms of the GNU General Public License, version 2,
 *  (http://www.gnu.org/licenses/old-licenses/gpl-2.0.html) as published by
 *  the Free Software Foundation;
 *
@@ -26,15 +26,11 @@
  * @subpackage	Bookmark
  */
 
-
-if( ! defined('TODOYU') ) die('NO ACCESS');
-
-	// Configure context menu
-TodoyuContextMenuManager::registerFunction('TaskBookmarksPanelWidget', 'TodoyuPanelWidgetTaskBookmarks::getContextMenuItems');
+	// Contextmenu on task
 TodoyuContextMenuManager::registerFunction('Task', 'TodoyuBookmarkManager::getTaskContextMenuItems');
+	// Contextmenu on daytracks
 TodoyuContextMenuManager::registerFunction('DaytracksPanelwidget', 'TodoyuBookmarkManager::getTaskContextMenuItems');
-
-	// Configure bookmarks panel renderer
-$CONFIG['EXT']['portal']['renderer']['panel'][]	= 'TodoyuPanelWidgetTaskBookmarks::render';
+	// Contextmenu on widget
+TodoyuContextMenuManager::registerFunction('TaskBookmarksPanelWidget', 'TodoyuPanelWidgetTaskBookmarks::getContextMenuItems', 10000);
 
 ?>

@@ -21,7 +21,9 @@
 
 /**
  * todoyu Bookmark class
-
+ *
+ * @package		Todoyu
+ * @subpackage	Bookmark
  */
 class TodoyuBookmark extends TodoyuBaseObject {
 
@@ -33,15 +35,13 @@ class TodoyuBookmark extends TodoyuBaseObject {
 	 *	@param	Integer	$bookmarkId
 	 */
 	public function __construct($idBookmark)	{
-		$idBookmark	= intval($idBookmark);
-
 		parent::__construct($idBookmark, 'ext_bookmark_bookmark');
 	}
 
 
 
 	public function getTemplateData()	{
-		//@TODO: add infos
+		return parent::getTemplateData();
 	}
 
 }

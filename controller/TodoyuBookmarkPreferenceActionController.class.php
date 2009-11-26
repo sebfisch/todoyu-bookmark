@@ -2,8 +2,6 @@
 
 class TodoyuBookmarkPreferenceActionController extends TodoyuActionController {
 
-
-
 	/**
 	 *	General panelWidget action, saves collapse status
 	 *

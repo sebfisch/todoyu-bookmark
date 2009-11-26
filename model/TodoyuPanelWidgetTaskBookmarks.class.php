@@ -37,7 +37,6 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 	 * @param	Boolean 	$expanded
 	 */
 	public function __construct(array $config, array $params = array(), $idArea = 0) {
-
 		parent::__construct(
 			'bookmark',								// ext key
 			'taskbookmarks',						// panel widget ID
@@ -48,8 +47,6 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 		);
 
 		$this->addHasIconClass();
-
-		//$this->setClass('taskbookmarks hasIcon');
 	}
 
 
@@ -150,23 +147,53 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 		$task	= TodoyuTaskManager::getTask($idTask);
 
 		$ownItems	= $GLOBALS['CONFIG']['EXT']['bookmark']['ContextMenu']['PanelWidget'];
+		$allowed	= array();
+
+			// Show in project
+		$allowed['showinproject']	= $ownItems['showinproject'];
+
+			// Remove bookmark
+		if( allowed('bookmark', 'task:remove') ) {
+			$allowed['removebookmark'] = $ownItems['removebookmark'];
+		}
+
+			// Change status
+		$taskItems = TodoyuTaskManager::getContextMenuItems($idTask, array());
+		if( array_key_exists('status', $taskItems) ) {
+			$status	= $taskItems['status'];
+			foreach($status['submenu'] as $key => $config) {
+				$status['submenu'][$key]['jsAction'] = str_replace('Todoyu.Ext.project.Task.updateStatus', 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus', $config['jsAction']);
+			}
+
+			$allowed['status'] = $status;
+		}
 
 			// Check if timetrack extension is installed
 		if( TodoyuExtensions::isInstalled('timetracking') ) {
 				// Check if task has a trackable status
-			if( TodoyuTimetracking::isTrackable($task->getType(), $task->getStatus()) ) {
+			if( TodoyuTimetracking::isTrackable($task->getType(), $task->getStatus()) && allowed('timetracking', 'track') ) {
 					// Add stop or start button
 				if( TodoyuTimetracking::isTaskRunning($idTask) ) {
-					$ownItems['timetrackstop'] = $GLOBALS['CONFIG']['EXT']['timetracking']['ContextMenu']['Task']['timetrackstop'];
+					$allowed['timetrackstop'] = $GLOBALS['CONFIG']['EXT']['timetracking']['ContextMenu']['Task']['timetrackstop'];
 				} else {
-					$ownItems['timetrackstart'] = $GLOBALS['CONFIG']['EXT']['timetracking']['ContextMenu']['Task']['timetrackstart'];
+					$allowed['timetrackstart'] = $GLOBALS['CONFIG']['EXT']['timetracking']['ContextMenu']['Task']['timetrackstart'];
 				}
 			}
 		}
 
-		return array_merge_recursive($items, $ownItems);
+		return array_merge_recursive($items, $allowed);
 	}
 
+
+
+	/**
+	 * Check if panelwidget is allowed
+	 *
+	 * @return	Bool
+	 */
+	public static function isAllowed() {
+		return allowed('bookmark', 'panelwidget:taskbookmarks');
+	}
 
 }
 

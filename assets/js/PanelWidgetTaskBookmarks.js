@@ -37,8 +37,12 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	init: function() {
 		this.registerTimetracking();
 		this.ContextMenu.attach();
+		this.registerHooks();
 	},
-
+	
+	registerHooks: function() {
+		Todoyu.Hook.add('taskStatusUpdated', this.onTaskStatusUpdated.bind(this));		
+	},
 
 
 	/**
@@ -71,6 +75,17 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 */
 	onTimetrackingClockUpdate: function(idTask, time) {
 
+	},
+	
+	
+	
+	/**
+	 * Handler when task status is updated and hook is called
+	 * @param	Integer		idTask
+	 * @param	Integer		status
+	 */
+	onTaskStatusUpdated: function(idTask, status) {
+		this.refresh();
 	},
 
 
@@ -161,7 +176,9 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 *	Update task status
 	 */
-	updateTaskStatus: Todoyu.Ext.project.Task.updateStatus,
+	updateTaskStatus: function(idTask, status) {
+		Todoyu.Ext.project.Task.updateStatus(idTask, status);
+	},
 
 
 

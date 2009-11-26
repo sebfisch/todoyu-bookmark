@@ -194,17 +194,25 @@ class TodoyuBookmarkManager {
 	public function getTaskContextMenuItems($idTask, array $items)	{
 		$idTask		= intval($idTask);
 
-		if( $idTask > 0 ) {
-			$ownItems	= $GLOBALS['CONFIG']['EXT']['bookmark']['ContextMenu']['Task'];
-
-			if( self::isTaskBookmarked($idTask) ) {
-				unset($ownItems['addbookmark']);
-			} else {
-				unset($ownItems['removebookmark']);
-			}
-
-			$items	= array_merge_recursive($items, $ownItems);
+			// Ignore 0-task
+		if( $idTask === 0 ) {
+			return $items;
 		}
+
+		$ownItems	= $GLOBALS['CONFIG']['EXT']['bookmark']['ContextMenu']['Task'];
+		$allowed	= array();
+
+		if( self::isTaskBookmarked($idTask) ) {
+			if( allowed('bookmark', 'task:remove') ) {
+				$allowed['removebookmark'] = $ownItems['removebookmark'];
+			}
+		} else {
+			if( allowed('bookmark', 'task:add') ) {
+				$allowed['addbookmark'] = $ownItems['addbookmark'];
+			}
+		}
+
+		$items	= array_merge_recursive($items, $allowed);
 
 		return $items;
 	}
