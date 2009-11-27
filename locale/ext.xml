@@ -3,10 +3,15 @@
 	<labels lang="en">
 		<label index="ext.title">Task Bookmarks</label>
 		<label index="title">Bookmarks</label>
-		<label index="nobookmarksstoredyet">There are no bookmarks yet.</label>
+		<label index="nobookmarksstoredyet">There are no Bookmarks yet</label>
 		<label index="contextmenu.removebookmark">Bookmark -</label>
 		<label index="contextmenu.addbookmark">Bookmark +</label>
-<!--  ......................................... added after 20091122 -->
 	</labels>
-	<labels lang="de"></labels>
+	<labels lang="de">
+		<label index="ext.title">Aufgaben Favoriten</label>
+		<label index="title">Favoriten</label>
+		<label index="nobookmarksstoredyet">Es gibt noch keine Favoriten</label>
+		<label index="contextmenu.removebookmark">Favoriten -</label>
+		<label index="contextmenu.addbookmark">Favoriten +</label>
+	</labels>
 </locallang>
