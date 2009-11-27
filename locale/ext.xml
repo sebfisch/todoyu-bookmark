@@ -8,7 +8,7 @@
 		<label index="contextmenu.addbookmark">Bookmark +</label>
 	</labels>
 	<labels lang="de">
-		<label index="ext.title">Aufgaben Favoriten</label>
+		<label index="ext.title">Aufgaben-Favoriten</label>
 		<label index="title">Favoriten</label>
 		<label index="nobookmarksstoredyet">Es gibt noch keine Favoriten</label>
 		<label index="contextmenu.removebookmark">Favoriten -</label>
