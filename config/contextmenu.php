@@ -23,7 +23,7 @@
  *	Context menu for task bookmarks panel widget. Use the same items, change behaviour.
  */
 
-if( ! defined('TODOYU') ) die('NO ACCESS');
+
 
 
 ### CONTEXT MENU FOR PANEL WIDGET ###

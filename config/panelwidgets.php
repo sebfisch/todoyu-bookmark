@@ -23,7 +23,7 @@
  * Bookmarks panel widgets' configuration
  */
 
-if( ! defined('TODOYU') ) die('NO ACCESS');
+
 
 
 	// add bookmarks widget to several areas

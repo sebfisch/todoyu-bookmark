@@ -26,7 +26,7 @@
  * @subpackage	Bookmark
  */
 
-if( ! defined('TODOYU') ) die('NO ACCESS');
+
 
 
 
