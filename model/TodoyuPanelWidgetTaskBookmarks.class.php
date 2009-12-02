@@ -63,14 +63,18 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 		$fields	= '	t.*,
 					b.date_create as date_create_bookmark,
 					p.title as projecttitle';
+
 		$tables	= ' ext_project_task t,
 					ext_project_project p,
 					ext_bookmark_bookmark b';
+
 		$where	= ' b.id_item	= t.id AND
 					t.id_project= p.id AND
 					b.deleted	= 0 AND
+					p.deleted	= 0 AND
 					b.type		= ' . BOOKMARK_TYPE_TASK . ' AND
 					b.id_user_create = ' . $idUser;
+
 		$order	= ' b.date_create';
 
 		$taskBooksmarks	= Todoyu::db()->getArray($fields, $tables, $where, '', $order);
