@@ -20,7 +20,10 @@
 
 Todoyu.Ext.bookmark.Task = {
 
-	ext: Todoyu.Ext.bookmark,
+	/**
+	 *	Ext shortcut
+	 */
+	ext:	Todoyu.Ext.bookmark,
 
 
 

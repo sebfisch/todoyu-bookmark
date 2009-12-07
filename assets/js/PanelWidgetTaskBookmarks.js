@@ -20,15 +20,18 @@
 
 Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
+	/**
+	 *	Ext shortcut
+	 */
 	ext:		Todoyu.Ext.bookmark,
 
-	_task: 0,
+	_task:		0,
 
-	_tasktime: 0,
+	_tasktime:	0,
 
-	_el_task: null,
+	_el_task:	null,
 
-	_el_total: null,
+	_el_total:	null,
 
 
 

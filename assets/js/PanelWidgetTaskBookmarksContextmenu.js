@@ -24,8 +24,10 @@
 */
 Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.ContextMenu = {
 
-
-	ext: Todoyu.Ext.bookmark,
+	/**
+	 *	Ext shortcut
+	 */
+	ext:	Todoyu.Ext.bookmark,
 
 
 
