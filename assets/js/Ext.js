@@ -31,6 +31,10 @@ Todoyu.Ext.bookmark = {
 
 	/**
 	 *	Add bookmark
+	 * 
+	 *	@param	String	type
+	 * 	@param	Integer	idItem
+	 * 	@param	String	onComplete
 	 */
 	add: function(type, idItem, onComplete) {
 		var url		= Todoyu.getUrl('bookmark', 'bookmark');
@@ -94,6 +98,5 @@ Todoyu.Ext.bookmark = {
 			Todoyu.Ext.timetracking.Task.stop(idTask);
 		}
 	}
-
 
 };

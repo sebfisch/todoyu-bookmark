@@ -31,6 +31,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	_el_total: null,
 
 
+
 	/**
 	 *	Initialize task bookmarks panel widget
 	 */
@@ -43,6 +44,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	registerHooks: function() {
 		Todoyu.Hook.add('taskStatusUpdated', this.onTaskStatusUpdated.bind(this));		
 	},
+
 
 
 	/**
@@ -81,8 +83,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	
 	/**
 	 * Handler when task status is updated and hook is called
-	 * @param	Integer		idTask
-	 * @param	Integer		status
+	 *	@param	Integer		idTask
+	 *	@param	Integer		status
 	 */
 	onTaskStatusUpdated: function(idTask, status) {
 		this.refresh();
@@ -171,6 +173,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	showTaskInProject: function(idTask) {
 		Todoyu.goTo('project', 'ext', {'task':idTask}, 'task-'+idTask);
 	},
+
 
 
 	/**

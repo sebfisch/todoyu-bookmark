@@ -28,12 +28,14 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.ContextMenu = {
 	ext: Todoyu.Ext.bookmark,
 
 
+
 	/**
 	 *	Attach context menu to bookmarks panel widget
 	 */
 	attach: function() {
 		Todoyu.ContextMenu.attachMenuToClass('contextmenutaskbookmarks', this.load.bind(this));
 	},
+
 
 
 	/**
@@ -68,6 +70,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.ContextMenu = {
 
 		return false;
 	},
+
 
 
 	/**
