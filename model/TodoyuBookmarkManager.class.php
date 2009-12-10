@@ -83,12 +83,12 @@ class TodoyuBookmarkManager {
 	/**
 	 *	Remove an item from the bookmarks
 	 *
-	 *	@param	String		$typeKey
+	 *	@param	Integer		$type
 	 *	@param	Integer		$idItem
 	 *	@return	Boolean
 	 */
-	public static function removeItemFromBooksmarks($typeKey, $idItem) {
-		$type	= self::getTypeIndex($typeKey);
+	public static function removeItemFromBooksmarks($type, $idItem) {
+		$type	= intval($type);
 		$idItem	= intval($idItem);
 
 		$table	= self::TABLE;

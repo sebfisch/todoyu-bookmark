@@ -5,12 +5,12 @@
 		<right name="use" />
 	</section>
 	
-	<section name="task">
+	<section name="task" require="use">
 		<right name="task:add" />
 		<right name="task:remove" />
 	</section>
 	
-	<section name="panelwidgets">
+	<section name="panelwidgets" require="use">
 		<right name="panelwidget:taskbookmarks" />
 	</section>
 	

@@ -19,13 +19,24 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
+/**
+ * Bookmark refresh controller
+ *
+ * @package		Todoyu
+ * @subpackage	Bookmark
+ */
 class TodoyuBookmarkRefreshActionController extends TodoyuActionController {
 
+	/**
+	 * Update panelwidget content
+	 *
+	 * @param	Array		$params
+	 * @return	String
+	 */
 	public function updateAction(array $params) {
 		restrict('bookmark', 'use');
 
-		$config		= array();
-		$panelWidget= TodoyuPanelWidgetManager::getPanelWidget('TaskBookmarks', AREA, $config);
+		$panelWidget= TodoyuPanelWidgetManager::getPanelWidget('TaskBookmarks', AREA);
 
 		return $panelWidget->render();
 	}

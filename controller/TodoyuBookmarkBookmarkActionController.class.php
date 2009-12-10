@@ -19,27 +19,46 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
+/**
+ * Bookmark action controller
+ *
+ * @package		Todoyu
+ * @subpackage	Bookmark
+ */
 class TodoyuBookmarkBookmarkActionController extends TodoyuActionController {
 
+	/**
+	 * Add a bookmark
+	 *
+	 * @param	Array		$params
+	 */
 	public function addAction(array $params) {
-		restrict('bookmark', 'use');
-		restrict('bookmark', 'add');
-
 		$idItem	= intval($params['item']);
-		$typeKey= $params['type'];
-		$type	= TodoyuBookmarkManager::getTypeIndex($typeKey);
+		$type	= $params['type'];
 
-		TodoyuBookmarkManager::addItemToBookmarks($type, $idItem);
+		restrict('bookmark', $type . ':add');
+
+		$idType	= TodoyuBookmarkManager::getTypeIndex($type);
+
+		TodoyuBookmarkManager::addItemToBookmarks($idType, $idItem);
 	}
 
+
+
+	/**
+	 * Remove an item from bookmarks
+	 *
+	 * @param	Array		$params
+	 */
 	public function removeAction(array $params) {
-		restrict('bookmark', 'use');
-		restrict('bookmark', 'remove');
-
 		$idItem	= intval($params['item']);
-		$typeKey= $params['type'];
+		$type	= $params['type'];
 
-		TodoyuBookmarkManager::removeItemFromBooksmarks($typeKey, $idItem);
+		restrict('bookmark', $type . ':remove');
+
+		$idType	= TodoyuBookmarkManager::getTypeIndex($type);
+
+		TodoyuBookmarkManager::removeItemFromBooksmarks($idType, $idItem);
 	}
 
 }

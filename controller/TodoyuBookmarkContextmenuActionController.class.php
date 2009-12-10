@@ -19,10 +19,20 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
+/**
+ * Bookmark action controller
+ *
+ * @package		Todoyu
+ * @subpackage	Bookmark
+ */
 class TodoyuBookmarkContextmenuActionController extends TodoyuActionController {
 
+	/**
+	 * Get contextmenu menu for favorite tasks
+	 *
+	 * @param	Array		$params
+	 */
 	public function taskAction(array $params) {
-
 		$idTask		= intval($params['task']);
 		$contextMenu= new TodoyuContextMenu('TaskBookmarksPanelWidget', $idTask);
 

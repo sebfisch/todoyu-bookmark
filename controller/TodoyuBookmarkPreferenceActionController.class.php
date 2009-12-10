@@ -19,6 +19,12 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
+/**
+ * Bookmark preferences action controller
+ *
+ * @package		Todoyu
+ * @subpackage	Bookmark
+ */
 class TodoyuBookmarkPreferenceActionController extends TodoyuActionController {
 
 	/**

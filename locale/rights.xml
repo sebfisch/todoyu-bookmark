@@ -7,7 +7,7 @@
 		<label index="right.task:add">Add task to bookmarks</label>
 		<label index="right.task:remove">Remove task from bookmarks</label>
 		<label index="section.panelwidgets">Panel widgets</label>
-		<label index="right.TodoyuPanelWidgetTaskBookmarks">See bookmark widget</label>
+		<label index="right.panelwidget:taskbookmarks">See bookmark widget</label>
 	</labels>
 	<labels lang="de">
 	<label index="section.general">Allgemein</label>
@@ -16,6 +16,6 @@
 		<label index="right.task:add">Leszeichen zu Aufgabe erstellen</label>
 		<label index="right.task:remove">Lesezeichen der Aufgabe entfernen</label>
 		<label index="section.panelwidgets">Steuerelemente</label>
-		<label index="right.TodoyuPanelWidgetTaskBookmarks">Siehe Favoriten Element</label>
+		<label index="right.panelwidget:taskbookmarks">Sieht Favoriten Widget</label>
 	</labels>
 </locallang>
