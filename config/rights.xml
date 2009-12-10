@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rights labels="ext/bookmark/locale/rights.xml">
-	<section key="general">
-		<allow right="use" />
+<rights>
+	
+	<section name="general">
+		<right name="use" />
 	</section>
-	<section key="task">
-		<allow right="task:add" />
-		<allow right="task:remove" />
+	
+	<section name="task">
+		<right name="task:add" />
+		<right name="task:remove" />
 	</section>
-	<section key="panelwidgets">
-		<allow right="panelwidget:taskbookmarks" />
+	
+	<section name="panelwidgets">
+		<right name="panelwidget:taskbookmarks" />
 	</section>
+	
 </rights>
