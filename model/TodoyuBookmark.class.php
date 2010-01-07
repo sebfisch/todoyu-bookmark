@@ -30,9 +30,9 @@ class TodoyuBookmark extends TodoyuBaseObject {
 	const TABLE = 'ext_bookmark_bookmark';
 
 	/**
-	 *	Constructor of the class
+	 * Constructor of the class
 	 *
-	 *	@param	Integer	$bookmarkId
+	 * @param	Integer	$bookmarkId
 	 */
 	public function __construct($idBookmark)	{
 		parent::__construct($idBookmark, 'ext_bookmark_bookmark');
@@ -40,6 +40,11 @@ class TodoyuBookmark extends TodoyuBaseObject {
 
 
 
+	/**
+	 * Get bookmark template data
+	 *
+	 * @return	Array
+	 */
 	public function getTemplateData()	{
 		return parent::getTemplateData();
 	}

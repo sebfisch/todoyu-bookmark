@@ -38,11 +38,11 @@ class TodoyuBookmarkManager {
 
 
 	/**
-	 *	Get type index of a type string
-	 *	Ex: 'task' => 1
+	 * Get type index of a type string
+	 * Ex: 'task' => 1
 	 *
-	 *	@param	String		$key
-	 *	@return	Integer
+	 * @param	String		$key
+	 * @return	Integer
 	 */
 	public static function getTypeIndex($typeKey) {
 		$constant	= 'BOOKMARK_TYPE_' . strtoupper(trim($typeKey));
@@ -57,11 +57,11 @@ class TodoyuBookmarkManager {
 
 
 	/**
-	 *	Add an item to the bookmarks
+	 * Add an item to the bookmarks
 	 *
-	 *	@param	Integer		$type
-	 *	@param	Integer		$idItem
-	 *	@return	Integer		Bookmark ID
+	 * @param	Integer		$type
+	 * @param	Integer		$idItem
+	 * @return	Integer		Bookmark ID
 	 */
 	public static function addItemToBookmarks($type, $idItem) {
 		$type	= intval($type);
@@ -81,11 +81,11 @@ class TodoyuBookmarkManager {
 
 
 	/**
-	 *	Remove an item from the bookmarks
+	 * Remove an item from the bookmarks
 	 *
-	 *	@param	Integer		$type
-	 *	@param	Integer		$idItem
-	 *	@return	Boolean
+	 * @param	Integer		$type
+	 * @param	Integer		$idItem
+	 * @return	Boolean
 	 */
 	public static function removeItemFromBooksmarks($type, $idItem) {
 		$type	= intval($type);
@@ -104,9 +104,9 @@ class TodoyuBookmarkManager {
 
 
 	/**
-	 *	Remove bookmarked item (of any type, by ID)
+	 * Remove bookmarked item (of any type, by ID)
 	 *
-	 *	@param	Integer		$idBookmark
+	 * @param	Integer		$idBookmark
 	 */
 	public static function removeBookmark($idBookmark) {
 		$idBookmark	= intval($idBookmark);
@@ -122,10 +122,10 @@ class TodoyuBookmarkManager {
 
 
 	/**
-	 *	Add task to bookmarks
+	 * Add task to bookmarks
 	 *
-	 *	@param	Integer		$idTask
-	 *	@return	Integer
+	 * @param	Integer		$idTask
+	 * @return	Integer
 	 */
 	public static function addTaskToBookmarks($idTask) {
 		$idTask	= intval($idTask);
@@ -136,10 +136,10 @@ class TodoyuBookmarkManager {
 
 
 	/**
-	 *	Remove task from bookmarks
+	 * Remove task from bookmarks
 	 *
-	 *	@param	Integer		$idTask
-	 *	@return	Bool
+	 * @param	Integer		$idTask
+	 * @return	Boolean
 	 */
 	public static function removeTaskFromBookmarks($idTask) {
 		$idTask	= intval($idTask);
@@ -150,11 +150,11 @@ class TodoyuBookmarkManager {
 
 
 	/**
-	 *	Check if an item of a type is bookmarked
+	 * Check if an item of a type is bookmarked
 	 *
-	 *	@param	String		$typeKey
-	 *	@param	Integer		$idItem
-	 *	@return	Bool
+	 * @param	String		$typeKey
+	 * @param	Integer		$idItem
+	 * @return	Boolean
 	 */
 	public static function isItemBookmarked($typeKey, $idItem) {
 		$type	= self::getTypeIndex($typeKey);
@@ -173,9 +173,9 @@ class TodoyuBookmarkManager {
 
 
 	/**
-	 *	Check whether task is bookmarked
+	 * Check whether task is bookmarked
 	 *
-	 *	@param	Integer	$idTask
+	 * @param	Integer	$idTask
 	 */
 	public static function isTaskBookmarked($idTask) {
 		$idTask	= intval($idTask);
@@ -186,10 +186,10 @@ class TodoyuBookmarkManager {
 
 
 	/**
-	 *	Get the contexmenu part of the bookmarks, depending on the task already exists as a bookmark
+	 * Get the contexmenu part of the bookmarks, depending on the task already exists as a bookmark
 	 *
-	 *	@param	Integer	$idTask
-	 *	@return	Array
+	 * @param	Integer	$idTask
+	 * @return	Array
 	 */
 	public function getTaskContextMenuItems($idTask, array $items)	{
 		$idTask		= intval($idTask);
@@ -220,9 +220,9 @@ class TodoyuBookmarkManager {
 
 
 	/**
-	 *	Gets Bookmark assigend to current user
+	 * Gets Bookmark assigend to current user
 	 *
-	 *	@return	Array
+	 * @return	Array
 	 */
 	public function getUserBookmarks($type)	{
 		$type	= intval($type);
@@ -240,9 +240,9 @@ class TodoyuBookmarkManager {
 
 
 	/**
-	 *	Get task bookmarks of current user
+	 * Get task bookmarks of current user
 	 *
-	 *	@return	Array
+	 * @return	Array
 	 */
 	public static function getTaskBookmarks() {
 		return self::getUserBookmarks(BOOKMARK_TYPE_TASK);
@@ -251,13 +251,13 @@ class TodoyuBookmarkManager {
 
 
 	/**
-	 *	Prepares the bookmark records for displaying on the portal panel
+	 * Prepares the bookmark records for displaying on the portal panel
 	 *
-	 *	- gets Bookmarks from current user
-	 *	- gets assigned tasks
+	 * - gets Bookmarks from current user
+	 * - gets assigned tasks
 	 *
-	 *	@access	public
-	 *	@return	Boolean / Array
+	 * @access	public
+	 * @return	Boolean / Array
 	 */
 	public function prepareBookmarksForPanel()	{
 		$bookmarks			= self::getUserBookmarks();
@@ -289,4 +289,5 @@ class TodoyuBookmarkManager {
 	}
 
 }
+
 ?>
