@@ -10,4 +10,4 @@ CREATE TABLE `ext_bookmark_bookmark` (
   `deleted` tinyint(1) NOT NULL,
   `id_item` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
