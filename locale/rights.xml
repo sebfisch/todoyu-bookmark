@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <locallang>
 	<labels lang="en">
-		<label index="section.general">General</label>
-		<label index="right.use">Use bookmarks</label>
-		<label index="section.task">Task bookmarks</label>
-		<label index="right.task:add">Add task to bookmarks</label>
-		<label index="right.task:remove">Remove task from bookmarks</label>
-		<label index="section.panelwidgets">Panel widgets</label>
-		<label index="right.panelwidget:taskbookmarks">See bookmark widget</label>
+		<label index="general">General</label>
+		<label index="general.use">Use bookmarks</label>
+		<label index="task">Task bookmarks</label>
+		<label index="task.add">Add task to bookmarks</label>
+		<label index="task.remove">Remove task from bookmarks</label>
+		<label index="panelwidgets">Panel widgets</label>
+		<label index="panelwidgets.taskbookmarks">See bookmark widget</label>
 	</labels>
 	<labels lang="de">
-	<label index="section.general">Allgemein</label>
-		<label index="right.use">Lesezeichen Verwenden</label>
-		<label index="section.task">Aufgaben Lesezeichen</label>
-		<label index="right.task:add">Leszeichen zu Aufgabe erstellen</label>
-		<label index="right.task:remove">Lesezeichen der Aufgabe entfernen</label>
-		<label index="section.panelwidgets">Steuerelemente</label>
-		<label index="right.panelwidget:taskbookmarks">Sieht Favoriten Widget</label>
+		<label index="general">Allgemein</label>
+		<label index="general.use">Lesezeichen Verwenden</label>
+		<label index="task">Aufgaben Lesezeichen</label>
+		<label index="task.add">Leszeichen zu Aufgabe erstellen</label>
+		<label index="task.remove">Lesezeichen der Aufgabe entfernen</label>
+		<label index="panelwidgets">Steuerelemente</label>
+		<label index="panelwidgets.taskbookmarks">Sieht Favoriten Widget</label>
 	</labels>
 </locallang>

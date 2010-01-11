@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rights>
-	
+
 	<section name="general">
 		<right name="use" />
 	</section>
-	
-	<section name="task" require="use">
-		<right name="task:add" />
-		<right name="task:remove" />
+
+	<section name="task" require="general:use">
+		<right name="add" />
+		<right name="remove" />
 	</section>
-	
-	<section name="panelwidgets" require="use">
-		<right name="panelwidget:taskbookmarks" />
+
+	<section name="panelwidgets" require="general:use">
+		<right name="taskbookmarks" />
 	</section>
-	
+
 </rights>
