@@ -191,7 +191,7 @@ class TodoyuBookmarkManager {
 	 * @param	Integer	$idTask
 	 * @return	Array
 	 */
-	public function getTaskContextMenuItems($idTask, array $items)	{
+	public static function getTaskContextMenuItems($idTask, array $items)	{
 		$idTask		= intval($idTask);
 
 			// Ignore 0-task
@@ -224,7 +224,7 @@ class TodoyuBookmarkManager {
 	 *
 	 * @return	Array
 	 */
-	public function getUserBookmarks($type)	{
+	public static function getUserBookmarks($type)	{
 		$type	= intval($type);
 		$idUser	= TodoyuAuth::getUserID();
 
@@ -259,7 +259,7 @@ class TodoyuBookmarkManager {
 	 * @access	public
 	 * @return	Boolean / Array
 	 */
-	public function prepareBookmarksForPanel()	{
+	public static function prepareBookmarksForPanel()	{
 		$bookmarks			= self::getUserBookmarks();
 
 		if( count($bookmarks) > 0 )	{
