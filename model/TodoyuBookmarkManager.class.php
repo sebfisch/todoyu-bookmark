@@ -19,15 +19,12 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-
-
-
 /**
- *	Class BookmarkManager
+ * Bookmark manager
  *
- *	Handles Bookmarks
+ * @package		Todoyu
+ * @subpackage	Bookmark
  */
-
 class TodoyuBookmarkManager {
 
 	/**
