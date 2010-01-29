@@ -2,3 +2,7 @@
 	background-image:url(../img/icons.png);
 	background-position:3px 2px;
 }
+
+a.task-showinproject {
+	background:url(../../../portal/assets/img/icons.png) no-repeat 2px -26px;
+}
