@@ -57,7 +57,7 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 	 * @return	Array
 	 */
 	private function getTaskBookmarks()	{
-		$idUser	= TodoyuAuth::getUserID();
+		$idUser	= TodoyuAuth::getPersonID();
 
 			// Get bookmarked tasks
 		$fields	= '	t.*,

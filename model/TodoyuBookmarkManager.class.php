@@ -65,7 +65,7 @@ class TodoyuBookmarkManager {
 		$idItem	= intval($idItem);
 
 		$data	= array(
-			'id_user_create'=> TodoyuAuth::getUserID(),
+			'id_user_create'=> TodoyuAuth::getPersonID(),
 			'date_create'	=> NOW,
 			'type'			=> $type,
 			'deleted'		=> 0,
@@ -155,7 +155,7 @@ class TodoyuBookmarkManager {
 	 */
 	public static function isItemBookmarked($typeKey, $idItem) {
 		$type	= self::getTypeIndex($typeKey);
-		$idUser	= TodoyuAuth::getUserID();
+		$idUser	= TodoyuAuth::getPersonID();
 
 		$field	= 'id';
 		$table	= self::TABLE;
@@ -223,7 +223,7 @@ class TodoyuBookmarkManager {
 	 */
 	public static function getUserBookmarks($type)	{
 		$type	= intval($type);
-		$idUser	= TodoyuAuth::getUserID();
+		$idUser	= TodoyuAuth::getPersonID();
 
 		$fields	= '*';
 		$table	= self::TABLE;
