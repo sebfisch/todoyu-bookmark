@@ -65,7 +65,7 @@ class TodoyuBookmarkManager {
 		$idItem	= intval($idItem);
 
 		$data	= array(
-			'id_user_create'=> TodoyuAuth::getPersonID(),
+			'id_person_create'=> TodoyuAuth::getPersonID(),
 			'date_create'	=> NOW,
 			'type'			=> $type,
 			'deleted'		=> 0,
@@ -160,7 +160,7 @@ class TodoyuBookmarkManager {
 		$field	= 'id';
 		$table	= self::TABLE;
 		$where	= '	`type`			= ' . $type . ' AND
-					id_user_create 	= ' . $idUser . ' AND
+					id_person_create 	= ' . $idUser . ' AND
 					id_item			= ' . $idItem . ' AND
 					deleted			= 0';
 
@@ -227,7 +227,7 @@ class TodoyuBookmarkManager {
 
 		$fields	= '*';
 		$table	= self::TABLE;
-		$where	= '	id_user_create	= ' . $idUser . ' AND
+		$where	= '	id_person_create	= ' . $idUser . ' AND
 					`type` = ' . $type;
 		$order	= 'date_create';
 

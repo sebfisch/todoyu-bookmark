@@ -73,7 +73,7 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 					b.deleted	= 0 AND
 					p.deleted	= 0 AND
 					b.type		= ' . BOOKMARK_TYPE_TASK . ' AND
-					b.id_user_create = ' . $idUser;
+					b.id_person_create = ' . $idUser;
 
 		$order	= ' b.date_create';
 
