@@ -7,7 +7,7 @@
 *
 *  This script is part of the todoyu project.
 *  The todoyu project is free software; you can redistribute it and/or modify
-*  it under the terms of the GNU General Public License, version 2, 
+*  it under the terms of the GNU General Public License, version 2,
 *  (http://www.gnu.org/licenses/old-licenses/gpl-2.0.html) as published by
 *  the Free Software Foundation;
 *
@@ -26,17 +26,13 @@
  * @subpackage	Bookmark
  */
 
-
-
-
 $CONFIG['EXT']['bookmark']['assets'] = array(
-		// default assets: loaded all over the installation always
+		// Default assets: loaded all over the installation always
 	'default' => array(
 
 	),
 
-
-		// public assets: basis assets for this extension
+		// Public assets: basis assets for this extension
 	'public'	=> array(
 		'js' => array(
 			array(
@@ -58,10 +54,9 @@ $CONFIG['EXT']['bookmark']['assets'] = array(
 		)
 	),
 
+	// Assets of panel widgets
 
-	// panel widgets
-
-		// task bookmarks
+		// Task bookmarks
 	'panelwidget-taskbookmarks'	=> array(
 		'js'	=> array(
 			array(
@@ -74,7 +69,6 @@ $CONFIG['EXT']['bookmark']['assets'] = array(
 				'position'	=> 111
 			)
 		),
-
 		'css'	=> array(
 			array(
 				'file' => 'ext/bookmark/assets/css/panelwidget-taskbookmarks.css',
