@@ -154,13 +154,13 @@ class TodoyuBookmarkManager {
 	 * @return	Boolean
 	 */
 	public static function isItemBookmarked($typeKey, $idItem) {
-		$type	= self::getTypeIndex($typeKey);
-		$idUser	= TodoyuAuth::getPersonID();
+		$type		= self::getTypeIndex($typeKey);
+		$idPerson	= TodoyuAuth::getPersonID();
 
 		$field	= 'id';
 		$table	= self::TABLE;
 		$where	= '	`type`			= ' . $type . ' AND
-					id_person_create 	= ' . $idUser . ' AND
+					id_person_create = ' . $idPerson . ' AND
 					id_item			= ' . $idItem . ' AND
 					deleted			= 0';
 
@@ -217,17 +217,17 @@ class TodoyuBookmarkManager {
 
 
 	/**
-	 * Gets Bookmark assigend to current user
+	 * Gets Bookmark assigend to current person
 	 *
 	 * @return	Array
 	 */
-	public static function getUserBookmarks($type)	{
-		$type	= intval($type);
-		$idUser	= TodoyuAuth::getPersonID();
+	public static function getPersonBookmarks($type)	{
+		$type		= intval($type);
+		$idPerson	= TodoyuAuth::getPersonID();
 
 		$fields	= '*';
 		$table	= self::TABLE;
-		$where	= '	id_person_create	= ' . $idUser . ' AND
+		$where	= '	id_person_create	= ' . $idPerson . ' AND
 					`type` = ' . $type;
 		$order	= 'date_create';
 
@@ -237,12 +237,12 @@ class TodoyuBookmarkManager {
 
 
 	/**
-	 * Get task bookmarks of current user
+	 * Get task bookmarks of current person
 	 *
 	 * @return	Array
 	 */
 	public static function getTaskBookmarks() {
-		return self::getUserBookmarks(BOOKMARK_TYPE_TASK);
+		return self::getPersonBookmarks(BOOKMARK_TYPE_TASK);
 	}
 
 
@@ -250,14 +250,14 @@ class TodoyuBookmarkManager {
 	/**
 	 * Prepares the bookmark records for displaying on the portal panel
 	 *
-	 * - gets Bookmarks from current user
+	 * - gets Bookmarks from current person
 	 * - gets assigned tasks
 	 *
-	 * @access	public
+	 * @todo	Cleanup
 	 * @return	Boolean / Array
 	 */
 	public static function prepareBookmarksForPanel()	{
-		$bookmarks			= self::getUserBookmarks();
+		$bookmarks			= self::getPersonBookmarks();
 
 		if( count($bookmarks) > 0 )	{
 			foreach($bookmarks as $key => $bookmark)	{
