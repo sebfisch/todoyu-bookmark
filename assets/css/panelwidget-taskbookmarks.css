@@ -4,7 +4,7 @@
 }
 
 #panelwidget-taskbookmarks div.bookmarks ul li {
-	height:32px;
+	min-height:32px;
 	padding:0;
 }
 
