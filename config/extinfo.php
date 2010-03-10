@@ -26,11 +26,11 @@
 
 $CONFIG['EXT']['bookmark']['info'] = array(
 	'title'				=> 'Bookmark',
-	'description' 		=> 'Task bookmarks',
+	'description' 		=> 'Bookmark Your Tasks',
 	'author' 			=> array(
-		'name'		=> 'Todoyu Core Team',
+		'name'		=> 'todoyu Core Developer Team',
 		'email'		=> 'team@todoyu.com',
-		'company'	=> 'Snowflake Productions, Zürich'
+		'company'	=> 'snowflake productions GmbH, Zurich'
 	),
 	'state' 			=> 'beta',
 	'version' => '0.2.0',
