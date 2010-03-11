@@ -2,12 +2,12 @@
 <locallang>
 	<labels lang="en">
 		<label index="general">General</label>
-		<label index="general.use">Use bookmarks</label>
-		<label index="task">Task bookmarks</label>
-		<label index="task.add">Add task to bookmarks</label>
-		<label index="task.remove">Remove task from bookmarks</label>
-		<label index="panelwidgets">Panel widgets</label>
-		<label index="panelwidgets.taskbookmarks">See bookmark widget</label>
+		<label index="general.use">Use Bookmarks</label>
+		<label index="task">Task Bookmarks</label>
+		<label index="task.add">Bookmark Task</label>
+		<label index="task.remove">Remove Bookmarks</label>
+		<label index="panelwidgets">Panel Widgets</label>
+		<label index="panelwidgets.taskbookmarks">See Bookmark Widget</label>
 	</labels>
 	<labels lang="de">
 		<label index="general">Allgemein</label>

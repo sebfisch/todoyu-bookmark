@@ -3,14 +3,14 @@
 	<labels lang="en">
 		<label index="ext.title">Task Bookmarks</label>
 		<label index="title">Bookmarks</label>
-		<label index="info.nobookmarks">There are no Bookmarks yet</label>
+		<label index="info.nobookmarks">No Bookmarks Yet</label>
 		<label index="contextmenu.removebookmark">Bookmark -</label>
 		<label index="contextmenu.addbookmark">Bookmark +</label>
 	</labels>
 	<labels lang="de">
 		<label index="ext.title">Aufgaben-Favoriten</label>
 		<label index="title">Favoriten</label>
-		<label index="info.nobookmarks">Es gibt noch keine Favoriten</label>
+		<label index="info.nobookmarks">Sie haben noch keine Favoriten</label>
 		<label index="contextmenu.removebookmark">Favoriten -</label>
 		<label index="contextmenu.addbookmark">Favoriten +</label>
 	</labels>
