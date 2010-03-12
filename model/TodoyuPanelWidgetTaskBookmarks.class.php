@@ -83,7 +83,6 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 		foreach($taskBooksmarks as $index => $task) {
 			$taskBooksmarks[$index]['isTrackable']	= TodoyuTimetracking::isTrackable($task['type'], $task['status']);
 
-
 			if( TodoyuTimetracking::isTaskRunning($task['id']) ) {
 				$taskBooksmarks[$index]['isRunning']	= true;
 				$taskBooksmarks[$index]['btnClass']		= 'stopButton';
@@ -109,7 +108,7 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 		$tmpl	= 'ext/bookmark/view/panelwidget-taskbookmarks.tmpl';
 		$data	= array(
 			'id'		=> $this->getID(),
-			'bookmarks'	=> $this->getTaskBookmarks() // TodoyuBookmarkManager::prepareBookmarksForPanel()
+			'bookmarks'	=> $this->getTaskBookmarks()
 		);
 
 		$content= render($tmpl, $data);

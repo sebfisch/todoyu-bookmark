@@ -32,11 +32,8 @@ class TodoyuBookmarkManager {
 	 */
 	const TABLE = 'ext_bookmark_bookmark';
 
-
-
 	/**
 	 * Get type index of a type string
-	 * Ex: 'task' => 1
 	 *
 	 * @param	String		$key
 	 * @return	Integer
@@ -227,8 +224,7 @@ class TodoyuBookmarkManager {
 
 		$fields	= '*';
 		$table	= self::TABLE;
-		$where	= '	id_person_create	= ' . $idPerson . ' AND
-					`type` = ' . $type;
+		$where	= '		id_person_create	= ' . $idPerson . ' AND	`type` = ' . $type;
 		$order	= 'date_create';
 
 		return Todoyu::db()->getArray($fields, $table, $where, '', $order);
@@ -243,46 +239,6 @@ class TodoyuBookmarkManager {
 	 */
 	public static function getTaskBookmarks() {
 		return self::getPersonBookmarks(BOOKMARK_TYPE_TASK);
-	}
-
-
-
-	/**
-	 * Prepares the bookmark records for displaying on the portal panel
-	 *
-	 * - gets Bookmarks from current person
-	 * - gets assigned tasks
-	 *
-	 * @todo	Cleanup
-	 * @return	Boolean / Array
-	 */
-	public static function prepareBookmarksForPanel()	{
-		$bookmarks			= self::getPersonBookmarks();
-
-		if( count($bookmarks) > 0 )	{
-			foreach($bookmarks as $key => $bookmark)	{
-				$task	= TodoyuTaskManager::getTask($bookmark['id_item']);
-
-				$bookmarks[$key]['task'] = $task->getTemplateData(1);
-
-					// Workaround: remove spaces from status-label (to use as class)
-				// pafu: work with global css-class Todoyu(bcStatus{key})
-				// $bookmarks[$key]['task']['statuslabel']		= ucfirst($bookmarks[$key]['task']['statuskey']);
-				$bookmarks[$key]['task']['buttonClass']		=  'playButton';
-				$bookmarks[$key]['task']['javaScriptMode']	= 'start';
-
-				$currentRunningTask	= TodoyuTimetracking::getTaskID();
-				if( $bookmark['id_task'] == $currentRunningTask )	{
-					$bookmarks[$key]['task']['buttonClass']		= 'stopButton';
-					$bookmarks[$key]['task']['javaScriptMode']	= 'stop';
-				}
-			}
-		}	else {
-				// No bookmarks found
-			$bookmarks	= false;
-		}
-
-		return $bookmarks;
 	}
 
 }
