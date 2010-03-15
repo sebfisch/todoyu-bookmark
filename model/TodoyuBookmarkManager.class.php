@@ -62,14 +62,12 @@ class TodoyuBookmarkManager {
 		$idItem	= intval($idItem);
 
 		$data	= array(
-			'id_person_create'=> TodoyuAuth::getPersonID(),
-			'date_create'	=> NOW,
 			'type'			=> $type,
 			'deleted'		=> 0,
 			'id_item'		=> $idItem
 		);
 
-		return Todoyu::db()->addRecord(self::TABLE, $data);
+		return TodoyuRecordManager::addRecord(self::TABLE , $data);
 	}
 
 
@@ -103,14 +101,11 @@ class TodoyuBookmarkManager {
 	 * @param	Integer		$idBookmark
 	 */
 	public static function removeBookmark($idBookmark) {
-		$idBookmark	= intval($idBookmark);
-
-		$table		= self::TABLE;
 		$update	= array(
 			'deleted'	=> 1
 		);
 
-		Todoyu::db()->updateRecord($table, $idBookmark, $update);
+		TodoyuRecordManager::updateRecord(self::TABLE, $idBookmark, $update);
 	}
 
 
