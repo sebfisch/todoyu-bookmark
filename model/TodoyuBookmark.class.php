@@ -27,7 +27,12 @@
  */
 class TodoyuBookmark extends TodoyuBaseObject {
 
+	/**
+	 * Default table for database requests
+	 */
 	const TABLE = 'ext_bookmark_bookmark';
+
+
 
 	/**
 	 * Constructor of the class

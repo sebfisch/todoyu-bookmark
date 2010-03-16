@@ -28,9 +28,11 @@
 class TodoyuBookmarkManager {
 
 	/**
-	 *	Working table
+	 * Default table for database requests
 	 */
 	const TABLE = 'ext_bookmark_bookmark';
+
+
 
 	/**
 	 * Get type index of a type string
