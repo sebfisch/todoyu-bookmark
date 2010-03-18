@@ -128,10 +128,6 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 	public function render() {
 		$this->renderContent();
 
-			// add assets, page inline JS
-		TodoyuPage::addExtAssets('bookmark', 'public');
-		TodoyuPage::addExtAssets('bookmark', 'panelwidget-taskbookmarks');
-
 		TodoyuPage::addJsOnloadedFunction('Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.init.bind(Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks)', 100);
 
 		return parent::render();

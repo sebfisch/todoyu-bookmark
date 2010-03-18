@@ -27,53 +27,34 @@
  */
 
 $CONFIG['EXT']['bookmark']['assets'] = array(
-		// Default assets: loaded all over the installation always
-	'default' => array(
-
-	),
-
-		// Public assets: basis assets for this extension
-	'public'	=> array(
-		'js' => array(
-			array(
-				'file' 		=> 'ext/bookmark/assets/js/Ext.js',
-				'position'	=> 100
-			),
-			array(
-				'file' 		=> 'ext/bookmark/assets/js/Task.js',
-				'position'	=> 101
-			)
+	'js' => array(
+		array(
+			'file' 		=> 'ext/bookmark/assets/js/Ext.js',
+			'position'	=> 100
+		),
+		array(
+			'file' 		=> 'ext/bookmark/assets/js/Task.js',
+			'position'	=> 101
+		),
+		array(
+			'file' => 'ext/bookmark/assets/js/PanelWidgetTaskBookmarks.js',
+			'position' => 110,
 		),
 
-		'css' => array(
-			array(
-				'file'	=> 'ext/bookmark/assets/css/ext.css',
-				'position' => 100
-			)
-
+		array(
+			'file'		=> 'ext/bookmark/assets/js/PanelWidgetTaskBookmarksContextmenu.js',
+			'position'	=> 111
 		)
 	),
 
-	// Assets of panel widgets
-
-		// Task bookmarks
-	'panelwidget-taskbookmarks'	=> array(
-		'js'	=> array(
-			array(
-				'file' => 'ext/bookmark/assets/js/PanelWidgetTaskBookmarks.js',
-				'position' => 110,
-			),
-
-			array(
-				'file'		=> 'ext/bookmark/assets/js/PanelWidgetTaskBookmarksContextmenu.js',
-				'position'	=> 111
-			)
+	'css' => array(
+		array(
+			'file'	=> 'ext/bookmark/assets/css/ext.css',
+			'position' => 100
 		),
-		'css'	=> array(
-			array(
-				'file' => 'ext/bookmark/assets/css/panelwidget-taskbookmarks.css',
-				'position' => 110,
-			),
+		array(
+			'file' => 'ext/bookmark/assets/css/panelwidget-taskbookmarks.css',
+			'position' => 110,
 		)
 	)
 );
