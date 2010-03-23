@@ -26,10 +26,6 @@
  * @subpackage	Bookmark
  */
 
-
-
-
-
 	// Declare ext ID, path
 define('EXTID_BOOKMARK', 103);
 define('PATH_EXT_BOOKMARK', PATH_EXT . '/bookmark');
