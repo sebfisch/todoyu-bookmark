@@ -26,7 +26,7 @@
  * @subpackage	Bookmark
  */
 
-$CONFIG['EXT']['bookmark']['assets'] = array(
+Todoyu::$CONFIG['EXT']['bookmark']['assets'] = array(
 	'js' => array(
 		array(
 			'file' 		=> 'ext/bookmark/assets/js/Ext.js',

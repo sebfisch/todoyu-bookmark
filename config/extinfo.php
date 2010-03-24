@@ -24,7 +24,7 @@
  */
 
 
-$CONFIG['EXT']['bookmark']['info'] = array(
+Todoyu::$CONFIG['EXT']['bookmark']['info'] = array(
 	'title'				=> 'Bookmark',
 	'description' 		=> 'Bookmark Your Tasks',
 	'author' 			=> array(

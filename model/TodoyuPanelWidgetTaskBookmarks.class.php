@@ -145,7 +145,7 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 		$idTask	= intval($idTask);
 		$task	= TodoyuTaskManager::getTask($idTask);
 
-		$ownItems	= $GLOBALS['CONFIG']['EXT']['bookmark']['ContextMenu']['PanelWidget'];
+		$ownItems	= Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget'];
 		$allowed	= array();
 
 			// Show in project
@@ -173,9 +173,9 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 			if( TodoyuTimetracking::isTrackable($task->getType(), $task->getStatus()) && allowed('timetracking', 'task:track') ) {
 					// Add stop or start button
 				if( TodoyuTimetracking::isTaskRunning($idTask) ) {
-					$allowed['timetrackstop'] = $GLOBALS['CONFIG']['EXT']['timetracking']['ContextMenu']['Task']['timetrackstop'];
+					$allowed['timetrackstop'] = Todoyu::$CONFIG['EXT']['timetracking']['ContextMenu']['Task']['timetrackstop'];
 				} else {
-					$allowed['timetrackstart'] = $GLOBALS['CONFIG']['EXT']['timetracking']['ContextMenu']['Task']['timetrackstart'];
+					$allowed['timetrackstart'] = Todoyu::$CONFIG['EXT']['timetracking']['ContextMenu']['Task']['timetrackstart'];
 				}
 			}
 		}

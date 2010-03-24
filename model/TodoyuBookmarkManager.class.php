@@ -190,7 +190,7 @@ class TodoyuBookmarkManager {
 			return $items;
 		}
 
-		$ownItems	= $GLOBALS['CONFIG']['EXT']['bookmark']['ContextMenu']['Task'];
+		$ownItems	= Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['Task'];
 		$allowed	= array();
 
 		if( self::isTaskBookmarked($idTask) ) {
