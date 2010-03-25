@@ -10,8 +10,9 @@
 
 /* status - bordercolors global */
 #panelwidget-taskbookmarks div.bookmarks ul li {
-	border-left-width:5px ;
+	border-left-width:5px;
 	border-left-style:solid;
+	padding-left: 5px;
 }
 
 #panelwidget-taskbookmarks div.bookmarks ul li a.info {
