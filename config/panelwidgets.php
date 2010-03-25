@@ -29,7 +29,7 @@
 	// add bookmarks widget to several areas
 $areas	= array('portal', 'project');
 foreach($areas as $areaKey) {
-	TodoyuPanelWidgetManager::addDefaultPanelWidget($areaKey, 'TodoyuPanelWidgetTaskBookmarks', 40);
+	TodoyuPanelWidgetManager::addDefaultPanelWidget($areaKey, 'TodoyuPanelWidgetTaskBookmarks', 50);
 }
 
 
