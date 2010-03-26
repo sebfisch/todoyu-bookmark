@@ -49,7 +49,7 @@ Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['subm
 Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['showinproject'] = array(
 	'key'		=> 'showinproject',
 	'label'		=> 'task.contextmenu.showinproject',
-	'jsAction'	=> 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.showTaskInProject(#ID#)',
+	'jsAction'	=> 'Todoyu.Ext.project.goToTaskInProject(#ID#)',
 	'class'		=> 'task-ctxmenu task-showinproject',
 	'position'	=> 10
 );

@@ -149,28 +149,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	onRefreshed: function(response) {
 		this.ContextMenu.attach();
 	},
-
-
-
-	/**
-	 * Scroll given task into focus, if not in current view: show in project view
-	 *
-	 * @param	Integer		idTask
-	 * @param	Integer		idProject
-	 */
-	goToTask: function(idTask, idProject) {
-		var taskNode	= 'task-' + idTask;
-
-		if( Todoyu.exists(taskNode) ) {
-			if( $(taskNode).visible() ) {
-				$(taskNode).scrollToElement();
-				return;
-			}
-		}
-
-		this.showTaskInProject(idTask);
-	},
-
+	
 
 
 	/**

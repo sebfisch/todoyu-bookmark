@@ -6,7 +6,7 @@
 		{if $taskBookmark.isTrackable}
 				<a id="{$id}-task-{$taskBookmark.id}-btn" class="icon timetracking {$taskBookmark.btnClass}" href="javascript:void(0)" onclick="Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.{$taskBookmark.jsFunction}({$taskBookmark.id})" title="{if $task.id == $current}{Label timetracking.stop}{else}{Label timetracking.start}{/if}"><!-- button --></a>
 		{/if}
-				<a class="info" onclick="Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.goToTask({$taskBookmark.id}, {$taskBookmark.id_project})">
+				<a class="info" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})">
 					<span class="project">{htmlencode $taskBookmark.projecttitle}</span>
 					<span class="task">{$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {htmlencode $taskBookmark.title|truncate:43}</span>
 				</a>
