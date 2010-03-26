@@ -42,5 +42,4 @@ class TodoyuBookmarkRefreshActionController extends TodoyuActionController {
 
 }
 
-
 ?>

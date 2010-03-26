@@ -37,5 +37,7 @@ class TodoyuBookmarkPreferenceActionController extends TodoyuActionController {
 
 		TodoyuPanelWidgetManager::saveCollapsedStatus(EXTID_BOOKMARK, $idWidget, $value);
 	}
+
 }
+
 ?>
