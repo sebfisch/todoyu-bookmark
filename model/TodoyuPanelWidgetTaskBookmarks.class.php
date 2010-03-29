@@ -110,6 +110,8 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 			'bookmarks'	=> $this->getTaskBookmarks()
 		);
 
+
+
 		$content= render($tmpl, $data);
 
 		$this->setContent($content);

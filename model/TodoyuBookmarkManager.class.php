@@ -189,6 +189,18 @@ class TodoyuBookmarkManager {
 			return $items;
 		}
 
+		$task	= TodoyuTaskManager::getTask($idTask);
+
+		TodoyuDebug::printInFirebug($items);
+
+			// Only allow tasks as bookmarks at the moment
+		if( ! $task->isTask() ) {
+			return $items;
+		}
+
+
+
+
 		$ownItems	= Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['Task'];
 		$allowed	= array();
 
