@@ -191,8 +191,6 @@ class TodoyuBookmarkManager {
 
 		$task	= TodoyuTaskManager::getTask($idTask);
 
-		TodoyuDebug::printInFirebug($items);
-
 			// Only allow tasks as bookmarks at the moment
 		if( ! $task->isTask() ) {
 			return $items;
