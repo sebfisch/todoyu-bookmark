@@ -35,9 +35,9 @@
 	clear:none;
 	width:22px;
 	height:22px;
-	background:url(../../../timetracking/assets/img/icons.png) no-repeat 0px -27px;
+	background:url(../../../timetracking/assets/img/icons.png) no-repeat 0 -27px;
 }
 
 #panelwidget-taskbookmarks div.bookmarks ul li.running a {
-	background-position:0px 3px !important;
+	background-position:0 3px !important;
 }
