@@ -197,8 +197,6 @@ class TodoyuBookmarkManager {
 		}
 
 
-
-
 		$ownItems	= Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['Task'];
 		$allowed	= array();
 
