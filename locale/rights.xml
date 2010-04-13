@@ -18,4 +18,13 @@
 		<label index="panelwidgets">Steuerelemente</label>
 		<label index="panelwidgets.taskbookmarks">Sieht Favoriten Widget</label>
 	</labels>
+	<labels lang="pt">
+		<label index="general">Configuração</label>
+		<label index="general.use">Utilizar Bookmarks</label>
+		<label index="task">Bookmarks de Tarefa</label>
+		<label index="task.add">Bookmark a Tarefa</label>
+		<label index="task.remove">Remover Bookmarks</label>
+		<label index="panelwidgets">Painel de Widgets</label>
+		<label index="panelwidgets.taskbookmarks">Exibir o Widget de Bookmark</label>
+	</labels>
 </locallang>

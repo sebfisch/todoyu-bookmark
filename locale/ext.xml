@@ -14,4 +14,11 @@
 		<label index="contextmenu.removebookmark">Favorit -</label>
 		<label index="contextmenu.addbookmark">Favorit +</label>
 	</labels>
+	<labels lang="pt">
+		<label index="ext.title">Bookmarks da Tarefa</label>
+		<label index="title">Bookmarks da Tarefa</label>
+		<label index="info.nobookmarks">Nenhum Bookmarks</label>
+		<label index="contextmenu.removebookmark">Bookmark -</label>
+		<label index="contextmenu.addbookmark">Bookmark +</label>
+	</labels>
 </locallang>
