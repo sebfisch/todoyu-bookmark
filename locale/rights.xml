@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <locallang>
-	<labels lang="en">
+	<labels lang="en_GB">
 		<label index="general">General</label>
 		<label index="general.use">Use Bookmarks</label>
 		<label index="task">Task Bookmarks</label>
@@ -9,7 +9,7 @@
 		<label index="panelwidgets">Panel Widgets</label>
 		<label index="panelwidgets.taskbookmarks">See Bookmark Widget</label>
 	</labels>
-	<labels lang="de">
+	<labels lang="de_DE">
 		<label index="general">Allgemein</label>
 		<label index="general.use">Favoriten verwenden</label>
 		<label index="task">Aufgaben Favoriten</label>
@@ -18,7 +18,7 @@
 		<label index="panelwidgets">Steuerelemente</label>
 		<label index="panelwidgets.taskbookmarks">Sieht Favoriten Widget</label>
 	</labels>
-	<labels lang="pt">
+	<labels lang="pt_BR">
 		<label index="general">Configuração</label>
 		<label index="general.use">Utilizar Bookmarks</label>
 		<label index="task">Bookmarks de Tarefa</label>
