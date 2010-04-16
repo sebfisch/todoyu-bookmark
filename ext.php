@@ -33,6 +33,7 @@ define('PATH_EXT_BOOKMARK', PATH_EXT . '/bookmark');
 TodoyuLanguage::register('bookmark', PATH_EXT_BOOKMARK . '/locale/ext.xml');
 
 	// Request configurations
+	// @notice	Auto-loaded configs if available: admin, assets, create, contextmenu, extinfo, filters, form, page, panelwidgets, rights, search
 require_once( PATH_EXT_BOOKMARK . '/config/constants.php' );
 require_once( PATH_EXT_BOOKMARK . '/config/extension.php' );
 
