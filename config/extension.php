@@ -26,10 +26,10 @@
  */
 
 	// Contextmenu on task
-TodoyuContextMenuManager::registerFunction('Task', 'TodoyuBookmarkManager::getTaskContextMenuItems');
+TodoyuContextMenuManager::addFunction('Task', 'TodoyuBookmarkManager::getTaskContextMenuItems');
 	// Contextmenu on daytracks
-TodoyuContextMenuManager::registerFunction('DaytracksPanelwidget', 'TodoyuBookmarkManager::getTaskContextMenuItems');
+TodoyuContextMenuManager::addFunction('DaytracksPanelwidget', 'TodoyuBookmarkManager::getTaskContextMenuItems');
 	// Contextmenu on widget
-TodoyuContextMenuManager::registerFunction('TaskBookmarksPanelWidget', 'TodoyuPanelWidgetTaskBookmarks::getContextMenuItems', 10000);
+TodoyuContextMenuManager::addFunction('TaskBookmarksPanelWidget', 'TodoyuPanelWidgetTaskBookmarks::getContextMenuItems', 10000);
 
 ?>

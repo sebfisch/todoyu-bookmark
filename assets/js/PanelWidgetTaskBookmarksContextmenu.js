@@ -29,12 +29,11 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.ContextMenu = {
 	ext:	Todoyu.Ext.bookmark,
 
 
-
 	/**
 	 * Attach context menu to bookmarks panel widget
 	 */
 	attach: function() {
-		Todoyu.ContextMenu.attachMenuToClass('contextmenutaskbookmarks', this.load.bind(this));
+		Todoyu.ContextMenu.attach('TaskBookmarksPanelWidget', '.contextmenutaskbookmarks', this.getID.bind(this));
 	},
 
 
@@ -43,44 +42,12 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.ContextMenu = {
 	 * Detach context menu from bookmarks panel widget
 	 */
 	detach: function() {
-		Todoyu.ContextMenu.detachAllMenus('contextmenutaskbookmarks');
+		Todoyu.ContextMenu.detach('.contextmenutaskbookmarks');
 	},
 
 
-
-	/**
-	 * Load context menu to bookmarks panel widget
-	 *
-	 * @param	String		event
-	 * @return	Boolean
-	 */
-	load: function(event) {
-		var li		= Event.findElement(event, 'li');
-		var idParts	= li.id.split('-');
-		var idTask	= Todoyu.Helper.intval(idParts[2]);
-
-		var url		= Todoyu.getUrl('bookmark', 'contextmenu');
-		var options	= {
-			'parameters': {
-				'action':	'task',
-				'task':		idTask
-			}
-		};
-
-		Todoyu.ContextMenu.showMenu(url, options, event);
-
-		return false;
-	},
-
-
-
-	/**
-	 *	Attach context menu to given element
-	 *
-	 *	param	String		element
-	 */
-	attachMenuToElement: function(element) {
-		Todoyu.ContextMenu.attachMenuToElement($(element), this.show.bind(this));
+	getID: function(element, event) {
+		return element.id.split('-').last();
 	}
 
 };
