@@ -24,7 +24,6 @@
  * @package		Todoyu
  * @subpackage	Bookmark
  */
-
 class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements TodoyuPanelWidgetIf {
 
 	/**
