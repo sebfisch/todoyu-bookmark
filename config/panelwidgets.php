@@ -31,5 +31,4 @@ foreach($areas as $areaKey) {
 	TodoyuPanelWidgetManager::addDefaultPanelWidget($areaKey, 'TodoyuPanelWidgetTaskBookmarks', 50);
 }
 
-
 ?>

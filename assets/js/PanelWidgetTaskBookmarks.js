@@ -20,7 +20,7 @@
 Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 	/**
-	 *	Ext shortcut
+	 * Ext shortcut
 	 */
 	ext:		Todoyu.Ext.bookmark,
 
@@ -55,7 +55,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 
 	/**
-	 *	Register to timetracking callbacks
+	 * Register to timetracking callbacks
 	 */
 	registerTimetracking: function() {
 		Todoyu.Ext.timetracking.registerToggleCallback(this.onTimetrackingToggle.bind(this));
@@ -67,7 +67,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Timetracking toggle-handler
 	 *
-	 * @param	Integer	idTask
+	 * @param	{Integer}	idTask
 	 * @param	unknown	start
 	 */
 	onTimetrackingToggle: function(idTask, start) {
@@ -79,7 +79,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Handle timetracking event: clock update
 	 *
-	 * @param	Integer	idTask
+	 * @param	{Integer}	idTask
 	 * @param	unknown	time
 	 */
 	onTimetrackingClockUpdate: function(idTask, time) {
@@ -91,8 +91,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Handler when task status is updated and hook is called
 	 * 
-	 * @param	Integer		idTask
-	 * @param	Integer		status
+	 * @param	{Integer}		idTask
+	 * @param	{Integer}		status
 	 */
 	onTaskStatusUpdated: function(idTask, status) {
 		this.refresh();
@@ -103,7 +103,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Start task timetracking
 	 *
-	 * @param	Integer		idTask
+	 * @param	{Integer}		idTask
 	 */
 	startTask: function(idTask) {
 		Todoyu.Ext.timetracking.start(idTask);
@@ -114,7 +114,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Stop task timetracking
 	 *
-	 * @param	Integer		idTask
+	 * @param	{Integer}		idTask
 	 */
 	stopTask: function(idTask) {
 		Todoyu.Ext.timetracking.stop();
@@ -144,7 +144,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * onRefreshed task bookmarks event handler
 	 *
-	 * @param	Object		response
+	 * @param	{Object}		response
 	 */
 	onRefreshed: function(response) {
 		this.ContextMenu.attach();
@@ -155,7 +155,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Show given task within its project
 	 *
-	 * @param	Integer		idTask
+	 * @param	{Integer}		idTask
 	 */
 	showTaskInProject: function(idTask) {
 		Todoyu.goTo('project', 'ext', {'task':idTask}, 'task-'+idTask);
@@ -166,8 +166,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Update task status
 	 * 
-	 * @param	Integer		idTask
-	 * @param	String		Status
+	 * @param	{Integer}		idTask
+	 * @param	{String}		Status
 	 */
 	updateTaskStatus: function(idTask, status) {
 		Todoyu.Ext.project.Task.updateStatus(idTask, status);
@@ -178,7 +178,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Remove given task
 	 *
-	 * @param	Integer		idTask
+	 * @param	{Integer}		idTask
 	 */
 	removeTask: function(idTask) {
 		this.ext.remove('task', idTask, this.refresh.bind(this));

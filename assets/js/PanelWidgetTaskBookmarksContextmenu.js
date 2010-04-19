@@ -46,6 +46,13 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.ContextMenu = {
 	},
 
 
+	/**
+	 * Extract ID of clicked bookmark from event
+	 *
+	 * @param	{Element}	element
+	 * @param	{Event}		event
+	 * @return	{String}
+	 */
 	getID: function(element, event) {
 		return element.id.split('-').last();
 	}

@@ -29,11 +29,11 @@ Todoyu.Ext.bookmark = {
 	Headlet: {},
 
 	/**
-	 *	Add bookmark
+	 * 	Add bookmark
 	 * 
-	 *	@param	String	type
-	 * 	@param	Integer	idItem
-	 * 	@param	String	onComplete
+	 * @param	{String}	type
+	 * @param	{Integer}	idItem
+	 * @param	{String}	onComplete
 	 */
 	add: function(type, idItem, onComplete) {
 		var url		= Todoyu.getUrl('bookmark', 'bookmark');
@@ -52,11 +52,11 @@ Todoyu.Ext.bookmark = {
 
 
 	/**
-	 *	Remove bookmark
+	 * Remove bookmark
 	 *
-	 *	@param	String	type
-	 *	@param	Integer	idItem
-	 *	@param	String	onComplete
+	 * @param	{String}	type
+	 * @param	{Integer}	idItem
+	 * @param	{String}	onComplete
 	 */
 	remove: function(type, idItem, onComplete) {
 		var url		= Todoyu.getUrl('bookmark', 'bookmark');
@@ -75,9 +75,9 @@ Todoyu.Ext.bookmark = {
 
 
 	/**
-	 *  Start timetracking of given task in the bookmark box
+	 * Start timetracking of given task in the bookmark box
 	 *
-	 *	@param	Integer	idTask
+	 * @param	{Integer}	idTask
 	 */
 	start: function(idTask)	{
 		if(idTask > 0)	{
@@ -90,7 +90,7 @@ Todoyu.Ext.bookmark = {
 	/*
 	 * Stop timetracking of given task in the bookmark box
 	 *
-	 *	@param	Integer	idTask
+	 * @param	{Integer}	idTask
 	 */
 	stop: function(idTask)	{
 		if(idTask > 0)	{
