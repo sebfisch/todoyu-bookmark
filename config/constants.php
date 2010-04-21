@@ -18,6 +18,13 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
+/**
+ * Constants for bookmark extension
+ *
+ * @package		Todoyu
+ * @subpackage	Bookmark
+ */
+
 define('BOOKMARK_TYPE_TASK', 	1);
 define('BOOKMARK_TYPE_PROJECT', 2);
 define('BOOKMARK_TYPE_EVENT', 	3);

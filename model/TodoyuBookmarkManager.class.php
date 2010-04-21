@@ -140,7 +140,7 @@ class TodoyuBookmarkManager {
 
 
 	/**
-	 * Check if an item of a type is bookmarked
+	 * Check whether an item of a type is bookmarked
 	 *
 	 * @param	String		$typeKey
 	 * @param	Integer		$idItem

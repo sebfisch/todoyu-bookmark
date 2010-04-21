@@ -22,7 +22,6 @@
  * Various bookmark extension info data
  */
 
-
 Todoyu::$CONFIG['EXT']['bookmark']['info'] = array(
 	'title'				=> 'Bookmark',
 	'description' 		=> 'Bookmark Your Tasks',
