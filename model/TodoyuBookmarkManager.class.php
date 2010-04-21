@@ -218,7 +218,7 @@ class TodoyuBookmarkManager {
 
 
 	/**
-	 * Gets Bookmark assigend to current person
+	 * Gets Bookmark assigned to current person
 	 *
 	 * @return	Array
 	 */
@@ -226,12 +226,10 @@ class TodoyuBookmarkManager {
 		$type		= intval($type);
 		$idPerson	= TodoyuAuth::getPersonID();
 
-		$fields	= '*';
-		$table	= self::TABLE;
-		$where	= '		id_person_create	= ' . $idPerson . ' AND	`type` = ' . $type;
+		$where	= 'id_person_create	= ' . $idPerson . ' AND	`type` = ' . $type;
 		$order	= 'date_create';
 
-		return Todoyu::db()->getArray($fields, $table, $where, '', $order);
+		return TodoyuRecordManager::getAllRecords(self::TABLE, $where, $order);
 	}
 
 
