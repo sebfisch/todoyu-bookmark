@@ -186,7 +186,7 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 
 
 	/**
-	 * Check whether panelwidget is allowed
+	 * Check panelWidget access permission
 	 *
 	 * @return	Boolean
 	 */
