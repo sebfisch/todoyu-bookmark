@@ -21,6 +21,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 	/**
 	 * Ext shortcut
+	 *
+	 * @var	{Object}	ext
 	 */
 	ext:		Todoyu.Ext.bookmark,
 

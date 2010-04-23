@@ -19,7 +19,6 @@
 
 /**
  *	Bookmark JS stuff
- *
  */
 
 Todoyu.Ext.bookmark = {

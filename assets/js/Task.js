@@ -21,6 +21,8 @@ Todoyu.Ext.bookmark.Task = {
 
 	/**
 	 * Ext shortcut
+	 *
+	 * @var	{Object}	ext
 	 */
 	ext:	Todoyu.Ext.bookmark,
 
