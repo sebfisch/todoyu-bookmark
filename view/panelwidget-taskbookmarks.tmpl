@@ -3,7 +3,7 @@
 	<ul class="contextmenutaskbookmarks ulListDotted withMouseHover">
 	{foreach $bookmarks taskBookmark}
 		<li id="{$id}-task-{$taskBookmark.id}" class="{cycle values="odd,even"} listItem bcStatus{$taskBookmark.status} {if $taskBookmark.isRunning}running{/if}" title="{Label task.task} {$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {$taskBookmark.title}">
-			{if $taskBookmark.isTrackable}
+			{if $taskBookmark.isTrackable || $taskBookmark.isRunning}
 				<a id="{$id}-task-{$taskBookmark.id}-btn" class="icon timetracking {$taskBookmark.btnClass}" href="javascript:void(0)" onclick="Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.{$taskBookmark.jsFunction}({$taskBookmark.id})" title="{if $task.id == $current}{Label timetracking.stop}{else}{Label timetracking.start}{/if}"><!-- button --></a>
 			{/if}
 			<a class="info" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})">
