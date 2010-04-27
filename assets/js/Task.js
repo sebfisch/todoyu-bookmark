@@ -31,7 +31,7 @@ Todoyu.Ext.bookmark.Task = {
 	/**
 	 * Add task bookmark (of given task)
 	 *
-	 * @param	{Integer}		idTask
+	 * @param	{Number}		idTask
 	 */
 	add: function(idTask) {
 		this.ext.add('task', idTask, this.onAdded.bind(this, idTask));
@@ -42,7 +42,7 @@ Todoyu.Ext.bookmark.Task = {
 	/**
 	 * Event handler being evoked after having added task bookmark
 	 *
-	 * @param	{Integer}		idTask
+	 * @param	{Number}		idTask
 	 * @param	{Object}		response
 	 */
 	onAdded: function(idTask, response) {
@@ -54,7 +54,7 @@ Todoyu.Ext.bookmark.Task = {
 	/**
 	 * Remove bookmark of given task
 	 *
-	 * @param	{Integer}		idTask
+	 * @param	{Number}		idTask
 	 */
 	remove: function(idTask) {
 		this.ext.remove('task', idTask, this.onRemoved.bind(this, idTask));
@@ -65,7 +65,7 @@ Todoyu.Ext.bookmark.Task = {
 	/**
 	 * Event handler being evoked after removal of task bookmark
 	 *
-	 * @param	{Integer}		idTask
+	 * @param	{Number}		idTask
 	 * @param	unknown		response
 	 */
 	onRemoved: function(idTask, response) {
