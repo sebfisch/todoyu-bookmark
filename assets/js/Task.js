@@ -65,8 +65,8 @@ Todoyu.Ext.bookmark.Task = {
 	/**
 	 * Event handler being evoked after removal of task bookmark
 	 *
-	 * @param	{Number}		idTask
-	 * @param	unknown		response
+	 * @param	{Number}			idTask
+	 * @param	{Ajax.Response}		response
 	 */
 	onRemoved: function(idTask, response) {
 		this.refreshPanelWidget();

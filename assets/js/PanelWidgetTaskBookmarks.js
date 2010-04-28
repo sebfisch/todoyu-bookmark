@@ -70,7 +70,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 * Timetracking toggle-handler
 	 *
 	 * @param	{Number}	idTask
-	 * @param	unknown	start
+	 * @param	{Boolean}	start
 	 */
 	onTimetrackingToggle: function(idTask, start) {
 		this.refresh();
@@ -82,7 +82,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 * Handle timetracking event: clock update
 	 *
 	 * @param	{Number}	idTask
-	 * @param	unknown	time
+	 * @param	{Number}	time
 	 */
 	onTimetrackingClockUpdate: function(idTask, time) {
 
