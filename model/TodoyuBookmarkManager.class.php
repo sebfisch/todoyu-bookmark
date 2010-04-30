@@ -85,8 +85,8 @@ class TodoyuBookmarkManager {
 		$idItem	= intval($idItem);
 
 		$table	= self::TABLE;
-		$where	= ' `type`	= ' . $type . ' AND
-					id_item	= ' . $idItem;
+		$where	= '		`type`	= ' . $type .
+				  ' AND	id_item	= ' . $idItem;
 		$update	= array(
 			'deleted'	=> 1
 		);
@@ -152,10 +152,10 @@ class TodoyuBookmarkManager {
 
 		$field	= 'id';
 		$table	= self::TABLE;
-		$where	= '	`type`			= ' . $type . ' AND
-					id_person_create = ' . $idPerson . ' AND
-					id_item			= ' . $idItem . ' AND
-					deleted			= 0';
+		$where	= '		`type`				= ' . $type .
+				  ' AND	id_person_create	= ' . $idPerson .
+				  ' AND	id_item				= ' . $idItem .
+				  ' AND	deleted				= 0';
 
 		return Todoyu::db()->hasResult($field, $table, $where);
 	}
