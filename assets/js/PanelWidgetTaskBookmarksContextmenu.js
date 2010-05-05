@@ -56,7 +56,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.ContextMenu = {
 	 * @return	{String}
 	 */
 	getID: function(element, event) {
-		return element.id.split('-').last();
+		return event.findElement('li').id.split('-').last();
 	}
 
 };
