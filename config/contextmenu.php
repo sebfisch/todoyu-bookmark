@@ -67,7 +67,7 @@ Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['removebookmark
 
 ### CONTEXT MENU FOR TASK ###
 
-	// extend genearal FE contextmenu of tasks (e.g portal, project)
+	// Extend general context menu of tasks (e.g portal, project)
 Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['Task'] = array(
 	'addbookmark' => array(
 		'key'		=> 'addbookmark',
