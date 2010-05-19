@@ -28,4 +28,11 @@
 		<label index="contextmenu.removebookmark">Закладка -</label>
 		<label index="contextmenu.addbookmark">Закладка +</label>
 	</labels>
+	<labels lang="fr_FR">
+		<label index="ext.title">Raccourcis de tche</label>
+		<label index="title">Raccourcis de tche</label>
+		<label index="info.nobookmarks">Aucun raccourcis pour le moment</label>
+		<label index="contextmenu.removebookmark">Raccourcis -</label>
+		<label index="contextmenu.addbookmark">Raccourcis +</label>
+	</labels>
 </locallang>
