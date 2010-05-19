@@ -21,4 +21,11 @@
 		<label index="contextmenu.removebookmark">Bookmark -</label>
 		<label index="contextmenu.addbookmark">Bookmark +</label>
 	</labels>
+	<labels lang="ru_RU">
+		<label index="ext.title">Закладки задач</label>
+		<label index="title">Закладки задач</label>
+		<label index="info.nobookmarks">Нет закладок</label>
+		<label index="contextmenu.removebookmark">Закладка -</label>
+		<label index="contextmenu.addbookmark">Закладка +</label>
+	</labels>
 </locallang>

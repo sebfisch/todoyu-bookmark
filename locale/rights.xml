@@ -27,4 +27,13 @@
 		<label index="panelwidgets">Painel de Widgets</label>
 		<label index="panelwidgets.taskbookmarks">Exibir o Widget de Bookmark</label>
 	</labels>
+	<labels lang="ru_RU">
+		<label index="general">Общие</label>
+		<label index="general.use">Использовать закладки</label>
+		<label index="task">Закладки задач</label>
+		<label index="task.add">Закладка задачи</label>
+		<label index="task.remove">Удалить закладки</label>
+		<label index="panelwidgets">Виджеты панели</label>
+		<label index="panelwidgets.taskbookmarks">Смотрите виджет закладок</label>
+	</labels>
 </locallang>
