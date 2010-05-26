@@ -4,22 +4,22 @@
 		<label index="ext.title">Task Bookmarks</label>
 		<label index="title">Task Bookmarks</label>
 		<label index="info.nobookmarks">No Bookmarks Yet</label>
-		<label index="contextmenu.removebookmark">Bookmark -</label>
-		<label index="contextmenu.addbookmark">Bookmark +</label>
+		<label index="contextmenu.removebookmark">Remove from Bookmarks</label>
+		<label index="contextmenu.addbookmark">Add to Bookmarks</label>
 	</labels>
 	<labels lang="de_DE">
 		<label index="ext.title">Aufgaben-Favoriten</label>
 		<label index="title">Aufgaben Favoriten</label>
 		<label index="info.nobookmarks">Sie haben noch keine Favoriten</label>
-		<label index="contextmenu.removebookmark">Favorit -</label>
-		<label index="contextmenu.addbookmark">Favorit +</label>
+		<label index="contextmenu.removebookmark">Aus Favoriten entfernen</label>
+		<label index="contextmenu.addbookmark">Zu Favoriten hinzufügen</label>
 	</labels>
 	<labels lang="pt_BR">
 		<label index="ext.title">Bookmarks da Tarefa</label>
 		<label index="title">Bookmarks da Tarefa</label>
 		<label index="info.nobookmarks">Nenhum Bookmarks</label>
-		<label index="contextmenu.removebookmark">Bookmark -</label>
-		<label index="contextmenu.addbookmark">Bookmark +</label>
+		<label index="contextmenu.removebookmark">Remover dos Bookmark</label>
+		<label index="contextmenu.addbookmark">Adicionar aos Favoritos</label>
 	</labels>
 	<labels lang="ru_RU">
 		<label index="ext.title">Закладки задач</label>
