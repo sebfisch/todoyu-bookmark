@@ -4,8 +4,8 @@
 		<label index="ext.title">Task Bookmarks</label>
 		<label index="title">Task Bookmarks</label>
 		<label index="info.nobookmarks">No Bookmarks Yet</label>
-		<label index="contextmenu.removebookmark">Remove from Bookmarks</label>
-		<label index="contextmenu.addbookmark">Add to Bookmarks</label>
+		<label index="contextmenu.removebookmark">Remove From Bookmarks</label>
+		<label index="contextmenu.addbookmark">Add To Bookmarks</label>
 	</labels>
 	<labels lang="de_DE">
 		<label index="ext.title">Aufgaben-Favoriten</label>
