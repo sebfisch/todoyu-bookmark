@@ -35,4 +35,11 @@
 		<label index="contextmenu.removebookmark">Raccourcis -</label>
 		<label index="contextmenu.addbookmark">Raccourcis +</label>
 	</labels>
+	<labels lang="nl_NL">
+		<label index="ext.title">Taak-favorieten</label>
+		<label index="title">Taak-favorieten</label>
+		<label index="info.nobookmarks">Nog geen favorieten</label>
+		<label index="contextmenu.removebookmark">Favoriet -</label>
+		<label index="contextmenu.addbookmark">Favoriet +</label>
+	</labels>
 </locallang>
