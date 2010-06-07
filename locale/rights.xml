@@ -54,4 +54,13 @@
 		<label index="panelwidgets">Stuurelementen</label>
 		<label index="panelwidgets.taskbookmarks">Zie favorieten-element</label>
 	</labels>
+	<labels lang="cs_CZ">
+		<label index="general">Obecné</label>
+		<label index="general.use">Používat záložky</label>
+		<label index="task">Úkolové záložky</label>
+		<label index="task.add">Použít záložku</label>
+		<label index="task.remove">Odstranit záložku</label>
+		<label index="panelwidgets">Panel Widgets</label>
+		<label index="panelwidgets.taskbookmarks">Viz Bookmark Widget</label>
+	</labels>
 </locallang>

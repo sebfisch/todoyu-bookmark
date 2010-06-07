@@ -42,4 +42,11 @@
 		<label index="contextmenu.removebookmark">Favoriet -</label>
 		<label index="contextmenu.addbookmark">Favoriet +</label>
 	</labels>
+	<labels lang="cs_CZ">
+		<label index="ext.title">Záložky</label>
+		<label index="title">Úkolové záložky</label>
+		<label index="info.nobookmarks">Prozatím žádné záložky</label>
+		<label index="contextmenu.removebookmark">Přidat záložku</label>
+		<label index="contextmenu.addbookmark">Odstranit záložku</label>
+	</labels>
 </locallang>
