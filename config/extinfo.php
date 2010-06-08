@@ -33,11 +33,14 @@ Todoyu::$CONFIG['EXT']['bookmark']['info'] = array(
 	'state' 			=> 'beta',
 	'version' => '1.0.0',
 	'constraints' => array(
-		'depends' => array(
+		'depends' 	=> array(
 			'contact'		=> '1.0.0',
 			'project' 		=> '1.0.0',
 		),
 		'conflicts' => array(
+		),
+		'suggests'	=> array(
+			'timetracking'	=> '1.0.0'
 		)
 	)
 );

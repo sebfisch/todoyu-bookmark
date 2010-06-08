@@ -75,25 +75,33 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 
 		$order	= ' b.date_create';
 
-		$taskBooksmarks	= Todoyu::db()->getArray($fields, $tables, $where, '', $order);
+		$taskBookmarks	= Todoyu::db()->getArray($fields, $tables, $where, '', $order);
 
 			// Prepare for rendering
-		foreach($taskBooksmarks as $index => $task) {
-			$taskBooksmarks[$index]['isTrackable']	= TodoyuTimetracking::isTrackable($task['type'], $task['status']);
-			$taskBooksmarks[$index]['seeTask']		= TodoyuTaskRights::isSeeAllowed($task['id']);
+		foreach($taskBookmarks as $index => $task) {
+				// Remove bookmark if not allowed
+			if( ! TodoyuTaskRights::isSeeAllowed($task['id']) ) {
+				unset($taskBookmarks[$index]);
+				continue;
+			}
 
-			if( TodoyuTimetracking::isTaskRunning($task['id']) ) {
-				$taskBooksmarks[$index]['isRunning']	= true;
-				$taskBooksmarks[$index]['btnClass']		= 'stopButton';
-				$taskBooksmarks[$index]['jsFunction']	= 'stopTask';
-			} else {
-				$taskBooksmarks[$index]['isRunning']	= false;
-				$taskBooksmarks[$index]['btnClass']		= 'playButton';
-				$taskBooksmarks[$index]['jsFunction']	= 'startTask';
+				// Add timetracking function if enable
+			if( TodoyuExtensions::isInstalled('timetracking') && allowed('timetracking', 'general:use') ) {
+				$taskBookmarks[$index]['isTrackable']	= TodoyuTimetracking::isTrackable($task['type'], $task['status']);
+
+				if( TodoyuTimetracking::isTaskRunning($task['id']) ) {
+					$taskBookmarks[$index]['isRunning']	= true;
+					$taskBookmarks[$index]['btnClass']		= 'stopButton';
+					$taskBookmarks[$index]['jsFunction']	= 'stopTask';
+				} else {
+					$taskBookmarks[$index]['isRunning']	= false;
+					$taskBookmarks[$index]['btnClass']		= 'playButton';
+					$taskBookmarks[$index]['jsFunction']	= 'startTask';
+				}
 			}
 		}
 
-		return $taskBooksmarks;
+		return $taskBookmarks;
 	}
 
 
