@@ -49,4 +49,11 @@
 		<label index="contextmenu.removebookmark">Přidat záložku</label>
 		<label index="contextmenu.addbookmark">Odstranit záložku</label>
 	</labels>
+	<labels lang="ja_JP">
+		<label index="ext.title">タスクブックマーク</label>
+		<label index="title">タスクブックマーク</label>
+		<label index="info.nobookmarks">ブックマークはまだありません</label>
+		<label index="contextmenu.removebookmark">ブックマーク -</label>
+		<label index="contextmenu.addbookmark">ブックマーク +</label>
+	</labels>
 </locallang>
