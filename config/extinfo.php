@@ -23,24 +23,24 @@
  */
 
 Todoyu::$CONFIG['EXT']['bookmark']['info'] = array(
-	'title'				=> 'Bookmark',
-	'description' 		=> 'Bookmark Your Tasks',
-	'author' 			=> array(
+	'title'			=> 'Bookmark',
+	'description' 	=> 'Bookmark Your Tasks',
+	'author' 		=> array(
 		'name'		=> 'todoyu Core Developer Team',
 		'email'		=> 'team@todoyu.com',
 		'company'	=> 'snowflake productions GmbH, Zurich'
 	),
-	'state' 			=> 'beta',
-	'version' => '1.0.0',
-	'constraints' => array(
+	'state' 		=> 'stable',
+	'version' 		=> '1.0.1',
+	'constraints' 	=> array(
 		'depends' 	=> array(
-			'contact'		=> '1.0.0',
-			'project' 		=> '1.0.0',
+			'contact'	=> '1.0.1',
+			'project' 	=> '1.0.1',
 		),
 		'conflicts' => array(
 		),
 		'suggests'	=> array(
-			'timetracking'	=> '1.0.0'
+			'timetracking'	=> '1.0.1'
 		)
 	)
 );
