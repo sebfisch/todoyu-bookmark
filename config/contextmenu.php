@@ -49,17 +49,16 @@ Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['showinproject'
 	'key'		=> 'showinproject',
 	'label'		=> 'task.contextmenu.showinproject',
 	'jsAction'	=> 'Todoyu.Ext.project.goToTaskInProject(#ID#)',
-	'class'		=> 'task-ctxmenu task-showinproject',
+	'class'		=> 'taskContextMenu task-showinproject',
 	'position'	=> 10
 );
 Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['removebookmark'] = array(
 	'key'		=> 'removebookmark',
 	'label'		=> 'bookmark.contextmenu.removebookmark',
 	'jsAction'	=> 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.removeTask(#ID#)',
-	'class'		=> 'task-ctxmenu task-bookmark',
+	'class'		=> 'taskContextMenu task-bookmark',
 	'position'	=> 90
 );
-
 
 
 
@@ -72,14 +71,14 @@ Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['Task'] = array(
 		'key'		=> 'addbookmark',
 		'label'		=> 'bookmark.contextmenu.addbookmark',
 		'jsAction'	=> 'Todoyu.Ext.bookmark.Task.add(#ID#)',
-		'class'		=> 'task-ctxmenu task-bookmark',
+		'class'		=> 'taskContextMenu task-bookmark',
 		'position'	=> 90
 	),
 	'removebookmark' => array(
 		'key'		=> 'removebookmark',
 		'label'		=> 'bookmark.contextmenu.removebookmark',
 		'jsAction'	=> 'Todoyu.Ext.bookmark.Task.remove(#ID#)',
-		'class'		=> 'task-ctxmenu task-bookmark',
+		'class'		=> 'taskContextMenu task-bookmark',
 		'position'	=> 90
 	)
 );
