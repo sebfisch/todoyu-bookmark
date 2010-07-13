@@ -146,7 +146,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * onRefreshed task bookmarks event handler
 	 *
-	 * @param	{Object}		response
+	 * @param	{Ajax.Response}		response
 	 */
 	onRefreshed: function(response) {
 		this.ContextMenu.attach();

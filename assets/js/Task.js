@@ -43,7 +43,7 @@ Todoyu.Ext.bookmark.Task = {
 	 * Event handler being evoked after having added task bookmark
 	 *
 	 * @param	{Number}		idTask
-	 * @param	{Object}		response
+	 * @param	{Ajax.Response}		response
 	 */
 	onAdded: function(idTask, response) {
 		this.refreshPanelWidget();
