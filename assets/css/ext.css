@@ -1,5 +1,5 @@
 h1.extIconBookmark .title {
-	background:url('../img/exticon.png') no-repeat 0 5px;
+	background:url(../img/exticon.png) no-repeat 0 5px;
 }
 
 #contextmenu .taskContextMenu.task-bookmark {
