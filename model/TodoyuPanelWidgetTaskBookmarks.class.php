@@ -87,7 +87,7 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 
 				// Add timetracking function if enable
 			if( TodoyuExtensions::isInstalled('timetracking') && allowed('timetracking', 'general:use') ) {
-				$taskBookmarks[$index]['isTrackable']	= TodoyuTimetracking::isTrackable($task['type'], $task['status']);
+				$taskBookmarks[$index]['isTrackable']	= TodoyuTimetracking::isTrackable($task['type'], $task['status'], $task['id']);
 
 				if( TodoyuTimetracking::isTaskRunning($task['id']) ) {
 					$taskBookmarks[$index]['isRunning']	= true;
@@ -177,7 +177,7 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 			// Check if timetrack extension is installed
 		if( TodoyuExtensions::isInstalled('timetracking') ) {
 				// Check if task has a trackable status
-			if( TodoyuTimetracking::isTrackable($task->getType(), $task->getStatus()) && allowed('timetracking', 'task:track') ) {
+			if( TodoyuTimetracking::isTrackable($task->getType(), $task->getStatus(), $idTask) && allowed('timetracking', 'task:track') ) {
 					// Add stop or start button
 				if( TodoyuTimetracking::isTaskRunning($idTask) ) {
 					$allowed['timetrackstop'] = Todoyu::$CONFIG['EXT']['timetracking']['ContextMenu']['Task']['timetrackstop'];
