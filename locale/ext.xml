@@ -49,6 +49,13 @@
 		<label index="contextmenu.removebookmark">Přidat záložku</label>
 		<label index="contextmenu.addbookmark">Odstranit záložku</label>
 	</labels>
+	<labels lang="sr_RS">
+		<label index="ext.title">Означени задаци</label>
+		<label index="title">Означени задаци</label>
+		<label index="info.nobookmarks">Досад не постоје означени задаци</label>
+		<label index="contextmenu.removebookmark">Уклони из означених задатка</label>
+		<label index="contextmenu.addbookmark">Додај у означене задатке</label>
+	</labels>
 	<labels lang="ja_JP">
 		<label index="ext.title">タスクブックマーク</label>
 		<label index="title">タスクブックマーク</label>

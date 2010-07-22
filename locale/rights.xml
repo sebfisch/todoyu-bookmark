@@ -63,6 +63,15 @@
 		<label index="panelwidgets">Panel Widgets</label>
 		<label index="panelwidgets.taskbookmarks">Viz Bookmark Widget</label>
 	</labels>
+	<labels lang="sr_RS">
+		<label index="general">Општи</label>
+		<label index="general.use">Користите ознаке</label>
+		<label index="task">Ознаке задатка</label>
+		<label index="task.add">Означи задатак</label>
+		<label index="task.remove">Уклони ознаку</label>
+		<label index="panelwidgets">Гаџети панел</label>
+		<label index="panelwidgets.taskbookmarks">Видите гаџет ознаке</label>
+	</labels>
 	<labels lang="ja_JP">
 		<label index="general">一般</label>
 		<label index="general.use">ブックマークの使用</label>
