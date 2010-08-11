@@ -160,7 +160,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 * @param	{Number}		idTask
 	 */
 	showTaskInProject: function(idTask) {
-		Todoyu.goTo('project', 'ext', {'task':idTask}, 'task-'+idTask);
+		Todoyu.goTo('project', 'ext', {'task':idTask}, 'task-' + idTask);
 	},
 
 
