@@ -45,5 +45,4 @@ Todoyu::$CONFIG['EXT']['bookmark']['info'] = array(
 	)
 );
 
-
 ?>

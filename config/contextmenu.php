@@ -22,9 +22,6 @@
  *	Context menu for task bookmarks panel widget. Use the same items, change behaviour.
  */
 
-
-
-
 ### CONTEXT MENU FOR PANEL WIDGET ###
 
 
