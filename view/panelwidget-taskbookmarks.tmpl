@@ -8,7 +8,8 @@
 				{/if}
 				<a class="info" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})">
 					<span class="project">{htmlencode $taskBookmark.projecttitle}</span>
-					<span class="task">{$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {htmlencode $taskBookmark.title|truncate:43}</span>
+					<span class="taskNumber floatLeft">{$taskBookmark.id_project}.{$taskBookmark.tasknumber}</span>
+					<span class="task"> - {htmlencode $taskBookmark.title|truncate:43}</span>
 				</a>
 			</li>
 		{/foreach}
