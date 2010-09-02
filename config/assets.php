@@ -32,8 +32,12 @@ Todoyu::$CONFIG['EXT']['bookmark']['assets'] = array(
 			'position'	=> 100
 		),
 		array(
-			'file' 		=> 'ext/bookmark/assets/js/Task.js',
+			'file' 		=> 'ext/bookmark/assets/js/Preference.js',
 			'position'	=> 101
+		),
+		array(
+			'file' 		=> 'ext/bookmark/assets/js/Task.js',
+			'position'	=> 102
 		),
 		array(
 			'file' => 'ext/bookmark/assets/js/PanelWidgetTaskBookmarks.js',

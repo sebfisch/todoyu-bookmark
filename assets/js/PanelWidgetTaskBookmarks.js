@@ -34,6 +34,10 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 	_el_total:	null,
 
+	key:		'taskbookmarks',
+
+	sortables:	[],
+
 
 
 	/**
@@ -43,6 +47,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 		this.registerTimetracking();
 		this.ContextMenu.attach();
 		this.registerHooks();
+
+		this.initSortable();
 	},
 
 
@@ -137,6 +143,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 		};
 
 		this.ContextMenu.detach();
+		this.disableSortable();
 
 		Todoyu.Ui.replace('panelwidget-taskbookmarks', url, options);
 	},
@@ -184,6 +191,80 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 */
 	removeTask: function(idTask) {
 		this.ext.remove('task', idTask, this.refresh.bind(this));
+	},
+
+
+
+	/**
+	 * Initialize bookmark sortables
+	 * Remark: element id's of sortable items MUST separate element and item identifier by underscore for sortable to work!
+	 */
+	initSortable: function() {
+		this.disableSortable();
+
+			// Define options for all sortables
+		var options	= {
+			'handle':	'dragPointListItem',
+			'onUpdate':	this.onSortableUpdate.bind(this)
+		};
+
+			// Get all sortable lists
+		var lists	= $('panelwidget-taskbookmarks-content').select('.sortable');
+
+			// Make each list sortable
+		lists.each(function(element) {
+				// Create a sortable
+			Sortable.create(element, options);
+				// Register sortable element
+			this.sortables.push(element);
+		}.bind(this));
+	},
+
+
+
+	/**
+	 * Disable bookmark sortability
+	 */
+	disableSortable: function() {
+		this.sortables.each(function(sortableElement){
+			Sortable.destroy(sortableElement);
+		});
+
+		this.sortables = [];
+	},
+
+
+
+	/**
+	 * Handler after update of filterSet sortables
+	 *
+	 * @param	{Element}	listElement
+	 */
+	onSortableUpdate: function(listElement) {
+		var type	= listElement.id.split('-').last();
+		var items	= Sortable.sequence(listElement);
+
+		this.saveBookmarksOrder(type, items);
+	},
+
+
+
+	/**
+	 * Save order of filterSet items (conditions)
+	 *
+	 * @param	{String}	type
+	 * @param	{Array}		items
+	 */
+	saveBookmarksOrder: function(type, items) {
+		var action		= 'bookmarksOrder';
+		var value	= Object.toJSON({
+			'type':		type,
+			'items':	items
+		});
+		var idItem	= 0;
+
+		this.ext.Preference.save(action, value, idItem);
 	}
+
 
 };

@@ -38,6 +38,19 @@ class TodoyuBookmarkPreferenceActionController extends TodoyuActionController {
 		TodoyuPanelWidgetManager::saveCollapsedStatus(EXTID_BOOKMARK, $idWidget, $value);
 	}
 
+
+
+	/**
+	 * Update order of bookmarks in panelwidget
+	 *
+	 * @param	Array	$params
+	 */
+	public function bookmarksOrderAction(array $params)	{
+		$orderData	= json_decode($params['value'], true);
+
+		TodoyuBookmarkManager::saveOrder($orderData['items']);
+	}
+
 }
 
 ?>

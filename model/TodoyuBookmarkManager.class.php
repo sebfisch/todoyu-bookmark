@@ -217,30 +217,45 @@ class TodoyuBookmarkManager {
 
 
 
+//	/**
+//	 * Gets Bookmark assigned to current person
+//	 *
+//	 * @return	Array
+//	 */
+//	public static function getPersonBookmarks($type)	{
+//		$type		= intval($type);
+//
+//		$where	= 'id_person_create	= ' . personid() . ' AND	`type` = ' . $type;
+//		$order	= 'sorting';
+//
+//		return TodoyuRecordManager::getAllRecords(self::TABLE, $where, $order);
+//	}
+
+
+
+//	/**
+//	 * Get task bookmarks of current person
+//	 *
+//	 * @return	Array
+//	 */
+//	public static function getTaskBookmarks() {
+//		return self::getPersonBookmarks(BOOKMARK_TYPE_TASK);
+//	}
+
+
+
 	/**
-	 * Gets Bookmark assigned to current person
+	 * Updates bookmarks order (in panelwidget) of current person in database
 	 *
-	 * @return	Array
+	 * @param	Array	$items
 	 */
-	public static function getPersonBookmarks($type)	{
-		$type		= intval($type);
-		$idPerson	= TodoyuAuth::getPersonID();
+	public static function saveOrder(array $items) {
+		foreach($items as $sorting => $idItem) {
+			$where	= 'id_item	= ' . $idItem . ' AND id_person_create = ' . personid();
+			$data	= array('sorting'	=> $sorting);
 
-		$where	= 'id_person_create	= ' . $idPerson . ' AND	`type` = ' . $type;
-		$order	= 'date_create';
-
-		return TodoyuRecordManager::getAllRecords(self::TABLE, $where, $order);
-	}
-
-
-
-	/**
-	 * Get task bookmarks of current person
-	 *
-	 * @return	Array
-	 */
-	public static function getTaskBookmarks() {
-		return self::getPersonBookmarks(BOOKMARK_TYPE_TASK);
+			Todoyu::db()->doUpdate(self::TABLE, $where, $data);
+		}
 	}
 
 }
