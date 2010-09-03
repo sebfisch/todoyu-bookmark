@@ -26,13 +26,13 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 */
 	ext:		Todoyu.Ext.bookmark,
 
-	_task:		0,
+	activeTask:		0,
 
-	_tasktime:	0,
+	timeTask:	0,
 
-	_el_task:	null,
+	spanTimeTask:	null,
 
-	_el_total:	null,
+	spanTimeTotal:	null,
 
 	key:		'taskbookmarks',
 
@@ -98,7 +98,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 	/**
 	 * Handler when task status is updated and hook is called
-	 * 
+	 *
 	 * @param	{Number}		idTask
 	 * @param	{Number}		status
 	 */
@@ -174,7 +174,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 	/**
 	 * Update task status
-	 * 
+	 *
 	 * @param	{Number}		idTask
 	 * @param	{String}		Status
 	 */
