@@ -9,7 +9,7 @@
 			<dt class="floatLeft">{Label project.project}:</dt>
 			<dd>{$projectTitle}</dd>
 
-			<dt class="floatLeft">{Label task.task}:</dt>
+			<dt class="floatLeft">{if $task.type == constant('TASK_TYPE_TASK')}{Label task.task}{else}{Label task.type.container}{/if}:</dt>
 			<dd>{$task.title}</dd>
 		</dl>
 	</div>
