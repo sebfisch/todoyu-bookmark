@@ -74,6 +74,7 @@ h1.extIconBookmark .title {
 }
 
 
+
 /* -------------------------
 	Profile
    ------------------------- */
@@ -84,3 +85,14 @@ h1.extIconBookmark .title {
 .formTaskbookmark  {
 	width:650px;
 }
+
+div.bookmark.details {
+	margin-top:12px;
+}
+	div.bookmark.details div.properties dl {
+		line-height:20px;
+	}
+		div.bookmark.details div.properties dl dt {
+			width:100px;
+			padding-right:20px;
+		}

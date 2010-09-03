@@ -160,7 +160,8 @@ class TodoyuBookmarkProfileRenderer {
 			'idBookmark'	=> $idBookmark,
 			'bookmark'		=> $bookmark->getTemplateData(),
 			'task'			=> $task->getTemplateData(),
-			'formhtml'		=> $form->render()
+			'formhtml'		=> $form->render(),
+			'projectTitle'	=> $task->getProject()->getFullTitle()
 		);
 
 		return render('ext/bookmark/view/task-form.tmpl', $data);
