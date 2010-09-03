@@ -28,6 +28,10 @@
 #panelwidget-taskbookmarks div.bookmarks .info .task  {
 	display:block;
 }
+#panelwidget-taskbookmarks div.bookmarks li.running .info .task,
+#panelwidget-taskbookmarks div.bookmarks li.running .info .taskNumber {
+	font-weight: bold;
+}
 
 #panelwidget-taskbookmarks div.bookmarks ul li a.timetracking {
 	display:block;
