@@ -32,4 +32,54 @@ TodoyuContextMenuManager::addFunction('DaytracksPanelwidget', 'TodoyuBookmarkMan
 	// Contextmenu on widget
 TodoyuContextMenuManager::addFunction('TaskBookmarksPanelWidget', 'TodoyuPanelWidgetTaskBookmarks::getContextMenuItems', 10000);
 
+
+
+
+/**
+ * Add bookmarks module to profile
+ */
+TodoyuProfileManager::addModule('bookmark', array(
+	'position'	=> 10,
+	'tabs'		=> 'TodoyuBookmarkProfileRenderer::renderTabs',
+	'content'	=> 'TodoyuBookmarkProfileRenderer::renderContent',
+	'label'		=> 'bookmark.profile.module',
+	'class'		=> 'bookmark'
+));
+
+
+
+/**
+ * Tabs for bookmark section in profile
+ */
+Todoyu::$CONFIG['EXT']['profile']['bookmarkTabs'] = array(
+	array(
+		'id'			=> 'tasks',
+		'label'			=> 'LLL:bookmark.profile.module.tasks.tab',
+//		'require'		=> 'bookmark.settings:editbookmarks'
+	)
+);
+
+
+
+/**
+ * Configure listings for bookmarks
+ */
+Todoyu::$CONFIG['EXT']['bookmark']['listing']['bookmark'] = array(
+	'name'		=> 'bookmark',
+	'update'	=> 'bookmark/bookmark/listing',
+	'dataFunc'	=> 'TodoyuBookmarkManager::getTaskBookmarkListingData',
+	'size'		=> Todoyu::$CONFIG['LIST']['size'],
+	'columns'	=> array(
+		'icon'		=> '',
+		'task'		=> 'LLL:bookmark.profile.module.tasks.listing.task',
+		'title'		=> 'LLL:bookmark.profile.module.tasks.listing.title',
+		'label'		=> 'LLL:bookmark.profile.module.tasks.listing.label',
+		'actions'	=> '',
+	),
+	'truncate'	=> array(
+		'title'	=> 30,
+		'label'	=> 70,
+	)
+);
+
 ?>

@@ -34,6 +34,52 @@ class TodoyuBookmarkManager {
 
 
 	/**
+	 * Get bookmark
+	 *
+	 * @param	Integer				$idBookmark
+	 * @return	TodoyuBookmark
+	 */
+	public static function getBookmark($idBookmark)	{
+		$idBookmark	= intval($idBookmark);
+
+		return new TodoyuBookmark($idBookmark);
+	}
+
+
+
+	/**
+	 * Get bookmark of given item id, type, creator person
+	 *
+	 * @param	Integer		$idIem
+	 * @param	String		$typeKey
+	 * @param	Integer		$idPersonCreate
+	 * @return	TodoyuBookmark
+	 */
+	public static function getBookmarkByItemId($idIem, $typeKey, $idPersonCreate = 0) {
+		$idItem		= intval($idIem);
+		$idPersonCreate	= intval($idPersonCreate);
+		$idType		= self::getTypeIndex($typeKey);
+
+		if ( $idPersonCreate === 0 ) {
+			$idPersonCreate	= personid();
+		}
+
+		$field	= 'id';
+		$table	= self::TABLE;
+		$where	= '		id_item				= ' . $idItem
+				. ' AND	type				= ' . $idType
+				. ' AND	id_person_create	= ' . $idPersonCreate
+				. ' AND	deleted				= 0';
+
+		$res		= Todoyu::db()->getColumn($field, $table, $where);
+		$idBookmark	= intval($res[0]);
+
+		return self::getBookmark($idBookmark);
+	}
+
+
+
+	/**
 	 * Get type index of a type string
 	 *
 	 * @param	String		$key
@@ -47,6 +93,21 @@ class TodoyuBookmarkManager {
 		} else {
 			return 0;
 		}
+	}
+
+
+
+	/**
+	 * Get bookmark ID to given bookmark of given type and given person
+	 *
+	 * @param	Integer		$idBookmark
+	 * @return	Integer
+	 */
+	public static function getItemID($idBookmark) {
+		$idBookmark	= intval($idBookmark);
+		$bookmark	= new TodoyuBookmark($idBookmark);
+
+		return	$bookmark->getItemID();
 	}
 
 
@@ -80,13 +141,16 @@ class TodoyuBookmarkManager {
 	 * @param	Integer		$idItem
 	 * @return	Boolean
 	 */
-	public static function removeItemFromBooksmarks($type, $idItem) {
-		$type	= intval($type);
-		$idItem	= intval($idItem);
+	public static function removeItemFromBooksmarks($type, $idItem, $idPersonCreate = 0) {
+		$type			= intval($type);
+		$idItem			= intval($idItem);
+		$idPersonCreate	= intval($idPersonCreate);
 
 		$table	= self::TABLE;
-		$where	= '		`type`	= ' . $type .
-				  ' AND	id_item	= ' . $idItem;
+		$where	= '		`type`				= ' . $type
+				. ' AND	id_item				= ' . $idItem
+				. ( $idPersonCreate > 0 ? ' AND	id_person_create	= ' . $idPersonCreate : '' )
+		;
 		$update	= array(
 			'deleted'	=> 1
 		);
@@ -217,30 +281,32 @@ class TodoyuBookmarkManager {
 
 
 
-//	/**
-//	 * Gets Bookmark assigned to current person
-//	 *
-//	 * @return	Array
-//	 */
-//	public static function getPersonBookmarks($type)	{
-//		$type		= intval($type);
-//
-//		$where	= 'id_person_create	= ' . personid() . ' AND	`type` = ' . $type;
-//		$order	= 'sorting';
-//
-//		return TodoyuRecordManager::getAllRecords(self::TABLE, $where, $order);
-//	}
+	/**
+	 * Gets Bookmarks of current person
+	 *
+	 * @return	Array
+	 */
+	public static function getPersonBookmarks($type)	{
+		$type		= intval($type);
+
+		$where	= '		deleted				= 0'
+				. ' AND	id_person_create	= ' . personid()
+				. ' AND	`type` 				= ' . $type;
+		$order	= 'sorting';
+
+		return TodoyuRecordManager::getAllRecords(self::TABLE, $where, $order);
+	}
 
 
 
-//	/**
-//	 * Get task bookmarks of current person
-//	 *
-//	 * @return	Array
-//	 */
-//	public static function getTaskBookmarks() {
-//		return self::getPersonBookmarks(BOOKMARK_TYPE_TASK);
-//	}
+	/**
+	 * Get task bookmarks of current person
+	 *
+	 * @return	Array
+	 */
+	public static function getTaskBookmarks() {
+		return self::getPersonBookmarks(BOOKMARK_TYPE_TASK);
+	}
 
 
 
@@ -256,6 +322,93 @@ class TodoyuBookmarkManager {
 
 			Todoyu::db()->doUpdate(self::TABLE, $where, $data);
 		}
+	}
+
+
+
+	/**
+	 * Get listing data for task bookmarks
+	 * Keys: [total,rows]
+	 *
+	 * @param	Integer		$size
+	 * @param	Integer		$offset
+	 * @param	String		$searchWord
+	 * @return	Array
+	 */
+	public static function getTaskBookmarkListingData($size, $offset = 0, $searchWord = '') {
+		$data	= array();
+		$bookmarks= self::getTaskBookmarks();
+
+		$data	= array(
+			'rows'	=> array(),
+			'total'	=> Todoyu::db()->getTotalFoundRows()
+		);
+
+		foreach($bookmarks as $bookmark) {
+			$task	= TodoyuTaskManager::getTask($bookmark['id_item']);
+
+			$data['rows'][] = array(
+				'icon'		=> '',
+				'iconClass'	=> intval($bookmark['active']) === 1 ? 'login' : '',
+				'task'		=> $task->getTaskNumber(),
+				'title'		=> $task->getTitle(),
+				'label'		=> $bookmark['title'],
+				'actions'	=> TodoyuBookmarkProfileRenderer::renderBookmarkActions($bookmark['id'])
+			);
+		}
+
+		return $data;
+	}
+
+
+
+
+	/**
+	 * Save bookmark data as record
+	 *
+	 * @param	Array		$data
+	 * @return	Integer		Bookmark ID
+	 */
+	public static function saveBookmark(array $data) {
+//		$xmlPath	= 'ext/bookmark/config/form/task-bookmark.xml';
+		$idBookmark	= intval($data['id']);
+
+			// Update bookmark data
+		self::updateBookmark($idBookmark, $data);
+
+			// Remove bookmark record from cache
+		self::removeFromCache($idBookmark);
+
+		return $idBookmark;
+	}
+
+
+
+	/**
+	 * Update a bookmark record
+	 *
+	 * @param	Integer		$idBookmark
+	 * @param	Array		$data
+	 * @return	Integer
+	 */
+	public static function updateBookmark($idBookmark, array $data) {
+		$idBookmark			= intval($idBookmark);
+
+		return TodoyuRecordManager::updateRecord(self::TABLE, $idBookmark, $data);
+	}
+
+
+
+	/**
+	 * Remove bookmark object from cache
+	 *
+	 * @param	Integer		$idBookmark
+	 */
+	public static function removeFromCache($idBookmark)	{
+		$idBookmark	= intval($idBookmark);
+
+		TodoyuRecordManager::removeRecordCache('TodoyuBookmark', $idBookmark);
+		TodoyuRecordManager::removeRecordQueryCache(self::TABLE, $idBookmark);
 	}
 
 }

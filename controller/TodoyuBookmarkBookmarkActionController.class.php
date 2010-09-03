@@ -50,14 +50,42 @@ class TodoyuBookmarkBookmarkActionController extends TodoyuActionController {
 	 * @param	Array		$params
 	 */
 	public function removeAction(array $params) {
-		$idItem	= intval($params['item']);
 		$type	= $params['type'];
 
 		restrict('bookmark', $type . ':remove');
 
 		$idType	= TodoyuBookmarkManager::getTypeIndex($type);
+		$idItem	= intval($params['item']);
 
-		TodoyuBookmarkManager::removeItemFromBooksmarks($idType, $idItem);
+			// No item ID given? get from bookmark ID
+		if ( $idItem === 0 ) {
+			$idBookmark	= intval($params['bookmark']);
+			$idItem		= TodoyuBookmarkManager::getItemID($idBookmark);
+		}
+
+		$idPersonCreate	= personid();
+
+		TodoyuBookmarkManager::removeItemFromBooksmarks($idType, $idItem, $idPersonCreate);
+	}
+
+
+
+	/**
+	 * Show bookmarks list of given type
+	 *
+	 * @param	Array		$params
+	 * @return	String
+	 */
+	public function updatecontentAction(array $params) {
+		$type	= $params['type'];
+
+		switch($type)	{
+			case 'task':
+				$params['tab']	= 'tasks';
+				break;
+		}
+
+		TodoyuBookmarkProfileRenderer::renderContent($params);
 	}
 
 }

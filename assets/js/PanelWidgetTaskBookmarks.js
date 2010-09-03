@@ -185,7 +185,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 
 	/**
-	 * Remove given task
+	 * Remove given task bookmark from favorites
 	 *
 	 * @param	{Number}		idTask
 	 */
@@ -241,7 +241,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 * @param	{Element}	listElement
 	 */
 	onSortableUpdate: function(listElement) {
-		var type	= listElement.id.split('-').last();
+//		var type	= listElement.id.split('_');
+		var type	= 'task';
 		var items	= Sortable.sequence(listElement);
 
 		this.saveBookmarksOrder(type, items);

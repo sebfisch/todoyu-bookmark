@@ -53,6 +53,28 @@ class TodoyuBookmark extends TodoyuBaseObject {
 		return parent::getTemplateData();
 	}
 
+
+
+	/**
+	 * Get item ID of bookmark
+	 *
+	 * @return	Integer
+	 */
+	public function getItemID() {
+		return 	intval($this->get('id_item'));
+	}
+
+
+
+	/**
+	 * Get label of bookmark
+	 *
+	 * @return	Integer
+	 */
+	public function getLabel() {
+		return 	$this->get('title');
+	}
+
 }
 
 ?>

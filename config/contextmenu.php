@@ -59,7 +59,6 @@ Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['removebookmark
 
 
 
-
 ### CONTEXT MENU FOR TASK ###
 
 	// Extend general context menu of tasks (e.g portal, project)

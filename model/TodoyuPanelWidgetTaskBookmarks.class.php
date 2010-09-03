@@ -85,6 +85,10 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 				continue;
 			}
 
+				// Get label
+			$bookmark	= TodoyuBookmarkManager::getBookmarkByItemId($task['id'], 'task', personid());
+			$taskBookmarks[$index]['label']	= $bookmark->getLabel();
+
 				// Add timetracking function if enable
 			if( TodoyuExtensions::isInstalled('timetracking') && allowed('timetracking', 'general:use') ) {
 				$taskBookmarks[$index]['isTrackable']	= TodoyuTimetracking::isTrackable($task['type'], $task['status'], $task['id']);

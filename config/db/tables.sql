@@ -11,5 +11,6 @@ CREATE TABLE `ext_bookmark_bookmark` (
 	`type` tinyint(1) NOT NULL,
 	`id_item` int(10) unsigned NOT NULL,
 	`sorting` int(10) unsigned NOT NULL,
+	`title` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

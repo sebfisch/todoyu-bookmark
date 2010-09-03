@@ -13,3 +13,74 @@ h1.extIconBookmark .title {
 	background-image:url(../img/icons.png) ;
 	background-position:3px 2px;
 }
+
+
+
+/* -------------------------
+	Bookmark list
+   ------------------------- */
+.bookmarkListing th,
+.bookmarkListing td {
+	vertical-align:middle;
+}
+
+
+	/* Column widths */
+.bookmarkListing th.icon {
+	width:15px;
+}
+
+.bookmarkListing th.task {
+	width:60px;
+}
+
+.bookmarkListing th.title {
+	width:130px;
+}
+
+.bookmarkListing th.label {
+	width:220px;
+}
+
+.bookmarkListing th.actions {
+	width:40px;
+}
+
+.bookmarkListing td {
+	vertical-align:middle;
+}
+
+	/* Column configs */
+.bookmarkListing span.icon {
+	background:url(../img/icons.png) no-repeat 2px -32px;
+}
+.bookmarkListing td.icon.person {
+	background:url(../img/icons.png) no-repeat 6px -116px;
+}
+.bookmarkListing td.actions span.icon {
+	cursor:pointer;
+	margin-right:5px;
+}
+.bookmarkListing td.actions span {
+	background-image:url(../img/icons.png);
+	background-repeat:no-repeat;
+}
+
+.bookmarkListing td.actions span.rename {
+	background-position:0 -58px;
+}
+.bookmarkListing td.actions span.delete {
+	background-position:0 -90px;
+}
+
+
+/* -------------------------
+	Profile
+   ------------------------- */
+#panelwidget-profilemodules li.bookmark a {
+	background:url(../img/exticon.png) no-repeat 1px 1px;
+}
+
+.formTaskbookmark  {
+	width:650px;
+}
