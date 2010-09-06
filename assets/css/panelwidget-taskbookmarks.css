@@ -46,13 +46,20 @@
 
 
 
-#panelwidget-taskbookmarks .handle {
-	cursor:move;
+#panelwidget-taskbookmarks .taskItem {
 	border-left-width:5px;
 	border-left-style:solid;
 	padding:5px 25px 5px 5px;
 	margin:-2px;
 	margin-right: 0;
+}
+#panelwidget-taskbookmarks .handle {
+	height: 100%;
+	width: 5px;
+	position: absolute;
+	cursor:move;
+	left: 0;
+	top: 0;
 }
 
 #panelwidget-taskbookmarks .handle.hover { }
