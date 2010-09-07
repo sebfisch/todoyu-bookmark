@@ -21,6 +21,8 @@
 
 #panelwidget-taskbookmarks div.bookmarks .info .project {
 	display:block;
+	color:#666;
+	padding-bottom: 3px;
 }
 
 #panelwidget-taskbookmarks div.bookmarks .info .task  {
@@ -37,6 +39,8 @@
 	clear:none;
 	width:22px;
 	height:22px;
+	position: relative;
+	z-index:101;
 	background:url(../../../timetracking/assets/img/icons.png) no-repeat 0 -27px;
 }
 
@@ -51,15 +55,18 @@
 	border-left-style:solid;
 	padding:5px 25px 5px 5px;
 	margin:-2px;
-	margin-right: 0;
+	margin-right:0;
+	position:relative;
+	z-index:100;
 }
 #panelwidget-taskbookmarks .handle {
-	height: 100%;
-	width: 5px;
-	position: absolute;
+	height:100%;
+	width:5px;
+	position:absolute;
 	cursor:move;
-	left: 0;
-	top: 0;
+	top:0;
+	left:0;
+	margin-left:-5px;
 }
 
 #panelwidget-taskbookmarks .handle.hover { }
