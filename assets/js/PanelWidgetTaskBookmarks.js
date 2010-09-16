@@ -157,6 +157,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 */
 	onRefreshed: function(response) {
 		this.ContextMenu.attach();
+		this.initSortable();
 	},
 
 
@@ -244,7 +245,6 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 //		var type	= listElement.id.split('_');
 		var type	= 'task';
 		var items	= Sortable.sequence(listElement);
-
 		this.saveBookmarksOrder(type, items);
 	},
 
@@ -264,7 +264,9 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 		});
 		var idItem	= 0;
 
-		this.ext.Preference.save(action, value, idItem);
+		var onComplete = this.refresh.bind(this);
+		
+		this.ext.Preference.save(action, value, idItem, onComplete);
 	}
 
 
