@@ -31,16 +31,16 @@ Todoyu::$CONFIG['EXT']['bookmark']['info'] = array(
 		'company'	=> 'snowflake productions GmbH, Zurich'
 	),
 	'state' 		=> 'stable',
-	'version' 		=> '1.0.3',
+	'version' 		=> '1.0.4',
 	'constraints' 	=> array(
 		'depends' 	=> array(
-			'contact'	=> '1.0.3',
-			'project' 	=> '1.0.3',
+			'contact'	=> '1.0.4',
+			'project' 	=> '1.0.4',
 		),
 		'conflicts' => array(
 		),
 		'suggests'	=> array(
-			'timetracking'	=> '1.0.3'
+			'timetracking'	=> '1.0.4'
 		)
 	)
 );
