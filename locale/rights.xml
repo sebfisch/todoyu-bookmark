@@ -65,7 +65,7 @@
 	</labels>
 	<labels lang="sr_RS">
 		<label index="general">Општи</label>
-		<label index="general.use">Користите ознаке</label>
+		<label index="general.use">Употребите ознаке</label>
 		<label index="task">Ознаке задатка</label>
 		<label index="task.add">Означи задатак</label>
 		<label index="task.remove">Уклони ознаку</label>
