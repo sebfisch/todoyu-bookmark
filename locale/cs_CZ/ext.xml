@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="ext.title">Záložky</label>
+	<label index="title">Úkolové záložky</label>
+	<label index="info.nobookmarks">Prozatím žádné záložky</label>
+	<label index="contextmenu.removebookmark">Přidat záložku</label>
+	<label index="contextmenu.addbookmark">Odstranit záložku</label>
+</labels>

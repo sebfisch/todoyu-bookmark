@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="general">Obecné</label>
+	<label index="general.use">Používat záložky</label>
+	<label index="task">Úkolové záložky</label>
+	<label index="task.add">Použít záložku</label>
+	<label index="task.remove">Odstranit záložku</label>
+	<label index="panelwidgets">Panel Widgets</label>
+	<label index="panelwidgets.taskbookmarks">Viz Bookmark Widget</label>
+</labels>

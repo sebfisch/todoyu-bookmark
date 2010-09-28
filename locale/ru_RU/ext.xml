@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="ext.title">Закладки задач</label>
+	<label index="title">Закладки задач</label>
+	<label index="info.nobookmarks">Нет закладок</label>
+	<label index="contextmenu.removebookmark">Закладка -</label>
+	<label index="contextmenu.addbookmark">Закладка +</label>
+</labels>

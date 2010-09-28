@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="ext.title">Означени задаци</label>
+	<label index="title">Означени задаци</label>
+	<label index="info.nobookmarks">Досад не постоје означени задаци</label>
+	<label index="contextmenu.removebookmark">Уклони из означених задатка</label>
+	<label index="contextmenu.addbookmark">Додај у означене задатке</label>
+</labels>

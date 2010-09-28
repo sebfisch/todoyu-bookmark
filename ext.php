@@ -30,7 +30,7 @@ define('EXTID_BOOKMARK', 103);
 define('PATH_EXT_BOOKMARK', PATH_EXT . '/bookmark');
 
 	// Register module locales
-TodoyuLanguage::register('bookmark', PATH_EXT_BOOKMARK . '/locale/ext.xml');
+TodoyuLabelManager::register('bookmark', 'bookmark', 'ext.xml');
 
 	// Request configurations
 	// @notice	Auto-loaded configs if available: admin, assets, create, contextmenu, extinfo, filters, form, page, panelwidgets, rights, search
