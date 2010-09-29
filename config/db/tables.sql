@@ -12,5 +12,6 @@ CREATE TABLE `ext_bookmark_bookmark` (
 	`id_item` int(10) unsigned NOT NULL,
 	`sorting` int(10) unsigned NOT NULL,
 	`title` varchar(255) NOT NULL,
-	PRIMARY KEY (`id`)
+	PRIMARY KEY (`id`),
+	KEY `multi` (`id_person_create`,`id_item`,`type`,`deleted`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
