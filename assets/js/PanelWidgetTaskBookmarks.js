@@ -36,7 +36,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 	key:		'taskbookmarks',
 
-	sortables:	[],
+	sortable:	null,
 
 
 
@@ -177,7 +177,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 * Update task status
 	 *
 	 * @param	{Number}		idTask
-	 * @param	{String}		Status
+	 * @param	{String}		status
 	 */
 	updateTaskStatus: function(idTask, status) {
 		Todoyu.Ext.project.Task.updateStatus(idTask, status);
@@ -191,7 +191,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 * @param	{Number}		idTask
 	 */
 	removeTask: function(idTask) {
-		this.ext.remove('task', idTask, this.refresh.bind(this));
+		this.ext.remove('task', idTask);
+		Effect.SlideUp('taskbookmarks-task-' + idTask);
 	},
 
 
@@ -205,20 +206,14 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 			// Define options for all sortables
 		var options	= {
-			'handle':	'dragPointListItem',
-			'onUpdate':	this.onSortableUpdate.bind(this)
+			handle:		'handle',
+			onUpdate:	this.onSortableUpdate.bind(this),
+			format:		/^[^_\-](?:[A-Za-z0-9\-\_]*)[-](.*)$/
 		};
 
-			// Get all sortable lists
-		var lists	= $('panelwidget-taskbookmarks-content').select('.sortable');
+		var list	= $('panelwidget-taskbookmarks-content').down('ul');
 
-			// Make each list sortable
-		lists.each(function(element) {
-				// Create a sortable
-			Sortable.create(element, options);
-				// Register sortable element
-			this.sortables.push(element);
-		}.bind(this));
+		Sortable.create(list, options);
 	},
 
 
@@ -227,11 +222,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 * Disable bookmark sortability
 	 */
 	disableSortable: function() {
-		this.sortables.each(function(sortableElement){
-			Sortable.destroy(sortableElement);
-		});
-
-		this.sortables = [];
+		Sortable.destroy($('panelwidget-taskbookmarks-content').down('ul'));
 	},
 
 
@@ -242,10 +233,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 * @param	{Element}	listElement
 	 */
 	onSortableUpdate: function(listElement) {
-//		var type	= listElement.id.split('_');
-		var type	= 'task';
 		var items	= Sortable.sequence(listElement);
-		this.saveBookmarksOrder(type, items);
+		this.saveBookmarksOrder('task', items);
 	},
 
 
@@ -264,9 +253,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 		});
 		var idItem	= 0;
 
-		var onComplete = this.refresh.bind(this);
-		
-		this.ext.Preference.save(action, value, idItem, onComplete);
+		this.ext.Preference.save(action, value, idItem);
 	}
 
 
