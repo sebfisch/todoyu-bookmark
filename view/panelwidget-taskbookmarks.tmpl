@@ -16,7 +16,7 @@
 						<span class="task" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})"> - {$taskBookmark.title|truncate:43}</span>
 					{else}
 						<span class="task" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})">
-						 	{$taskBookmark.id_project}.{$taskBookmark.id} - {$taskBookmark.label|truncate:43}
+						 	{$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {$taskBookmark.label|truncate:43}
 						</span>
 					{/if}
 					</div>
