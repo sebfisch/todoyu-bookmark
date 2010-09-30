@@ -35,9 +35,9 @@ class TodoyuBookmarkRefreshActionController extends TodoyuActionController {
 	public function updateAction(array $params) {
 		restrict('bookmark', 'general:use');
 
-		$panelWidget= TodoyuPanelWidgetManager::getPanelWidget('TaskBookmarks', AREA);
+		$panelWidget= TodoyuPanelWidgetManager::getPanelWidget('TaskBookmarks');
 
-		return $panelWidget->render();
+		return $panelWidget->renderContent();
 	}
 
 }

@@ -32,6 +32,8 @@ TodoyuContextMenuManager::addFunction('DaytracksPanelwidget', 'TodoyuBookmarkMan
 	// Contextmenu on widget
 TodoyuContextMenuManager::addFunction('TaskBookmarksPanelWidget', 'TodoyuPanelWidgetTaskBookmarks::getContextMenuItems', 10000);
 
+	// Add timetracking update callbacks
+TodoyuTimetrackingCallbackManager::add('bookmarks', 'TodoyuBookmarkManager::callbackTrackingToggle');
 
 
 

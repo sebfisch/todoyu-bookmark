@@ -45,9 +45,13 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 */
 	init: function() {
 		this.registerTimetracking();
-		this.ContextMenu.attach();
 		this.registerHooks();
 
+		this.initExtra();
+	},
+
+	initExtra: function() {
+		this.ContextMenu.attach();
 		this.initSortable();
 	},
 
@@ -66,32 +70,32 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 * Register to timetracking callbacks
 	 */
 	registerTimetracking: function() {
-		Todoyu.Ext.timetracking.registerToggleCallback(this.onTimetrackingToggle.bind(this));
-		Todoyu.Ext.timetracking.registerClockCallback(this.onTimetrackingClockUpdate.bind(this));
+		Todoyu.Ext.timetracking.addToggle('bookmarks', this.onTrackingToggle.bind(this), this.onTrackingToggleUpdate.bind(this));
 	},
 
 
 
 	/**
-	 * Timetracking toggle-handler
+	 * Callback if timetracking is toggled
 	 *
 	 * @param	{Number}	idTask
 	 * @param	{Boolean}	start
 	 */
-	onTimetrackingToggle: function(idTask, start) {
-		this.refresh();
+	onTrackingToggle: function(idTask, start) {
+		return false;
 	},
 
 
 
 	/**
-	 * Handle timetracking event: clock update
+	 * Update bookmark panelwidget with data from tracking request
 	 *
-	 * @param	{Number}	idTask
-	 * @param	{Number}	time
+	 * @param	{Number}		idTask
+	 * @param	{String}		data		New html content
+	 * @param	{Ajax.Response}	response
 	 */
-	onTimetrackingClockUpdate: function(idTask, time) {
-
+	onTrackingToggleUpdate: function(idTask, data, response) {
+		this.setContent(data);
 	},
 
 
@@ -156,8 +160,13 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 * @param	{Ajax.Response}		response
 	 */
 	onRefreshed: function(response) {
-		this.ContextMenu.attach();
-		this.initSortable();
+		this.initExtra();
+	},
+
+
+	setContent: function(html) {
+		$('panelwidget-taskbookmarks-content').update(html);
+		this.initExtra();
 	},
 
 

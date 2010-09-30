@@ -405,6 +405,21 @@ class TodoyuBookmarkManager {
 		TodoyuRecordManager::removeRecordQueryCache(self::TABLE, $idBookmark);
 	}
 
+
+
+	/**
+	 * Callback to render the content for the bookmark panelwidget
+	 *
+	 * @param	Integer		$idTask
+	 * @param	Boolean		$info		Don't care
+	 * @return	String		Content of the panelwidget
+	 */
+	public static function callbackTrackingToggle($idTask, $info) {
+		$panelWidget = TodoyuPanelWidgetManager::getPanelWidget('TaskBookmarks');
+
+		return $panelWidget->renderContent();
+	}
+
 }
 
 ?>
