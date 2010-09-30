@@ -149,7 +149,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 		this.ContextMenu.detach();
 		this.disableSortable();
 
-		Todoyu.Ui.replace('panelwidget-taskbookmarks', url, options);
+		Todoyu.Ui.update('panelwidget-taskbookmarks-content', url, options);
 	},
 
 
