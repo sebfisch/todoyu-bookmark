@@ -6,30 +6,35 @@
 #panelwidget-taskbookmarks div.bookmarks ul li {
 	min-height:32px;
 	padding:0;
+	border-bottom:1px dotted #AAAAAA;
+	margin-bottom:2px;
 }
-/* status - border colors global */
-#panelwidget-taskbookmarks div.bookmarks ul li {
-	/*border-left-width:14px;*/
-	/*border-left-style:solid;*/
-	/*padding-left:5px;*/
-}
-#panelwidget-taskbookmarks div.bookmarks ul li a.info {
-	display:block;
-	padding:2px; /* icon space */
+
+#panelwidget-taskbookmarks .taskItem {
+	border-left-width:5px;
+	border-left-style:solid;
+	padding:5px 10px 5px 5px;
+	margin:-2px;
+	margin-right:30px;
+	position:relative;
+	z-index:100;
+	overflow:hidden;
 	cursor:pointer;
 }
 
-#panelwidget-taskbookmarks div.bookmarks .info .project {
-	display:block;
-	color:#666;
+#panelwidget-taskbookmarks .taskItem .title,
+#panelwidget-taskbookmarks .taskItem .project {
+	display:inline-block;
+	width:400px;
+}
+
+#panelwidget-taskbookmarks .taskItem .project {
+	color:#999;
 	padding-bottom: 3px;
 }
 
-#panelwidget-taskbookmarks div.bookmarks .info .task  {
-	display:block;
-}
-#panelwidget-taskbookmarks div.bookmarks li.running .info .task,
-#panelwidget-taskbookmarks div.bookmarks li.running .info .taskNumber {
+
+#panelwidget-taskbookmarks li.running .taskItem .title {
 	font-weight: bold;
 }
 
@@ -50,15 +55,7 @@
 
 
 
-#panelwidget-taskbookmarks .taskItem {
-	border-left-width:5px;
-	border-left-style:solid;
-	padding:5px 25px 5px 5px;
-	margin:-2px;
-	margin-right:0;
-	position:relative;
-	z-index:100;
-}
+
 #panelwidget-taskbookmarks .handle {
 	height:100%;
 	width:5px;
@@ -67,11 +64,4 @@
 	top:0;
 	left:0;
 	margin-left:-5px;
-}
-
-#panelwidget-taskbookmarks .handle.hover { }
-
-#panelwidget-taskbookmarksdropZone {
-	width:210px;
-	height:5px;
 }

@@ -6,21 +6,24 @@
 				{if $taskBookmark.isTrackable || $taskBookmark.isRunning}
 					<a id="{$id}-task-{$taskBookmark.id}-btn" class="icon timetracking {$taskBookmark.btnClass}" href="javascript:void(0)" onclick="Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.{$taskBookmark.jsFunction}({$taskBookmark.id})" title="{if $task.id == $current}{Label timetracking.stop}{else}{Label timetracking.start}{/if}"><!-- button --></a>
 				{/if}
-				<a class="info" href="javascript:void(0);">
+				<span class="info">
+					<div class="handle" id="bookmark-{$taskBookmark.id}-handle"></div>
 					<div class="bcStatus{if $taskBookmark.type == constant('TASK_TYPE_TASK')}{$taskBookmark.status}{else}0{/if} taskItem">
 
-					<div class="handle" id="bookmark-{$taskBookmark.id}-handle"></div>
-					{if empty($taskBookmark.label)}
-						<span class="project" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})">{htmlencode $taskBookmark.projecttitle}</span>
-						<span class="taskNumber floatLeft" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})">{$taskBookmark.id_project}.{$taskBookmark.tasknumber}</span>
-						<span class="task" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})"> - {$taskBookmark.title|truncate:43}</span>
-					{else}
-						<span class="task" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})">
-						 	{$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {$taskBookmark.label|truncate:43}
-						</span>
-					{/if}
+						<div class="title" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})">
+							{$taskBookmark.id_project}.{$taskBookmark.tasknumber} -
+							{if empty($taskBookmark.label)}
+								{$taskBookmark.title|truncate:43}
+							{else}
+								{$taskBookmark.label|truncate:43}
+							{/if}
+						</div>
+
+						<div class="project" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})">
+							{htmlencode $taskBookmark.projecttitle}
+						</div>
 					</div>
-				</a>
+				</span>
 			</li>
 		{/foreach}
 		</ul>
