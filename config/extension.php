@@ -32,21 +32,23 @@ TodoyuContextMenuManager::addFunction('DaytracksPanelwidget', 'TodoyuBookmarkMan
 	// Contextmenu on widget
 TodoyuContextMenuManager::addFunction('TaskBookmarksPanelWidget', 'TodoyuPanelWidgetTaskBookmarks::getContextMenuItems', 10000);
 
-	// Add timetracking update callbacks
-TodoyuTimetrackingCallbackManager::add('bookmarks', 'TodoyuBookmarkManager::callbackTrackingToggle');
+if( TodoyuExtensions::isInstalled('timetracking') ) {
+		// Add timetracking update callbacks
+	TodoyuTimetrackingCallbackManager::add('bookmarks', 'TodoyuBookmarkManager::callbackTrackingToggle');
+}
 
-
-
-/**
- * Add bookmarks module to profile
- */
-TodoyuProfileManager::addModule('bookmark', array(
-	'position'	=> 10,
-	'tabs'		=> 'TodoyuBookmarkProfileRenderer::renderTabs',
-	'content'	=> 'TodoyuBookmarkProfileRenderer::renderContent',
-	'label'		=> 'bookmark.profile.module',
-	'class'		=> 'bookmark'
-));
+if( TodoyuExtensions::isInstalled('profile') ) {
+	/**
+	 * Add bookmarks module to profile
+	 */
+	TodoyuProfileManager::addModule('bookmark', array(
+		'position'	=> 10,
+		'tabs'		=> 'TodoyuBookmarkProfileRenderer::renderTabs',
+		'content'	=> 'TodoyuBookmarkProfileRenderer::renderContent',
+		'label'		=> 'bookmark.profile.module',
+		'class'		=> 'bookmark'
+	));
+}
 
 
 
