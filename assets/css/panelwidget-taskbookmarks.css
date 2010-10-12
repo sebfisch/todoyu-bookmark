@@ -30,12 +30,12 @@
 
 #panelwidget-taskbookmarks .taskItem .project {
 	color:#999;
-	padding-bottom: 3px;
+	padding-bottom:3px;
 }
 
 
 #panelwidget-taskbookmarks li.running .taskItem .title {
-	font-weight: bold;
+	font-weight:bold;
 }
 
 #panelwidget-taskbookmarks div.bookmarks ul li a.timetracking {
@@ -44,7 +44,7 @@
 	clear:none;
 	width:22px;
 	height:22px;
-	position: relative;
+	position:relative;
 	z-index:101;
 	background:url(../../../timetracking/assets/img/icons.png) no-repeat 0 -27px;
 }
@@ -52,7 +52,6 @@
 #panelwidget-taskbookmarks div.bookmarks ul li.running a {
 	background-position:0 3px !important;
 }
-
 
 
 

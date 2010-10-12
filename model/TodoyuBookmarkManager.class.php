@@ -60,7 +60,7 @@ class TodoyuBookmarkManager {
 		$idPersonCreate	= intval($idPersonCreate);
 		$idType		= self::getTypeIndex($typeKey);
 
-		if ( $idPersonCreate === 0 ) {
+		if( $idPersonCreate === 0 ) {
 			$idPersonCreate	= personid();
 		}
 

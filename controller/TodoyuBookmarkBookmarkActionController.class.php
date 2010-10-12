@@ -58,7 +58,7 @@ class TodoyuBookmarkBookmarkActionController extends TodoyuActionController {
 		$idItem	= intval($params['item']);
 
 			// No item ID given? get from bookmark ID
-		if ( $idItem === 0 ) {
+		if( $idItem === 0 ) {
 			$idBookmark	= intval($params['bookmark']);
 			$idItem		= TodoyuBookmarkManager::getItemID($idBookmark);
 		}

@@ -140,7 +140,7 @@ class TodoyuBookmarkProfileRenderer {
 		$form		= TodoyuFormManager::getForm($xmlPath, $idBookmark);
 
 		$label	= $bookmark->getLabel();
-		if ( is_null($label) ) {
+		if( is_null($label) ) {
 			$label	= $task->getTitle(); 
 		}
 
