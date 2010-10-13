@@ -330,10 +330,8 @@ class TodoyuBookmarkManager {
 	 * @return	Array
 	 */
 	public static function getTaskBookmarkListingData($size, $offset = 0, $searchWord = '') {
-		$data	= array();
-		$bookmarks= self::getTaskBookmarks();
-
-		$data	= array(
+		$bookmarks	= self::getTaskBookmarks();
+		$data		= array(
 			'rows'	=> array(),
 			'total'	=> Todoyu::db()->getTotalFoundRows()
 		);

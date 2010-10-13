@@ -65,7 +65,7 @@ Todoyu.Ext.bookmark.Profile =  {
 	 * Close bookmark edit form
 	 */
 	closeForm: function() {
-		this.ext.up
+//		this.ext.up
 	},
 
 
