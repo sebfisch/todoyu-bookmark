@@ -37,7 +37,7 @@ if( TodoyuExtensions::isInstalled('timetracking') ) {
 	TodoyuTimetrackingCallbackManager::add('bookmarks', 'TodoyuBookmarkManager::callbackTrackingToggle');
 }
 
-if( TodoyuExtensions::isInstalled('profile') ) {
+if( TodoyuExtensions::isInstalled('profile') && allowed('bookmark', 'general:use') ) {
 	/**
 	 * Add bookmarks module to profile
 	 */
