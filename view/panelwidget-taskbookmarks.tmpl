@@ -2,7 +2,7 @@
 	{if $bookmarks}
 		<ul class="contextmenutaskbookmarks ulListDotted withMouseHover sortable">
 		{foreach $bookmarks taskBookmark}
-			<li id="{$id}-task-{$taskBookmark.id}" class="{cycle values="odd,even"} listItem sortable bcStatus{$taskBookmark.status} {if $taskBookmark.isRunning}running{/if}" title="{if taskBookmark.type === constant('TASK_TYPE_TASK')}{Label task.task}{else}{Label task.type.container}{/if} {$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {$taskBookmark.title}">
+			<li id="{$id}-task-{$taskBookmark.id}" class="{cycle values="odd,even"} listItem sortable bcStatus{$taskBookmark.status} {if $taskBookmark.isRunning}running{/if}" title="{if taskBookmark.type === constant('TASK_TYPE_TASK')}{Label task.task}{else}{Label task.type.container}{/if} {$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {htmlencode $taskBookmark.title}">
 				{if $taskBookmark.isTrackable || $taskBookmark.isRunning}
 					<a id="{$id}-task-{$taskBookmark.id}-btn" class="icon timetracking {$taskBookmark.btnClass}" href="javascript:void(0)" onclick="Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.{$taskBookmark.jsFunction}({$taskBookmark.id});this.onclick=''" title="{if $task.id == $current}{Label timetracking.stop}{else}{Label timetracking.start}{/if}"><!-- button --></a>
 				{/if}
@@ -13,9 +13,9 @@
 						<div class="title" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})">
 							{$taskBookmark.id_project}.{$taskBookmark.tasknumber} -
 							{if empty($taskBookmark.label)}
-								{$taskBookmark.title|truncate:43}
+								{htmlencode(truncate($taskBookmark.title,43))}
 							{else}
-								{$taskBookmark.label|truncate:43}
+								{htmlencode(truncate($taskBookmark.label,43))}
 							{/if}
 						</div>
 
