@@ -18,9 +18,15 @@
 *****************************************************************************/
 
 /**
- *	Bookmark JS stuff
+ * @module	Bookmark
  */
 
+/**
+ *	Bookmark main object
+ *
+ * @class		bookmark
+ * @namespace	Todoyu.Ext
+ */
 Todoyu.Ext.bookmark = {
 
 	PanelWidget: {},
@@ -29,7 +35,7 @@ Todoyu.Ext.bookmark = {
 
 	/**
 	 * 	Add bookmark
-	 * 
+	 *
 	 * @param	{String}	type
 	 * @param	{Number}	idItem
 	 * @param	{String}	onComplete
