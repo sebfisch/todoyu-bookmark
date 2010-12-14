@@ -25,16 +25,7 @@
  * @subpackage	Bookmark
  */
 
-	// Declare ext ID, path
-define('EXTID_BOOKMARK', 103);
-define('PATH_EXT_BOOKMARK', PATH_EXT . '/bookmark');
 
-	// Register module locales
-TodoyuLabelManager::register('bookmark', 'bookmark', 'ext.xml');
-
-	// Request configurations
-	// @notice	Auto-loaded configs if available: admin, assets, create, contextmenu, extinfo, filters, form, page, panelwidgets, rights, search
-require_once( PATH_EXT_BOOKMARK . '/config/constants.php' );
 require_once( PATH_EXT_BOOKMARK . '/config/extension.php' );
 
 ?>

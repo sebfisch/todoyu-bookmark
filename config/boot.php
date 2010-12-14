@@ -18,13 +18,13 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-/**
- * General configuration for bookmark extension
- *
- * @package		Todoyu
- * @subpackage	Bookmark
- */
+	// Declare ext ID, path
+define('EXTID_BOOKMARK', 103);
+define('PATH_EXT_BOOKMARK', PATH_EXT . '/bookmark');
 
+require_once( PATH_EXT_BOOKMARK . '/config/constants.php' );
 
+	// Register module locales
+TodoyuLabelManager::register('bookmark', 'bookmark', 'ext.xml');
 
 ?>
