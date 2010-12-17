@@ -43,8 +43,8 @@ Todoyu.Ext.bookmark.Profile =  {
 	/**
 	 * Edit (bookmark)
 	 *
-	 * @paran	{String}		type
-	 * @paran	{Integer}		idBookmark
+	 * @param	{String}		type
+	 * @param	{Integer}		idBookmark
 	 */
 	initRenameForm: function(type, idBookmark) {
 		var url = Todoyu.getUrl('bookmark', 'profile');
@@ -60,12 +60,14 @@ Todoyu.Ext.bookmark.Profile =  {
 	},
 
 
-
+	
 	/**
-	 * Close bookmark edit form
+	 * Close form by reloading the bookmarks list
+	 *
+	 * @param	{String}	type
 	 */
-	closeForm: function() {
-//		this.ext.up
+	closeForm: function(type) {
+		this.updateContent(type);
 	},
 
 
@@ -73,8 +75,8 @@ Todoyu.Ext.bookmark.Profile =  {
 	/**
 	 * Delete given bookmark record
 	 *
-	 * @paran	{String}		type
-	 * @paran	{Number}		idBookmark
+	 * @param	{String}		type
+	 * @param	{Number}		idBookmark
 	 */
 	remove: function(type, idBookmark) {
 		if( confirm('[LLL:bookmark.bookmark.delete.confirm]') )	{
@@ -98,21 +100,10 @@ Todoyu.Ext.bookmark.Profile =  {
 	/**
 	 * Handler being evoked after onComplete of bookmark deletion: update listing display
 	 *
-	 * @paran	{Number}	idBookmark
-	 * @paran	{Object}	response
+	 * @param	{Number}	idBookmark
+	 * @param	{Object}	response
 	 */
 	onRemoved: function(type, idBookmark, response) {
-		this.updateContent(type);
-	},
-
-
-
-	/**
-	 * Close form by reloading the bookmarks list
-	 *
-	 * @param	{String}	type
-	 */
-	closeForm: function(type) {
 		this.updateContent(type);
 	},
 
@@ -141,8 +132,8 @@ Todoyu.Ext.bookmark.Profile =  {
 	/**
 	 * Save bookmark form
 	 *
-	 * @paran	{String}		type
-	 * @paran	{String}		form
+	 * @param	{String}		type
+	 * @param	{String}		form
 	 * @return	{Boolean}
 	 */
 	save: function(type, form) {
@@ -161,7 +152,7 @@ Todoyu.Ext.bookmark.Profile =  {
 	/**
 	 * Handler evoked upon onComplete of bookmark saving: check for and notify success / error, update display
 	 *
-	 * @paran	{Array}		response
+	 * @param	{Array}		response
 	 */
 	onSaved: function(response) {
 		var type	= 'task';
