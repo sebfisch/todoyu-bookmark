@@ -18,11 +18,11 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-	// Contextmenu on task
+	// Context menu on task
 TodoyuContextMenuManager::addFunction('Task', 'TodoyuBookmarkManager::getTaskContextMenuItems');
-	// Contextmenu on daytracks
+	// Context menu on daytracks
 TodoyuContextMenuManager::addFunction('DaytracksPanelwidget', 'TodoyuBookmarkManager::getTaskContextMenuItems');
-	// Contextmenu on widget
+	// Context menu on widget
 TodoyuContextMenuManager::addFunction('TaskBookmarksPanelWidget', 'TodoyuPanelWidgetTaskBookmarks::getContextMenuItems', 10000);
 
 if( TodoyuExtensions::isInstalled('timetracking') ) {
