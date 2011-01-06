@@ -79,7 +79,7 @@ Todoyu.Ext.bookmark.Profile =  {
 	 * @param	{Number}		idBookmark
 	 */
 	remove: function(type, idBookmark) {
-		if( confirm('[LLL:bookmark.bookmark.delete.confirm]') )	{
+		if( confirm('[LLL:bookmark.bookmark.delete.confirm]') ) {
 			var url = Todoyu.getUrl('bookmark', 'bookmark');
 			var options = {
 				'parameters': {

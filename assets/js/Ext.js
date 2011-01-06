@@ -84,8 +84,8 @@ Todoyu.Ext.bookmark = {
 	 *
 	 * @param	{Number}	idTask
 	 */
-	start: function(idTask)	{
-		if(idTask > 0)	{
+	start: function(idTask) {
+		if( idTask > 0 ) {
 			Todoyu.Ext.timetracking.Task.start(idTask);
 		}
 	},
@@ -97,8 +97,8 @@ Todoyu.Ext.bookmark = {
 	 *
 	 * @param	{Number}	idTask
 	 */
-	stop: function(idTask)	{
-		if(idTask > 0)	{
+	stop: function(idTask) {
+		if( idTask > 0 ) {
 			Todoyu.Ext.timetracking.Task.stop(idTask);
 		}
 	}

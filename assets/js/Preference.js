@@ -47,7 +47,7 @@ Todoyu.Ext.bookmark.Preference = {
 	 *
 	 * @param	{String}	value
 	 */
-	saveOrder: function(value)	{
+	saveOrder: function(value) {
 		var action = 'saveOrder';
 		this.sendAction(action, value);
 	},
@@ -60,7 +60,7 @@ Todoyu.Ext.bookmark.Preference = {
 	 * @param	{String}	action
 	 * @param	{String}	value
 	 */
-	sendAction: function(action, value)	{
+	sendAction: function(action, value) {
 		var url = Todoyu.getUrl('bookmark', 'preference');
 		var options = {
 			'parameters': {
