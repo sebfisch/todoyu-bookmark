@@ -19,7 +19,7 @@
 *****************************************************************************/
 
 /**
- * Renderer for profile module of bookmarks 
+ * Renderer for profile module of bookmarks
  *
  * @package		Todoyu
  * @subpackage	Bookmarks
@@ -38,7 +38,7 @@ class TodoyuBookmarkProfileRenderer {
 
 		$jsHandler	= 'Todoyu.Ext.bookmark.Profile.onTabClick.bind(Todoyu.Ext.bookmark.Profile)';
 
-		$tabs		= TodoyuTabManager::getTabs(Todoyu::$CONFIG['EXT']['profile']['bookmarkTabs']);
+		$tabs		= TodoyuTabManager::getAllowedTabs(Todoyu::$CONFIG['EXT']['profile']['bookmarkTabs']);
 		$active		= $params['tab'];
 
 		if( is_null($active) )	{
@@ -141,7 +141,7 @@ class TodoyuBookmarkProfileRenderer {
 
 		$label	= $bookmark->getLabel();
 		if( is_null($label) ) {
-			$label	= $task->getTitle(); 
+			$label	= $task->getTitle();
 		}
 
 			// Get form data
