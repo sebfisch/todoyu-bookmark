@@ -100,8 +100,8 @@ Todoyu.Ext.bookmark.Profile =  {
 	/**
 	 * Handler being evoked after onComplete of bookmark deletion: update listing display
 	 *
-	 * @param	{Number}	idBookmark
-	 * @param	{Object}	response
+	 * @param	{Number}			idBookmark
+	 * @param	{Ajax.Response}		response
 	 */
 	onRemoved: function(type, idBookmark, response) {
 		this.updateContent(type);
