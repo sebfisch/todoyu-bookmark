@@ -36,6 +36,7 @@ Todoyu.Ext.bookmark = {
 	/**
 	 * 	Add bookmark
 	 *
+	 * @method	add
 	 * @param	{String}	type
 	 * @param	{Number}	idItem
 	 * @param	{String}	onComplete
@@ -59,6 +60,7 @@ Todoyu.Ext.bookmark = {
 	/**
 	 * Remove bookmark
 	 *
+	 * @method	remove
 	 * @param	{String}	type
 	 * @param	{Number}	idItem
 	 * @param	{String}	onComplete
@@ -82,6 +84,7 @@ Todoyu.Ext.bookmark = {
 	/**
 	 * Start timetracking of given task in the bookmark box
 	 *
+	 * @method	start
 	 * @param	{Number}	idTask
 	 */
 	start: function(idTask) {
@@ -95,6 +98,7 @@ Todoyu.Ext.bookmark = {
 	/*
 	 * Stop timetracking of given task in the bookmark box
 	 *
+	 * @method	stop
 	 * @param	{Number}	idTask
 	 */
 	stop: function(idTask) {

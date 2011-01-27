@@ -31,6 +31,7 @@ Todoyu.Ext.bookmark.Preference = {
 	/**
 	 * Save given preference of bookmark extension
 	 *
+	 * @method	save
 	 * @param	{String}	action
 	 * @param	{String}	value
 	 * @param	{String}	idItem
@@ -45,6 +46,7 @@ Todoyu.Ext.bookmark.Preference = {
 	/**
 	 * Save preference: current order of bookmark filters
 	 *
+	 * @method	saveOrder
 	 * @param	{String}	value
 	 */
 	saveOrder: function(value) {
@@ -57,6 +59,7 @@ Todoyu.Ext.bookmark.Preference = {
 	/**
 	 * Wrapper method to evoke given bookmark action with given value
 	 *
+	 * @method	sendAction
 	 * @param	{String}	action
 	 * @param	{String}	value
 	 */

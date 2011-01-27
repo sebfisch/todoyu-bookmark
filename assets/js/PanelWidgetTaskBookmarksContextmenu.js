@@ -33,6 +33,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.ContextMenu = {
 
 	/**
 	 * Attach context menu to bookmarks panel widget
+	 *
+	 * @method	attach
 	 */
 	attach: function() {
 		Todoyu.ContextMenu.attach('TaskBookmarksPanelWidget', '.contextmenutaskbookmarks', this.getID.bind(this));
@@ -42,6 +44,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.ContextMenu = {
 
 	/**
 	 * Detach context menu from bookmarks panel widget
+	 *
+	 * @method	detach
 	 */
 	detach: function() {
 		Todoyu.ContextMenu.detach('.contextmenutaskbookmarks');
@@ -51,6 +55,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.ContextMenu = {
 	/**
 	 * Extract ID of clicked bookmark from event
 	 *
+	 * @method	getID
 	 * @param	{Element}	element
 	 * @param	{Event}		event
 	 * @return	{String}

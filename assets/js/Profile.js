@@ -31,6 +31,7 @@ Todoyu.Ext.bookmark.Profile =  {
 	/**
 	 * Handler for tabs in bookmarks area of profile
 	 *
+	 * @method	onTabClick
 	 * @param	{Event}		event
 	 * @param	{String}	tabKey
 	 */
@@ -43,6 +44,7 @@ Todoyu.Ext.bookmark.Profile =  {
 	/**
 	 * Edit (bookmark)
 	 *
+	 * @method	initRenameForm
 	 * @param	{String}		type
 	 * @param	{Integer}		idBookmark
 	 */
@@ -64,6 +66,7 @@ Todoyu.Ext.bookmark.Profile =  {
 	/**
 	 * Close form by reloading the bookmarks list
 	 *
+	 * @method	closeForm
 	 * @param	{String}	type
 	 */
 	closeForm: function(type) {
@@ -75,6 +78,7 @@ Todoyu.Ext.bookmark.Profile =  {
 	/**
 	 * Delete given bookmark record
 	 *
+	 * @method	remove
 	 * @param	{String}		type
 	 * @param	{Number}		idBookmark
 	 */
@@ -100,6 +104,7 @@ Todoyu.Ext.bookmark.Profile =  {
 	/**
 	 * Handler being evoked after onComplete of bookmark deletion: update listing display
 	 *
+	 * @method	onRemoved
 	 * @param	{Number}			idBookmark
 	 * @param	{Ajax.Response}		response
 	 */
@@ -112,6 +117,7 @@ Todoyu.Ext.bookmark.Profile =  {
 	/**
 	 * Show (filtered) bookmarks list
 	 *
+	 * @method	updateContent
 	 * @param	{String}	type
 	 */
 	updateContent: function(type) {
@@ -132,6 +138,7 @@ Todoyu.Ext.bookmark.Profile =  {
 	/**
 	 * Save bookmark form
 	 *
+	 * @method	save
 	 * @param	{String}		type
 	 * @param	{String}		form
 	 * @return	{Boolean}
@@ -152,6 +159,7 @@ Todoyu.Ext.bookmark.Profile =  {
 	/**
 	 * Handler evoked upon onComplete of bookmark saving: check for and notify success / error, update display
 	 *
+	 * @method	onSaved
 	 * @param	{Array}		response
 	 */
 	onSaved: function(response) {

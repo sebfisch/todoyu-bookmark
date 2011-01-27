@@ -42,6 +42,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 	/**
 	 * Initialize task bookmarks panel widget
+	 *
+	 * @method	init
 	 */
 	init: function() {
 		this.registerTimetracking();
@@ -50,6 +52,13 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 		this.initExtra();
 	},
 
+
+
+	/**
+	 * Additional initialization: contextmenu, sortables
+	 *
+	 * @method	initExtra
+	 */
 	initExtra: function() {
 		this.ContextMenu.attach();
 		this.initSortable();
@@ -59,6 +68,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 	/**
 	 * Register JS hooks of task bookmarks
+	 *
+	 * @method	registerHooks
 	 */
 	registerHooks: function() {
 		Todoyu.Hook.add('project.task.statusUpdated', this.onTaskStatusUpdated.bind(this));
@@ -68,6 +79,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 	/**
 	 * Register to timetracking callbacks
+	 *
+	 * @method	registerTimetracking
 	 */
 	registerTimetracking: function() {
 		Todoyu.Ext.timetracking.addToggle('bookmarks', this.onTrackingToggle.bind(this), this.onTrackingToggleUpdate.bind(this));
@@ -78,6 +91,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Callback if timetracking is toggled
 	 *
+	 * @method	onTrackingToggle
 	 * @param	{Number}	idTask
 	 * @param	{Boolean}	start
 	 */
@@ -90,6 +104,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Update bookmark panelwidget with data from tracking request
 	 *
+	 * @method	onTrackingToggleUpdate
 	 * @param	{Number}		idTask
 	 * @param	{String}		data		New html content
 	 * @param	{Ajax.Response}	response
@@ -103,6 +118,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Handler when task status is updated and hook is called
 	 *
+	 * @method	onTaskStatusUpdated
 	 * @param	{Number}		idTask
 	 * @param	{Number}		status
 	 */
@@ -115,6 +131,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Start task timetracking
 	 *
+	 * @method	startTask
 	 * @param	{Number}		idTask
 	 */
 	startTask: function(idTask) {
@@ -126,6 +143,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Stop task timetracking
 	 *
+	 * @method	stopTask
 	 * @param	{Number}		idTask
 	 */
 	stopTask: function(idTask) {
@@ -136,6 +154,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 	/**
 	 * Refresh the widget content
+	 *
+	 * @method	refresh
 	 */
 	refresh: function() {
 		var url 	= Todoyu.getUrl('bookmark', 'refresh');	// ext, action
@@ -157,6 +177,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * onRefreshed task bookmarks event handler
 	 *
+	 * @method	onRefreshed
 	 * @param	{Ajax.Response}		response
 	 */
 	onRefreshed: function(response) {
@@ -164,6 +185,12 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	},
 
 
+	/**
+	 * Set taskbookmarks widget content, reinit associated extras
+	 *
+	 * @method	setContent
+	 * @param	{String}	html
+	 */
 	setContent: function(html) {
 		$('panelwidget-taskbookmarks-content').update(html);
 		this.initExtra();
@@ -174,6 +201,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Show given task within its project
 	 *
+	 * @method	showTaskInProject
 	 * @param	{Number}		idTask
 	 */
 	showTaskInProject: function(idTask) {
@@ -185,6 +213,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Update task status
 	 *
+	 * @method	updateTaskStatus
 	 * @param	{Number}		idTask
 	 * @param	{String}		status
 	 */
@@ -197,6 +226,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Remove given task bookmark from favorites
 	 *
+	 * @method	removeTask
 	 * @param	{Number}		idTask
 	 */
 	removeTask: function(idTask) {
@@ -209,6 +239,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Initialize bookmark sortables
 	 * Remark: element id's of sortable items MUST separate element and item identifier by underscore for sortable to work!
+	 *
+	 * @method	initSortable
 	 */
 	initSortable: function() {
 		this.disableSortable();
@@ -229,6 +261,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 	/**
 	 * Disable bookmark sortability
+	 *
+	 * @method	disableSortable
 	 */
 	disableSortable: function() {
 		Sortable.destroy($('panelwidget-taskbookmarks-content').down('ul'));
@@ -239,6 +273,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Handler after update of filterSet sortables
 	 *
+	 * @method	onSortableUpdate
 	 * @param	{Element}	listElement
 	 */
 	onSortableUpdate: function(listElement) {
@@ -251,6 +286,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Save order of filterSet items (conditions)
 	 *
+	 * @method	saveBookmarksOrder
 	 * @param	{String}	type
 	 * @param	{Array}		items
 	 */
@@ -264,6 +300,5 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 		this.ext.Preference.save(action, value, idItem);
 	}
-
 
 };

@@ -31,6 +31,7 @@ Todoyu.Ext.bookmark.Task = {
 	/**
 	 * Add task bookmark (of given task)
 	 *
+	 * @method	add
 	 * @param	{Number}		idTask
 	 */
 	add: function(idTask) {
@@ -42,6 +43,7 @@ Todoyu.Ext.bookmark.Task = {
 	/**
 	 * Event handler being evoked after having added task bookmark
 	 *
+	 * @method	onAdded
 	 * @param	{Number}		idTask
 	 * @param	{Ajax.Response}		response
 	 */
@@ -54,6 +56,7 @@ Todoyu.Ext.bookmark.Task = {
 	/**
 	 * Remove bookmark of given task
 	 *
+	 * @method	remove
 	 * @param	{Number}		idTask
 	 */
 	remove: function(idTask) {
@@ -65,6 +68,7 @@ Todoyu.Ext.bookmark.Task = {
 	/**
 	 * Event handler being evoked after removal of task bookmark
 	 *
+	 * @method	onRemoved
 	 * @param	{Number}			idTask
 	 * @param	{Ajax.Response}		response
 	 */
@@ -76,6 +80,8 @@ Todoyu.Ext.bookmark.Task = {
 
 	/**
 	 * Refresh bookmarks panel widget
+	 *
+	 * @method	refreshPanelWidget
 	 */
 	refreshPanelWidget: function() {
 		if( Todoyu.PanelWidget.isLoaded('bookmark', 'TaskBookmarks') ) {
