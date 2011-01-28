@@ -1,84 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<locallang>
-	<labels lang="en_GB">
-		<label index="general">General</label>
-		<label index="general.use">Use Bookmarks</label>
-		<label index="task">Task Bookmarks</label>
-		<label index="task.add">Bookmark Task</label>
-		<label index="task.remove">Remove Bookmarks</label>
-		<label index="panelwidgets">Panel Widgets</label>
-		<label index="panelwidgets.taskbookmarks">See Bookmark Widget</label>
-	</labels>
-	<labels lang="de_DE">
-		<label index="general">Allgemein</label>
-		<label index="general.use">Favoriten verwenden</label>
-		<label index="task">Aufgaben Favoriten</label>
-		<label index="task.add">Favorit zu Aufgabe erstellen</label>
-		<label index="task.remove">Aufgaben-Favorit entfernen</label>
-		<label index="panelwidgets">Steuerelemente</label>
-		<label index="panelwidgets.taskbookmarks">Sieht Favoriten Widget</label>
-	</labels>
-	<labels lang="pt_BR">
-		<label index="general">Configuração</label>
-		<label index="general.use">Utilizar Bookmarks</label>
-		<label index="task">Bookmarks de Tarefa</label>
-		<label index="task.add">Bookmark a Tarefa</label>
-		<label index="task.remove">Remover Bookmarks</label>
-		<label index="panelwidgets">Painel de Widgets</label>
-		<label index="panelwidgets.taskbookmarks">Exibir o Widget de Bookmark</label>
-	</labels>
-	<labels lang="ru_RU">
-		<label index="general">Общие</label>
-		<label index="general.use">Использовать закладки</label>
-		<label index="task">Закладки задач</label>
-		<label index="task.add">Закладка задачи</label>
-		<label index="task.remove">Удалить закладки</label>
-		<label index="panelwidgets">Виджеты панели</label>
-		<label index="panelwidgets.taskbookmarks">Смотрите виджет закладок</label>
-	</labels>
-	<labels lang="fr_FR">
-		<label index="general">Gnral</label>
-		<label index="general.use">Utiliser les raccourcis</label>
-		<label index="task">Raccourcis de tches</label>
-		<label index="task.add">Crer un raccourcis de tche</label>
-		<label index="task.remove">Effacer les raccourcis</label>
-		<label index="panelwidgets">Panneau de Widgets</label>
-		<label index="panelwidgets.taskbookmarks">Voir le Widget de raccourcis</label>
-	</labels>
-	<labels lang="nl_NL">
-		<label index="general">Algemeen</label>
-		<label index="general.use">Favorieten gebruiken</label>
-		<label index="task">Taak-favorieten</label>
-		<label index="task.add">Taak toevoegen aan favorieten</label>
-		<label index="task.remove">Favorieten verwijderen</label>
-		<label index="panelwidgets">Stuurelementen</label>
-		<label index="panelwidgets.taskbookmarks">Zie favorieten-element</label>
-	</labels>
-	<labels lang="cs_CZ">
-		<label index="general">Obecné</label>
-		<label index="general.use">Používat záložky</label>
-		<label index="task">Úkolové záložky</label>
-		<label index="task.add">Použít záložku</label>
-		<label index="task.remove">Odstranit záložku</label>
-		<label index="panelwidgets">Panel Widgets</label>
-		<label index="panelwidgets.taskbookmarks">Viz Bookmark Widget</label>
-	</labels>
-	<labels lang="sr_RS">
-		<label index="general">Општи</label>
-		<label index="general.use">Употребите ознаке</label>
-		<label index="task">Ознаке задатка</label>
-		<label index="task.add">Означи задатак</label>
-		<label index="task.remove">Уклони ознаку</label>
-		<label index="panelwidgets">Гаџети панел</label>
-		<label index="panelwidgets.taskbookmarks">Видите гаџет ознаке</label>
-	</labels>
-	<labels lang="ja_JP">
-		<label index="general">一般</label>
-		<label index="general.use">ブックマークの使用</label>
-		<label index="task">タスクブックマーク</label>
-		<label index="task.add">タスクをブックマークする</label>
-		<label index="task.remove">ブックマークを削除する</label>
-		<label index="panelwidgets">パネルウィジェット</label>
-		<label index="panelwidgets.taskbookmarks">ブックマークウィジェットの表示</label>
-	</labels>
-</locallang>
+<labels>
+	<label index="general">Општи</label>
+	<label index="general.use">Употребите ознаке</label>
+	<label index="task">Ознаке задатка</label>
+	<label index="task.add">Означи задатак</label>
+	<label index="task.remove">Уклони ознаку</label>
+	<label index="panelwidgets">Гаџети панел</label>
+	<label index="panelwidgets.taskbookmarks">Видите гаџет ознаке</label>
+</labels>
