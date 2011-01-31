@@ -62,7 +62,7 @@ Todoyu.Ext.bookmark.Profile =  {
 	},
 
 
-	
+
 	/**
 	 * Close form by reloading the bookmarks list
 	 *
