@@ -18,22 +18,29 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
-	// Context menu on task
+/* ----------------------------
+	Context Menu Callbacks
+   ---------------------------- */
+	// Tasks
 TodoyuContextMenuManager::addFunction('Task', 'TodoyuBookmarkManager::getTaskContextMenuItems');
-	// Context menu on daytracks
+	// Daytracks Widget
 TodoyuContextMenuManager::addFunction('DaytracksPanelwidget', 'TodoyuBookmarkManager::getTaskContextMenuItems');
-	// Context menu on widget
+	// Bookmarks Widget
 TodoyuContextMenuManager::addFunction('TaskBookmarksPanelWidget', 'TodoyuPanelWidgetTaskBookmarks::getContextMenuItems', 10000);
 
+
+
+	// Add timetracking update callbacks
 if( TodoyuExtensions::isInstalled('timetracking') ) {
-		// Add timetracking update callbacks
 	TodoyuTimetrackingCallbackManager::add('bookmarks', 'TodoyuBookmarkManager::callbackTrackingToggle');
 }
 
+
+
+/* -------------------------------------
+	Add bookmarks module to profile
+   ------------------------------------- */
 if( TodoyuExtensions::isInstalled('profile') && allowed('bookmark', 'general:use') ) {
-	/**
-	 * Add bookmarks module to profile
-	 */
 	TodoyuProfileManager::addModule('bookmark', array(
 		'position'	=> 10,
 		'tabs'		=> 'TodoyuBookmarkProfileRenderer::renderTabs',
@@ -45,9 +52,9 @@ if( TodoyuExtensions::isInstalled('profile') && allowed('bookmark', 'general:use
 
 
 
-/**
- * Tabs for bookmark section in profile
- */
+/* ----------------------------------------
+	Tabs for bookmark section in profile
+   ---------------------------------------- */
 Todoyu::$CONFIG['EXT']['profile']['bookmarkTabs'] = array(
 	array(
 		'id'			=> 'tasks',
@@ -58,9 +65,9 @@ Todoyu::$CONFIG['EXT']['profile']['bookmarkTabs'] = array(
 
 
 
-/**
- * Configure listings for bookmarks
- */
+/* ------------------------------------
+	Configure listings for bookmarks
+   ------------------------------------ */
 Todoyu::$CONFIG['EXT']['bookmark']['listing']['bookmark'] = array(
 	'name'		=> 'bookmark',
 	'update'	=> 'bookmark/bookmark/listing',
