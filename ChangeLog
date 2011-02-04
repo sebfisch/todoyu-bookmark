@@ -1,7 +1,7 @@
 todoyu bookmark extension changelog
 
 bookmark 1.1.0 (requires core >= 2.1) - not released yet
-	* Updated loading structure: (core: boot.php, init: request,) extensions: init.php
+	* Changed: Updated loading structure: (core: boot.php, init: request,) extensions: init.php
 
 
 bookmark 1.0.7 - not released yet
