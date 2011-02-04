@@ -1,0 +1,56 @@
+todoyu bookmark extension changelog
+
+bookmark 1.1.0 (requires core >= 2.1) - not released yet
+	* Updated loading structure: (core: boot.php, init: request,) extensions: init.php
+
+
+bookmark 1.0.7 - not released yet
+	* Feature: Added placeholders for to-be spanish locale files
+	* Feature: Added changelog
+
+
+bookmark 1.0.1 to 1.0.6 - 1.0.6 released 2011-01-17
+	* Changed: Incremented year in copyright notice to 2011
+	* Bugfx: Removed left-over debug output
+	* Changed: Added code comments, unified ambiguous JsDoc comments
+	* Changed: Renamed tab function
+	* Feature: Optimized panelwidget styling
+	* Feature: Added italian translation
+	* Feature: Added htmlencode() for dynamic labels
+	* Feature: Added access check to bookmarks administration in profile module
+ 	* Bugfix: Fixed problem with extension dependency in bookmark
+	* Feature: Disable links for bookmarks and daytracks on click (prevent multi click)
+	* Feature: Harmonized look of daytracks and bookmarks
+	* Feature: Merged all tracking request into a single request (much faster now)
+	* Feature: Added hooks documentation
+	* Bugfix: Fixed bookmark task number (was task id)
+	* Feature: Added support for linked task number in text (project, task, comment)
+	* Bugfix: Fixed bookmark items sorting, saved order
+	* Feature: Made containers bookmarkable, added label variation by type (task/container)
+	* Feature: Editable bookmark labels
+	* Feature: Highlighted running tasks in bookmarks panelwidget
+	* Feature: Bookmarks sortable via drag and drop, added prefs
+	* Feature: Added hooks documentation
+	* Feature: Added Serbian locales
+	* Feature: Moved styles from global.css to ext.css
+	* Bugfix: Fixed content menu icons of bookmarks
+	* Feature: Added japanese translation
+	* Feature: Added czech translation
+	* Feature: Added dutch translation
+	* Feature: Added parts of french translation
+	* Feature: Added EXTKEY constant
+	* Changed: Removed manual requiring of auto-loaded config files
+	* Feature: Added portuguese translation
+	* Changed: Fixed headlet icons positioning
+	* Changed: Switched license from GPL to BSD
+	* Changed: Moved the global $CONFIG variable to Todoyu class. Is now a public static member variable
+	* Changed: Asset handling (load all in one merge file)
+	* Bugfix: JS initialization order
+	* Bugfix: Task bookmarks of deleted projects are not listed anymore
+	* Feature: Added Rights
+	* Changed: Moved page config to own config/page.php which is loaded only on page rendering
+	* Feature: Added new version of role manager and rights editor
+
+
+bookmark 1.0.0 - released 2010-05-10
+	* Changed: Declared state stable
