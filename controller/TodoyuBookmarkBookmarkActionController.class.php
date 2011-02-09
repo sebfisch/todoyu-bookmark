@@ -79,7 +79,7 @@ class TodoyuBookmarkBookmarkActionController extends TodoyuActionController {
 	public function updatecontentAction(array $params) {
 		$type	= $params['type'];
 
-		switch($type)	{
+		switch( $type ) {
 			case 'task':
 				$params['tab']	= 'tasks';
 				break;

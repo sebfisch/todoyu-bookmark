@@ -39,7 +39,7 @@ class TodoyuBookmarkManager {
 	 * @param	Integer				$idBookmark
 	 * @return	TodoyuBookmark
 	 */
-	public static function getBookmark($idBookmark)	{
+	public static function getBookmark($idBookmark) {
 		$idBookmark	= intval($idBookmark);
 
 		return new TodoyuBookmark($idBookmark);
@@ -245,7 +245,7 @@ class TodoyuBookmarkManager {
 	 * @param	Integer	$idTask
 	 * @return	Array
 	 */
-	public static function getTaskContextMenuItems($idTask, array $items)	{
+	public static function getTaskContextMenuItems($idTask, array $items) {
 		$idTask		= intval($idTask);
 
 			// Ignore 0-task
@@ -280,7 +280,7 @@ class TodoyuBookmarkManager {
 	 *
 	 * @return	Array
 	 */
-	public static function getPersonBookmarks($type)	{
+	public static function getPersonBookmarks($type) {
 		$type		= intval($type);
 
 		$where	= '		deleted				= 0'
@@ -396,7 +396,7 @@ class TodoyuBookmarkManager {
 	 *
 	 * @param	Integer		$idBookmark
 	 */
-	public static function removeFromCache($idBookmark)	{
+	public static function removeFromCache($idBookmark) {
 		$idBookmark	= intval($idBookmark);
 
 		TodoyuRecordManager::removeRecordCache('TodoyuBookmark', $idBookmark);

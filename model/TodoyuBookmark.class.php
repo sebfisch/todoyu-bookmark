@@ -38,7 +38,7 @@ class TodoyuBookmark extends TodoyuBaseObject {
 	 *
 	 * @param	Integer	$bookmarkId
 	 */
-	public function __construct($idBookmark)	{
+	public function __construct($idBookmark) {
 		parent::__construct($idBookmark, 'ext_bookmark_bookmark');
 	}
 
@@ -49,7 +49,7 @@ class TodoyuBookmark extends TodoyuBaseObject {
 	 *
 	 * @return	Array
 	 */
-	public function getTemplateData()	{
+	public function getTemplateData() {
 		return parent::getTemplateData();
 	}
 

@@ -41,7 +41,7 @@ class TodoyuBookmarkProfileRenderer {
 		$tabs		= TodoyuTabManager::getAllowedTabs(Todoyu::$CONFIG['EXT']['profile']['bookmarkTabs']);
 		$active		= $params['tab'];
 
-		if( is_null($active) )	{
+		if( is_null($active) ) {
 			$active = $tabs[0]['id'];
 		}
 
@@ -92,7 +92,7 @@ class TodoyuBookmarkProfileRenderer {
 	 * @param	String		$type
 	 * @return	String
 	 */
-	public static function renderBookmarkList($type	= 'task')	{
+	public static function renderBookmarkList($type	= 'task') {
 		switch( $type ) {
 			case 'task': default:
 				$list	= TodoyuListingRenderer::render('bookmark', 'bookmark');

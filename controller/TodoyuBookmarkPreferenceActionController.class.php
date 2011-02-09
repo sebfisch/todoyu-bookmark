@@ -45,7 +45,7 @@ class TodoyuBookmarkPreferenceActionController extends TodoyuActionController {
 	 *
 	 * @param	Array	$params
 	 */
-	public function bookmarksOrderAction(array $params)	{
+	public function bookmarksOrderAction(array $params) {
 		$orderData	= json_decode($params['value'], true);
 
 		TodoyuBookmarkManager::saveOrder($orderData['items']);
