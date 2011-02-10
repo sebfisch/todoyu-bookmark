@@ -49,12 +49,7 @@ if( TodoyuExtensions::isInstalled('profile') && allowed('bookmark', 'general:use
 		'class'		=> 'bookmark'
 	));
 }
-
-
-
-/* ----------------------------------------
-	Tabs for bookmark section in profile
-   ---------------------------------------- */
+	// Tabs for bookmark section in profile
 Todoyu::$CONFIG['EXT']['profile']['bookmarkTabs'] = array(
 	array(
 		'id'			=> 'tasks',
