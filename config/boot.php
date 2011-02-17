@@ -23,6 +23,7 @@ define('EXTID_BOOKMARK', 103);
 define('PATH_EXT_BOOKMARK', PATH_EXT . '/bookmark');
 
 require_once( PATH_EXT_BOOKMARK . '/config/constants.php' );
+require_once( PATH_EXT_BOOKMARK . '/dwoo/plugins.php' );
 
 	// Register module locales
 TodoyuLabelManager::register('bookmark', 'bookmark', 'ext.xml');

@@ -27,6 +27,17 @@
 class TodoyuBookmarkProfileActionController extends TodoyuActionController {
 
 	/**
+	 * Initialize controller: restrict access
+	 *
+	 * @param	Array	$params
+	 */
+	public function init(array $params) {
+		restrict('bookmark', 'general:use');
+	}
+
+
+
+	/**
 	 * Get rename bookmark form
 	 *
 	 * @param	Array		$params
@@ -34,7 +45,11 @@ class TodoyuBookmarkProfileActionController extends TodoyuActionController {
 	public function renameformAction(array $params) {
 		$idBookmark	= intval($params['bookmark']);
 		$type		= $params['type'];
-
+		
+		if( !TodoyuBookmarkRights::isSeeAllowed(TodoyuBookmarkManager::getBookmark($idBookmark)->getItemID(), TodoyuBookmarkManager::getTypeIndex($type)) ) {
+			TodoyuRightsManager::deny('task', 'task:seeAll');
+		}
+		
 		return TodoyuBookmarkProfileRenderer::renderEditForm($type, $idBookmark);
 	}
 
@@ -47,13 +62,16 @@ class TodoyuBookmarkProfileActionController extends TodoyuActionController {
 	 * @return	String		Form HTML or bookmark ID
 	 */
 	public function saveAction(array $params) {
-//		restrict('bookmark', 'person:editAndDelete');
-
 		$xmlPath	= 'ext/bookmark/config/form/task-bookmark.xml';
 		$data		= $params['taskbookmark'];
 		$idBookmark	= intval($data['id']);
+		$bookmark	= TodoyuBookmarkManager::getBookmark($idBookmark);
 
-		$form 		= TodoyuFormManager::getForm($xmlPath, $idBookmark);
+		if( !TodoyuBookmarkRights::isSeeAllowed($bookmark->getItemID(), $bookmark->getItemType()) ) {
+			TodoyuRightsManager::deny('task', 'task:seeAll');
+		}
+
+		$form		= TodoyuFormManager::getForm($xmlPath, $idBookmark);
 
 			// Set form data
 		$form->setFormData($data);

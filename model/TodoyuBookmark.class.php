@@ -67,6 +67,17 @@ class TodoyuBookmark extends TodoyuBaseObject {
 
 
 	/**
+	 * Get item type of bookmark
+	 *
+	 * @return	Integer
+	 */
+	public function getItemType() {
+		return intval($this->get('type'));
+	}
+
+
+
+	/**
 	 * Get label of bookmark
 	 *
 	 * @return	Integer

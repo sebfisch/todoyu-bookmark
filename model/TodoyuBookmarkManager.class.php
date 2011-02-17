@@ -259,11 +259,11 @@ class TodoyuBookmarkManager {
 		$allowed	= array();
 
 		if( self::isTaskBookmarked($idTask) ) {
-			if( allowed('bookmark', 'task:remove') ) {
+			if( TodoyuBookmarkRights::isRemoveAllowed($idTask, BOOKMARK_TYPE_TASK) ) {
 				$allowed['removebookmark'] = $ownItems['removebookmark'];
 			}
 		} else {
-			if( allowed('bookmark', 'task:add') ) {
+			if( TodoyuBookmarkRights::isAddAllowed($idTask, BOOKMARK_TYPE_TASK) ) {
 				$allowed['addbookmark'] = $ownItems['addbookmark'];
 			}
 		}
@@ -339,14 +339,16 @@ class TodoyuBookmarkManager {
 		foreach($bookmarks as $bookmark) {
 			$task	= TodoyuTaskManager::getTask($bookmark['id_item']);
 
-			$data['rows'][] = array(
-				'icon'		=> '',
-				'iconClass'	=> intval($bookmark['active']) === 1 ? 'login' : '',
-				'task'		=> $task->getTaskNumber(),
-				'title'		=> $task->getTitle(),
-				'label'		=> $bookmark['title'],
-				'actions'	=> TodoyuBookmarkProfileRenderer::renderBookmarkActions($bookmark['id'])
-			);
+			if( TodoyuBookmarkRights::isSeeAllowed($task->getID(), BOOKMARK_TYPE_TASK) ) {
+				$data['rows'][] = array(
+					'icon'		=> '',
+					'iconClass'	=> intval($bookmark['active']) === 1 ? 'login' : '',
+					'task'		=> $task->getTaskNumber(),
+					'title'		=> $task->getTitle(),
+					'label'		=> $bookmark['title'],
+					'actions'	=> TodoyuBookmarkProfileRenderer::renderBookmarkActions($bookmark['id'])
+				);
+			}
 		}
 
 		return $data;

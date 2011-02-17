@@ -19,36 +19,24 @@
 *****************************************************************************/
 
 /**
- * Bookmark refresh controller
+ * Asset specific Dwoo plugins
  *
  * @package		Todoyu
- * @subpackage	Bookmark
+ * @subpackage	Template
  */
-class TodoyuBookmarkRefreshActionController extends TodoyuActionController {
 
-	/**
-	 * Initialize controller: restrict access
-	 *
-	 * @param	Array	$params
-	 */
-	public function init(array $params) {
-		restrict('bookmark', 'general:use');
-	}
-
-
-	
-	/**
-	 * Update panelwidget content
-	 *
-	 * @param	Array		$params
-	 * @return	String
-	 */
-	public function updateAction(array $params) {
-		$panelWidget= TodoyuPanelWidgetManager::getPanelWidget('TaskBookmarks');
-
-		return $panelWidget->renderContent();
-	}
-
+/**
+ * Check right of current person to delete given bookmark
+ *
+ * @package		Todoyu
+ * @subpackage	Template
+ *
+ * @param	Dwoo 		$dwoo
+ * @param	Integer		$idAsset
+ * @return	Boolean
+ */
+function Dwoo_Plugin_isBookmarkRemoveAllowed(Dwoo $dwoo, $idBookmark, $idType) {
+	return TodoyuBookmarkRights::isRemoveAllowed($idBookmark, $idType);
 }
 
 ?>

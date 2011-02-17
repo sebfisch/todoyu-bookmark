@@ -27,6 +27,17 @@
 class TodoyuBookmarkBookmarkActionController extends TodoyuActionController {
 
 	/**
+	 * Initialize controller: restrict access
+	 *
+	 * @param	Array	$params
+	 */
+	public function init(array $params) {
+		restrict('bookmark', 'general:use');
+	}
+
+
+
+	/**
 	 * Add a bookmark
 	 *
 	 * @param	Array		$params
@@ -34,10 +45,11 @@ class TodoyuBookmarkBookmarkActionController extends TodoyuActionController {
 	public function addAction(array $params) {
 		$idItem	= intval($params['item']);
 		$type	= $params['type'];
-
-		restrict('bookmark', $type . ':add');
-
 		$idType	= TodoyuBookmarkManager::getTypeIndex($type);
+
+		if( !TodoyuBookmarkRights::isAddAllowed($idItem, $idType) ) {
+			TodoyuRightsManager::deny('bookmark', $type . ':add');
+		}
 
 		TodoyuBookmarkManager::addItemToBookmarks($idType, $idItem);
 	}
@@ -51,11 +63,12 @@ class TodoyuBookmarkBookmarkActionController extends TodoyuActionController {
 	 */
 	public function removeAction(array $params) {
 		$type	= $params['type'];
-
-		restrict('bookmark', $type . ':remove');
-
 		$idType	= TodoyuBookmarkManager::getTypeIndex($type);
 		$idItem	= intval($params['item']);
+
+		if( TodoyuBookmarkRights::isRemoveAllowed($idItem, $idType) ) {
+			TodoyuRightsManager::deny('bookmark', 'task:remove');
+		}
 
 			// No item ID given? get from bookmark ID
 		if( $idItem === 0 ) {

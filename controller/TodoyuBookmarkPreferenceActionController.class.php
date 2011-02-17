@@ -27,11 +27,24 @@
 class TodoyuBookmarkPreferenceActionController extends TodoyuActionController {
 
 	/**
+	 * Initialize controller: restrict access
+	 *
+	 * @param	Array	$params
+	 */
+	public function init(array $params) {
+		restrict('bookmark', 'general:use');
+	}
+
+
+	
+	/**
 	 * General panelWidget action, saves collapse status
 	 *
 	 * @param	Array	$params
 	 */
 	public function pwidgetAction(array $params) {
+		restrict('bookmark', 'panelwidgets:taskbookmarks');
+
 		$idWidget	= $params['item'];
 		$value		= $params['value'];
 
@@ -46,6 +59,8 @@ class TodoyuBookmarkPreferenceActionController extends TodoyuActionController {
 	 * @param	Array	$params
 	 */
 	public function bookmarksOrderAction(array $params) {
+		restrict('bookmark', 'panelwidgets:taskbookmarks');
+		
 		$orderData	= json_decode($params['value'], true);
 
 		TodoyuBookmarkManager::saveOrder($orderData['items']);
