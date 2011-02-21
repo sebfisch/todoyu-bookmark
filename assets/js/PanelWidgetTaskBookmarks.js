@@ -254,7 +254,9 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 		var list	= $('panelwidget-taskbookmarks-content').down('ul');
 
-		Sortable.create(list, options);
+		if( list ) {
+			Sortable.create(list, options);
+		}
 	},
 
 
@@ -265,7 +267,11 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 * @method	disableSortable
 	 */
 	disableSortable: function() {
-		Sortable.destroy($('panelwidget-taskbookmarks-content').down('ul'));
+		var list	= $('panelwidget-taskbookmarks-content').down('ul');
+
+		if( list ) {
+			Sortable.destroy(list);
+		}
 	},
 
 
