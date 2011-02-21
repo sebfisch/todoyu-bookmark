@@ -148,9 +148,12 @@ class TodoyuBookmarkManager {
 
 		$table	= self::TABLE;
 		$where	= '		`type`				= ' . $type
-				. ' AND	id_item				= ' . $idItem
-				. ( $idPersonCreate > 0 ? ' AND	id_person_create	= ' . $idPersonCreate : '' )
-		;
+				. ' AND	id_item				= ' . $idItem;
+
+		if( $idPersonCreate !== 0 ) {
+			$where .= ' AND	id_person_create	= ' . $idPersonCreate;
+		}
+
 		$update	= array(
 			'deleted'	=> 1
 		);

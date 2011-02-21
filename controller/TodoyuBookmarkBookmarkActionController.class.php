@@ -47,7 +47,7 @@ class TodoyuBookmarkBookmarkActionController extends TodoyuActionController {
 		$type	= $params['type'];
 		$idType	= TodoyuBookmarkManager::getTypeIndex($type);
 
-		if( !TodoyuBookmarkRights::isAddAllowed($idItem, $idType) ) {
+		if( ! TodoyuBookmarkRights::isAddAllowed($idItem, $idType) ) {
 			TodoyuRightsManager::deny('bookmark', $type . ':add');
 		}
 
@@ -66,7 +66,7 @@ class TodoyuBookmarkBookmarkActionController extends TodoyuActionController {
 		$idType	= TodoyuBookmarkManager::getTypeIndex($type);
 		$idItem	= intval($params['item']);
 
-		if( TodoyuBookmarkRights::isRemoveAllowed($idItem, $idType) ) {
+		if( ! TodoyuBookmarkRights::isRemoveAllowed($idItem, $idType) ) {
 			TodoyuRightsManager::deny('bookmark', 'task:remove');
 		}
 

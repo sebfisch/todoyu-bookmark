@@ -38,6 +38,10 @@ class TodoyuBookmarkRights {
 	public static function isAddAllowed($idItem, $idType) {
 		$idItem	= intval($idItem);
 
+		if( TodoyuAuth::isAdmin() ) {
+			return true;
+		}
+
 		switch( $idType ) {
 			case BOOKMARK_TYPE_TASK:
 				if( TodoyuTaskRights::isSeeAllowed($idItem) ) {
@@ -64,6 +68,10 @@ class TodoyuBookmarkRights {
 	public static function isSeeAllowed($idItem, $idType) {
 		$idItem	= intval($idItem);
 
+		if( TodoyuAuth::isAdmin() ) {
+			return true;
+		}
+
 		switch( $idType ) {
 			case BOOKMARK_TYPE_TASK:
 				if( TodoyuTaskRights::isSeeAllowed($idItem) ) {
@@ -88,6 +96,10 @@ class TodoyuBookmarkRights {
 	public static function isRemoveAllowed($idItem, $idType) {
 		$idItem	= intval($idItem);
 		$idType	= intval($idType);
+
+		if( TodoyuAuth::isAdmin() ) {
+			return true;
+		}
 
 		switch( $idType ) {
 			case BOOKMARK_TYPE_TASK:
