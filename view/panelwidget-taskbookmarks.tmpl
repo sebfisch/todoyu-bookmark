@@ -4,7 +4,7 @@
 		{foreach $bookmarks taskBookmark}
 			<li id="{$id}-task-{$taskBookmark.id}" class="{cycle values="odd,even"} listItem sortable bcStatus{$taskBookmark.status} {if $taskBookmark.isRunning}running{/if}" title="{if taskBookmark.type === constant('TASK_TYPE_TASK')}{Label task.task}{else}{Label task.type.container}{/if} {$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {htmlencode $taskBookmark.title}">
 				{if $taskBookmark.isTrackable || $taskBookmark.isRunning}
-					<a id="{$id}-task-{$taskBookmark.id}-btn" class="icon timetracking {$taskBookmark.btnClass}" href="javascript:void(0)" onclick="Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.{$taskBookmark.jsFunction}({$taskBookmark.id});this.onclick=''" title="{if $task.id == $current}{Label timetracking.stop}{else}{Label timetracking.start}{/if}"><!-- button --></a>
+					<a id="{$id}-task-{$taskBookmark.id}-btn" class="icon timetracking {$taskBookmark.btnClass}" href="javascript:void(0)" onclick="Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.{$taskBookmark.jsFunction}({$taskBookmark.id});this.onclick=''" title="{if $taskBookmark.id == $runningTask}{Label timetracking.stop}{else}{Label timetracking.start}{/if}"><!-- button --></a>
 				{/if}
 				<span class="info">
 					<div class="handle" id="bookmark-{$taskBookmark.id}-handle"></div>

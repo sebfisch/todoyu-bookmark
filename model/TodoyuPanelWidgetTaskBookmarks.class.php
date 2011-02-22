@@ -122,6 +122,10 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 			'bookmarks'	=> $this->getTaskBookmarks()
 		);
 
+		if( TodoyuExtensions::isInstalled('timetracking') ) {
+			$data['runningTask'] = TodoyuTimetracking::getTaskID();
+		}
+
 		$content= render($tmpl, $data);
 
 		$this->setContent($content);
