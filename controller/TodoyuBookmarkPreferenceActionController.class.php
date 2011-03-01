@@ -36,7 +36,7 @@ class TodoyuBookmarkPreferenceActionController extends TodoyuActionController {
 	}
 
 
-	
+
 	/**
 	 * General panelWidget action, saves collapse status
 	 *
@@ -60,10 +60,10 @@ class TodoyuBookmarkPreferenceActionController extends TodoyuActionController {
 	 */
 	public function bookmarksOrderAction(array $params) {
 		restrict('bookmark', 'panelwidgets:taskbookmarks');
-		
+
 		$orderData	= json_decode($params['value'], true);
 
-		TodoyuBookmarkManager::saveOrder($orderData['items']);
+		TodoyuBookmarkBookmarkManager::saveOrder($orderData['items']);
 	}
 
 }

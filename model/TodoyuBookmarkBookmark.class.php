@@ -24,7 +24,7 @@
  * @package		Todoyu
  * @subpackage	Bookmark
  */
-class TodoyuBookmark extends TodoyuBaseObject {
+class TodoyuBookmarkBookmark extends TodoyuBaseObject {
 
 	/**
 	 * @var String		Default table for database requests

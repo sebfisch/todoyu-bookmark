@@ -130,7 +130,7 @@ class TodoyuBookmarkProfileRenderer {
 	 */
 	public static function renderEditForm($type, $idBookmark) {
 		$idBookmark	= intval($idBookmark);
-		$bookmark	= new TodoyuBookmark($idBookmark);
+		$bookmark	= new TodoyuBookmarkBookmark($idBookmark);
 
 		$idTask	= $bookmark->getItemID();
 		$task	= TodoyuProjectTaskManager::getTask($idTask);

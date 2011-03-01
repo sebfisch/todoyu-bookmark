@@ -22,9 +22,9 @@
 	Context Menu Callbacks
    ---------------------------- */
 	// Tasks
-TodoyuContextMenuManager::addFunction('Task', 'TodoyuBookmarkManager::getTaskContextMenuItems');
+TodoyuContextMenuManager::addFunction('Task', 'TodoyuBookmarkBookmarkManager::getTaskContextMenuItems');
 	// Daytracks Widget
-TodoyuContextMenuManager::addFunction('DaytracksPanelwidget', 'TodoyuBookmarkManager::getTaskContextMenuItems');
+TodoyuContextMenuManager::addFunction('DaytracksPanelwidget', 'TodoyuBookmarkBookmarkManager::getTaskContextMenuItems');
 	// Bookmarks Widget
 TodoyuContextMenuManager::addFunction('TaskBookmarksPanelWidget', 'TodoyuBookmarkPanelWidgetTaskBookmarks::getContextMenuItems', 10000);
 
@@ -32,7 +32,7 @@ TodoyuContextMenuManager::addFunction('TaskBookmarksPanelWidget', 'TodoyuBookmar
 
 	// Add timetracking update callbacks
 if( TodoyuExtensions::isInstalled('timetracking') ) {
-	TodoyuTimetrackingCallbackManager::add('bookmarks', 'TodoyuBookmarkManager::callbackTrackingToggle');
+	TodoyuTimetrackingCallbackManager::add('bookmarks', 'TodoyuBookmarkBookmarkManager::callbackTrackingToggle');
 }
 
 
@@ -66,7 +66,7 @@ Todoyu::$CONFIG['EXT']['profile']['bookmarkTabs'] = array(
 Todoyu::$CONFIG['EXT']['bookmark']['listing']['bookmark'] = array(
 	'name'		=> 'bookmark',
 	'update'	=> 'bookmark/bookmark/listing',
-	'dataFunc'	=> 'TodoyuBookmarkManager::getTaskBookmarkListingData',
+	'dataFunc'	=> 'TodoyuBookmarkBookmarkManager::getTaskBookmarkListingData',
 	'size'		=> Todoyu::$CONFIG['LIST']['size'],
 	'columns'	=> array(
 		'icon'		=> '',

@@ -24,7 +24,7 @@
  * @package		Todoyu
  * @subpackage	Bookmark
  */
-class TodoyuBookmarkManager {
+class TodoyuBookmarkBookmarkManager {
 
 	/**
 	 * @var String		Default table for database requests
@@ -37,12 +37,12 @@ class TodoyuBookmarkManager {
 	 * Get bookmark
 	 *
 	 * @param	Integer				$idBookmark
-	 * @return	TodoyuBookmark
+	 * @return	TodoyuBookmarkBookmark
 	 */
 	public static function getBookmark($idBookmark) {
 		$idBookmark	= intval($idBookmark);
 
-		return new TodoyuBookmark($idBookmark);
+		return TodoyuRecordManager::getRecord('TodoyuBookmarkBookmark', $idBookmark);
 	}
 
 
@@ -53,7 +53,7 @@ class TodoyuBookmarkManager {
 	 * @param	Integer		$idIem
 	 * @param	String		$typeKey
 	 * @param	Integer		$idPersonCreate
-	 * @return	TodoyuBookmark
+	 * @return	TodoyuBookmarkBookmark
 	 */
 	public static function getBookmarkByItemId($idIem, $typeKey, $idPersonCreate = 0) {
 		$idItem		= intval($idIem);
@@ -105,7 +105,7 @@ class TodoyuBookmarkManager {
 	 */
 	public static function getItemID($idBookmark) {
 		$idBookmark	= intval($idBookmark);
-		$bookmark	= new TodoyuBookmark($idBookmark);
+		$bookmark	= new TodoyuBookmarkBookmark($idBookmark);
 
 		return	$bookmark->getItemID();
 	}
@@ -404,7 +404,7 @@ class TodoyuBookmarkManager {
 	public static function removeFromCache($idBookmark) {
 		$idBookmark	= intval($idBookmark);
 
-		TodoyuRecordManager::removeRecordCache('TodoyuBookmark', $idBookmark);
+		TodoyuRecordManager::removeRecordCache('TodoyuBookmarkBookmark', $idBookmark);
 		TodoyuRecordManager::removeRecordQueryCache(self::TABLE, $idBookmark);
 	}
 
