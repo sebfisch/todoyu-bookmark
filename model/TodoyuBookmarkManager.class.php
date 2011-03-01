@@ -256,7 +256,7 @@ class TodoyuBookmarkManager {
 			return $items;
 		}
 
-//		$task	= TodoyuTaskManager::getTask($idTask);
+//		$task	= TodoyuProjectTaskManager::getTask($idTask);
 
 		$ownItems	= Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['Task'];
 		$allowed	= array();
@@ -340,7 +340,7 @@ class TodoyuBookmarkManager {
 		);
 
 		foreach($bookmarks as $bookmark) {
-			$task	= TodoyuTaskManager::getTask($bookmark['id_item']);
+			$task	= TodoyuProjectTaskManager::getTask($bookmark['id_item']);
 
 			if( TodoyuBookmarkRights::isSeeAllowed($task->getID(), BOOKMARK_TYPE_TASK) ) {
 				$data['rows'][] = array(
@@ -418,7 +418,7 @@ class TodoyuBookmarkManager {
 	 * @return	String		Content of the panelwidget
 	 */
 	public static function callbackTrackingToggle($idTask, $info) {
-		$panelWidget = TodoyuPanelWidgetManager::getPanelWidget('TaskBookmarks');
+		$panelWidget = TodoyuPanelWidgetManager::getPanelWidget('bookmark', 'TaskBookmarks');
 
 		return $panelWidget->renderContent();
 	}

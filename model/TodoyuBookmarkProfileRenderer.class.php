@@ -133,7 +133,7 @@ class TodoyuBookmarkProfileRenderer {
 		$bookmark	= new TodoyuBookmark($idBookmark);
 
 		$idTask	= $bookmark->getItemID();
-		$task	= TodoyuTaskManager::getTask($idTask);
+		$task	= TodoyuProjectTaskManager::getTask($idTask);
 
 			// Construct form object
 		$xmlPath	= 'ext/bookmark/config/form/task-bookmark.xml';

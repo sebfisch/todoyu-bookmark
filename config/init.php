@@ -26,7 +26,7 @@ TodoyuContextMenuManager::addFunction('Task', 'TodoyuBookmarkManager::getTaskCon
 	// Daytracks Widget
 TodoyuContextMenuManager::addFunction('DaytracksPanelwidget', 'TodoyuBookmarkManager::getTaskContextMenuItems');
 	// Bookmarks Widget
-TodoyuContextMenuManager::addFunction('TaskBookmarksPanelWidget', 'TodoyuPanelWidgetTaskBookmarks::getContextMenuItems', 10000);
+TodoyuContextMenuManager::addFunction('TaskBookmarksPanelWidget', 'TodoyuBookmarkPanelWidgetTaskBookmarks::getContextMenuItems', 10000);
 
 
 

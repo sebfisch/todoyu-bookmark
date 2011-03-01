@@ -44,7 +44,7 @@ class TodoyuBookmarkRights {
 
 		switch( $idType ) {
 			case BOOKMARK_TYPE_TASK:
-				if( TodoyuTaskRights::isSeeAllowed($idItem) ) {
+				if( TodoyuProjectTaskRights::isSeeAllowed($idItem) ) {
 					if( allowed('bookmark', 'task:add')) {
 						return true;
 					}
@@ -74,7 +74,7 @@ class TodoyuBookmarkRights {
 
 		switch( $idType ) {
 			case BOOKMARK_TYPE_TASK:
-				if( TodoyuTaskRights::isSeeAllowed($idItem) ) {
+				if( TodoyuProjectTaskRights::isSeeAllowed($idItem) ) {
 					return true;
 				}
 		}
@@ -103,7 +103,7 @@ class TodoyuBookmarkRights {
 
 		switch( $idType ) {
 			case BOOKMARK_TYPE_TASK:
-				if( TodoyuTaskRights::isSeeAllowed($idItem) ) {
+				if( TodoyuProjectTaskRights::isSeeAllowed($idItem) ) {
 					if( allowed('bookmark', 'task:remove')) {
 						return true;
 					}

@@ -24,7 +24,7 @@
  * @package		Todoyu
  * @subpackage	Bookmark
  */
-class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements TodoyuPanelWidgetIf {
+class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements TodoyuPanelWidgetIf {
 
 	/**
 	 * Initialize widget with open tasks and projects
@@ -80,7 +80,7 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 			// Prepare for rendering
 		foreach($taskBookmarks as $index => $task) {
 				// Remove bookmark if not allowed
-			if( ! TodoyuTaskRights::isSeeAllowed($task['id']) ) {
+			if( ! TodoyuProjectTaskRights::isSeeAllowed($task['id']) ) {
 				unset($taskBookmarks[$index]);
 				continue;
 			}
@@ -158,7 +158,7 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 	 */
 	public static function getContextMenuItems($idTask, array $items) {
 		$idTask	= intval($idTask);
-		$task	= TodoyuTaskManager::getTask($idTask);
+		$task	= TodoyuProjectTaskManager::getTask($idTask);
 
 		$ownItems	= Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget'];
 		$allowed	= array();
@@ -172,7 +172,7 @@ class TodoyuPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements Todoyu
 		}
 
 			// Change status
-		$taskItems = TodoyuTaskManager::getContextMenuItems($idTask, array());
+		$taskItems = TodoyuProjectTaskManager::getContextMenuItems($idTask, array());
 		if( array_key_exists('status', $taskItems) ) {
 			$status	= $taskItems['status'];
 			foreach($status['submenu'] as $key => $config) {
