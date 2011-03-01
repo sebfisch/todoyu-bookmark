@@ -105,9 +105,9 @@ class TodoyuBookmarkBookmarkManager {
 	 */
 	public static function getItemID($idBookmark) {
 		$idBookmark	= intval($idBookmark);
-		$bookmark	= new TodoyuBookmarkBookmark($idBookmark);
+		$bookmark	= self::getBookmark($idBookmark);
 
-		return	$bookmark->getItemID();
+		return $bookmark->getItemID();
 	}
 
 
