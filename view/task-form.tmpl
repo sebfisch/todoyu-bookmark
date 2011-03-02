@@ -6,10 +6,10 @@
 <div id="bookmark-{$bookmark.id}-details" class="bookmark details">
 	<div class="properties">
 		<dl>
-			<dt class="floatLeft">{Label project.project}:</dt>
+			<dt class="floatLeft">{Label project.ext.project}:</dt>
 			<dd>{$projectTitle}</dd>
 
-			<dt class="floatLeft">{if $task.type == constant('TASK_TYPE_TASK')}{Label task.task}{else}{Label task.type.container}{/if}:</dt>
+			<dt class="floatLeft">{if $task.type == constant('TASK_TYPE_TASK')}{Label project.task.task}{else}{Label project.task.type.container}{/if}:</dt>
 			<dd>{$task.title}</dd>
 		</dl>
 	</div>

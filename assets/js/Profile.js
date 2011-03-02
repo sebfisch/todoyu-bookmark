@@ -83,7 +83,7 @@ Todoyu.Ext.bookmark.Profile =  {
 	 * @param	{Number}		idBookmark
 	 */
 	remove: function(type, idBookmark) {
-		if( confirm('[LLL:bookmark.bookmark.delete.confirm]') ) {
+		if( confirm('[LLL:bookmark.ext.bookmark.delete.confirm]') ) {
 			var url = Todoyu.getUrl('bookmark', 'bookmark');
 			var options = {
 				'parameters': {
@@ -166,12 +166,12 @@ Todoyu.Ext.bookmark.Profile =  {
 		var type	= 'task';
 
 		if( response.hasTodoyuError() ) {
-			Todoyu.notifyError('[LLL:bookmark.bookmark.saved.error]');
+			Todoyu.notifyError('[LLL:bookmark.ext.bookmark.saved.error]');
 			$('bookmark-form-content').update(response.responseText);
 			var idBookmark	= parseInt(response.request.parameters['bookmark[id]'], 10);
 			this.initEditForm(idBookmark);
 		} else {
-			Todoyu.notifySuccess('[LLL:bookmark.bookmark.saved]');
+			Todoyu.notifySuccess('[LLL:bookmark.ext.bookmark.saved]');
 
 			this.updateContent(type);
 		}

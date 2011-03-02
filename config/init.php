@@ -45,7 +45,7 @@ if( TodoyuExtensions::isInstalled('profile') && allowed('bookmark', 'general:use
 		'position'	=> 10,
 		'tabs'		=> 'TodoyuBookmarkProfileRenderer::renderTabs',
 		'content'	=> 'TodoyuBookmarkProfileRenderer::renderContent',
-		'label'		=> 'bookmark.profile.module',
+		'label'		=> 'bookmark.ext.profile.module',
 		'class'		=> 'bookmark'
 	));
 }
@@ -53,7 +53,7 @@ if( TodoyuExtensions::isInstalled('profile') && allowed('bookmark', 'general:use
 Todoyu::$CONFIG['EXT']['profile']['bookmarkTabs'] = array(
 	array(
 		'id'			=> 'tasks',
-		'label'			=> 'LLL:bookmark.profile.module.tasks.tab',
+		'label'			=> 'LLL:bookmark.ext.profile.module.tasks.tab',
 //		'require'		=> 'bookmark.settings:editbookmarks'
 	)
 );
@@ -70,9 +70,9 @@ Todoyu::$CONFIG['EXT']['bookmark']['listing']['bookmark'] = array(
 	'size'		=> Todoyu::$CONFIG['LIST']['size'],
 	'columns'	=> array(
 		'icon'		=> '',
-		'task'		=> 'LLL:bookmark.profile.module.tasks.listing.task',
-		'title'		=> 'LLL:bookmark.profile.module.tasks.listing.title',
-		'label'		=> 'LLL:bookmark.profile.module.tasks.listing.label',
+		'task'		=> 'LLL:bookmark.ext.profile.module.tasks.listing.task',
+		'title'		=> 'LLL:bookmark.ext.profile.module.tasks.listing.title',
+		'label'		=> 'LLL:bookmark.ext.profile.module.tasks.listing.label',
 		'actions'	=> '',
 	),
 	'truncate'	=> array(

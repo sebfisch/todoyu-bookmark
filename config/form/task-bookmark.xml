@@ -15,7 +15,7 @@
 			<elements>
 
 				<field type="text" name="title">
-					<label>bookmark.bookmark.attr.title</label>
+					<label>bookmark.ext.bookmark.attr.title</label>
 				</field>
 
 			</elements>
