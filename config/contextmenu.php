@@ -44,7 +44,7 @@ Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['subm
 	// Add own context menu items
 Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['showinproject'] = array(
 	'key'		=> 'showinproject',
-	'label'		=> 'task.contextmenu.showinproject',
+	'label'		=> 'project.task.contextmenu.showinproject',
 	'jsAction'	=> 'Todoyu.Ext.project.goToTaskInProject(#ID#)',
 	'class'		=> 'taskContextMenu task-showinproject',
 	'position'	=> 10
