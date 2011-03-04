@@ -10,7 +10,7 @@ h1.extIconBookmark .title {
 }
 
 #contextmenu .taskContextMenu.task-bookmark {
-	background: url(../img/icons.png) 3px 2px;
+	background: url(../img/icons.png) no-repeat 3px 2px;
 }
 
 
