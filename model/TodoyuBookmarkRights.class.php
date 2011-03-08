@@ -51,7 +51,6 @@ class TodoyuBookmarkRights {
 				}
 		}
 
-
 		return false;
 	}
 
@@ -78,7 +77,6 @@ class TodoyuBookmarkRights {
 					return true;
 				}
 		}
-
 
 		return false;
 	}
