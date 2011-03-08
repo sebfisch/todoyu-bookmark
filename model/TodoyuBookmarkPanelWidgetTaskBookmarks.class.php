@@ -24,7 +24,7 @@
  * @package		Todoyu
  * @subpackage	Bookmark
  */
-class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget implements TodoyuPanelWidgetIf {
+class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 
 	/**
 	 * Initialize widget with open tasks and projects
@@ -126,11 +126,7 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget implement
 			$data['runningTask'] = TodoyuTimetracking::getTaskID();
 		}
 
-		$content= render($tmpl, $data);
-
-		$this->setContent($content);
-
-		return $content;
+		return render($tmpl, $data);
 	}
 
 
@@ -141,8 +137,6 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget implement
 	 * @return	String
 	 */
 	public function render() {
-		$this->renderContent();
-
 		TodoyuPage::addJsOnloadedFunction('Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.init.bind(Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks)', 100);
 
 		return parent::render();
