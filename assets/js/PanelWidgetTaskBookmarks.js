@@ -20,20 +20,33 @@
 Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 	/**
-	 * Ext shortcut
+	 * Reference to extension
 	 *
-	 * @var	{Object}	ext
+	 * @property	ext
+	 * @type		Object
 	 */
 	ext:		Todoyu.Ext.bookmark,
 
+	/**
+	 * @property	activeTask
+	 * @type		Number
+	 */
 	activeTask:		0,
 
+	/**
+	 * @property	timeTask
+	 * @type		Object
+	 */
 	timeTask:	0,
 
 	spanTimeTask:	null,
 
 	spanTimeTotal:	null,
 
+	/**
+	 * @property	key
+	 * @type		String
+	 */
 	key:		'taskbookmarks',
 
 	sortable:	null,

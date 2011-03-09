@@ -24,11 +24,13 @@
 Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.ContextMenu = {
 
 	/**
-	 * Ext shortcut
+	 * Reference to extension
 	 *
-	 * @var	{Object}	ext
+	 * @property	ext
+	 * @type		Object
 	 */
 	ext:	Todoyu.Ext.bookmark,
+
 
 
 	/**
