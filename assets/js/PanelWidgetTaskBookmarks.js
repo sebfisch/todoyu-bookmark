@@ -17,6 +17,16 @@
 * This copyright notice MUST APPEAR in all copies of the script.
 *****************************************************************************/
 
+/**
+ * @module	Bookmark
+ */
+
+/**
+ *	Task bookmarks panelwidget
+ *
+ * @class		TaskBookmarks
+ * @namespace	Todoyu.Ext.bookmark.PanelWidget
+ */
 Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 	/**

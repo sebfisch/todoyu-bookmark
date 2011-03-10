@@ -22,7 +22,7 @@
  */
 
 /**
- *	Bookmark main object
+ * Bookmark main object
  *
  * @class		bookmark
  * @namespace	Todoyu.Ext

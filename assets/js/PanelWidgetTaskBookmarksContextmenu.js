@@ -18,9 +18,15 @@
 *****************************************************************************/
 
 /**
- * Context menu for task entries of task bookmarks panel widget
+ * @module	Bookmark
+ */
+
+/**
+ *	Context menu for task entries of task bookmarks panel widget
  *
-*/
+ * @class		ContextMenu
+ * @namespace	Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks
+ */
 Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.ContextMenu = {
 
 	/**
