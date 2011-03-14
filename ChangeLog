@@ -9,6 +9,7 @@ bookmark 1.1.0 (requires core >= 2.1) - not released yet
 
 
 bookmark 1.0.7 - not released yet
+	* Bugfix: Deleted tasks were still listed in bookmarks widget
 	* Feature: Added placeholders for to-be spanish locale files
 	* Feature: Added changelog
 

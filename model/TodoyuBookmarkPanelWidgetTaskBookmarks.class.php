@@ -65,6 +65,7 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 
 		$where	= '		b.id_item	= t.id
 					AND	t.id_project= p.id
+					AND	t.deleted	= 0
 					AND b.deleted	= 0
 					AND	p.deleted	= 0
 					AND	b.type		= ' . BOOKMARK_TYPE_TASK .
