@@ -13,9 +13,9 @@
 						<div class="title" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})">
 							{$taskBookmark.id_project}.{$taskBookmark.tasknumber} -
 							{if empty($taskBookmark.label)}
-								{htmlencode(truncate($taskBookmark.title,43))}
+								{htmlencode(truncate($taskBookmark.title,40))}
 							{else}
-								{htmlencode(truncate($taskBookmark.label,43))}
+								{htmlencode(truncate($taskBookmark.label,40))}
 							{/if}
 						</div>
 
