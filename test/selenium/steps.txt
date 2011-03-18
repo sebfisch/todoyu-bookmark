@@ -1,0 +1,6 @@
+todoyu selenium testsuite steps: bookmark extension
+---------------------------------------------------
+
+* bookmarks panelwidget:
+	check presents
+	test toggle incl. pref.
