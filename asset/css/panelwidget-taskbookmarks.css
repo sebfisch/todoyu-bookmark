@@ -44,7 +44,7 @@
 	height:22px;
 	position:relative;
 	z-index:101;
-	background:url(../../../timetracking/assets/img/icons.png) no-repeat 0 -27px;
+	background:url(../../../timetracking/asset/img/icons.png) no-repeat 0 -27px;
 }
 
 #panelwidget-taskbookmarks div.bookmarks ul li.running a {

@@ -28,39 +28,39 @@
 Todoyu::$CONFIG['EXT']['bookmark']['assets'] = array(
 	'js' => array(
 		array(
-			'file' 		=> 'ext/bookmark/assets/js/Ext.js',
+			'file' 		=> 'ext/bookmark/asset/js/Ext.js',
 			'position'	=> 100
 		),
 		array(
-			'file' 		=> 'ext/bookmark/assets/js/Preference.js',
+			'file' 		=> 'ext/bookmark/asset/js/Preference.js',
 			'position'	=> 101
 		),
 		array(
-			'file' 		=> 'ext/bookmark/assets/js/Task.js',
+			'file' 		=> 'ext/bookmark/asset/js/Task.js',
 			'position'	=> 102
 		),
 		array(
-			'file' 		=> 'ext/bookmark/assets/js/Profile.js',
+			'file' 		=> 'ext/bookmark/asset/js/Profile.js',
 			'position'	=> 103
 		),
 		array(
-			'file' => 'ext/bookmark/assets/js/PanelWidgetTaskBookmarks.js',
+			'file' => 'ext/bookmark/asset/js/PanelWidgetTaskBookmarks.js',
 			'position' => 110,
 		),
 
 		array(
-			'file'		=> 'ext/bookmark/assets/js/PanelWidgetTaskBookmarksContextmenu.js',
+			'file'		=> 'ext/bookmark/asset/js/PanelWidgetTaskBookmarksContextmenu.js',
 			'position'	=> 111
 		)
 	),
 
 	'css' => array(
 		array(
-			'file'	=> 'ext/bookmark/assets/css/ext.css',
+			'file'	=> 'ext/bookmark/asset/css/ext.css',
 			'position' => 100
 		),
 		array(
-			'file' => 'ext/bookmark/assets/css/panelwidget-taskbookmarks.css',
+			'file' => 'ext/bookmark/asset/css/panelwidget-taskbookmarks.css',
 			'position' => 110,
 		)
 	)
