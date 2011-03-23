@@ -44,12 +44,12 @@ Todoyu.Ext.bookmark = {
 	add: function(type, idItem, onComplete) {
 		var url		= Todoyu.getUrl('bookmark', 'bookmark');
 		var options = {
-			'parameters': {
-				'action':	'add',
+			parameters: {
+				action:	'add',
 				'type':		type,
 				'item':		idItem
 			},
-			'onComplete': onComplete
+			onComplete: onComplete
 		};
 
 		Todoyu.send(url, options);
@@ -68,12 +68,12 @@ Todoyu.Ext.bookmark = {
 	remove: function(type, idItem, onComplete) {
 		var url		= Todoyu.getUrl('bookmark', 'bookmark');
 		var options = {
-			'parameters': {
-				'action':	'remove',
+			parameters: {
+				action:	'remove',
 				'type':		type,
 				'item':		idItem
 			},
-			'onComplete': onComplete
+			onComplete: onComplete
 		};
 
 		Todoyu.send(url, options);

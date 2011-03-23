@@ -56,8 +56,8 @@ Todoyu.Ext.bookmark.Profile =  {
 	initRenameForm: function(type, idBookmark) {
 		var url = Todoyu.getUrl('bookmark', 'profile');
 		var options = {
-			'parameters': {
-				'action':	'renameform',
+			parameters: {
+				action:	'renameform',
 				'bookmark':	idBookmark,
 				'type':		type
 			}
@@ -91,13 +91,13 @@ Todoyu.Ext.bookmark.Profile =  {
 		if( confirm('[LLL:bookmark.ext.bookmark.delete.confirm]') ) {
 			var url = Todoyu.getUrl('bookmark', 'bookmark');
 			var options = {
-				'parameters': {
-					'action':	'remove',
+				parameters: {
+					action:	'remove',
 					'item':		0,
 					'bookmark':	idBookmark,
 					'type':		type
 				},
-				'onComplete': this.onRemoved.bind(this, type, idBookmark)
+				onComplete: this.onRemoved.bind(this, type, idBookmark)
 			};
 
 			Todoyu.send(url, options);
@@ -128,8 +128,8 @@ Todoyu.Ext.bookmark.Profile =  {
 	updateContent: function(type) {
 		var url = Todoyu.getUrl('profile', 'ext');
 		var options = {
-			'parameters': {
-				'action':	'module',
+			parameters: {
+				action:	'module',
 				'area':		'profile',
 				'module':	'bookmark'
 			}
@@ -150,10 +150,10 @@ Todoyu.Ext.bookmark.Profile =  {
 	 */
 	save: function(type, form) {
 		$(form).request ({
-			'parameters': {
-				'action':	'save'
+			parameters: {
+				action:	'save'
 			},
-			'onComplete': this.onSaved.bind(this)
+			onComplete: this.onSaved.bind(this)
 		});
 
 		return false;

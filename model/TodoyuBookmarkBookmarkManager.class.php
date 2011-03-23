@@ -418,6 +418,9 @@ class TodoyuBookmarkBookmarkManager {
 	 * @return	String		Content of the panelwidget
 	 */
 	public static function callbackTrackingToggle($idTask, $info) {
+		/**
+		 * @var	TodoyuBookmarkPanelWidgetTaskBookmarks $panelWidget
+		 */
 		$panelWidget = TodoyuPanelWidgetManager::getPanelWidget('bookmark', 'TaskBookmarks');
 
 		return $panelWidget->renderContent();

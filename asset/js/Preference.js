@@ -71,8 +71,8 @@ Todoyu.Ext.bookmark.Preference = {
 	sendAction: function(action, value) {
 		var url = Todoyu.getUrl('bookmark', 'preference');
 		var options = {
-			'parameters': {
-				'action':	action,
+			parameters: {
+				action:	action,
 				'value':	value
 			}
 		};
