@@ -70,8 +70,8 @@ Todoyu.Ext.bookmark = {
 		var options = {
 			parameters: {
 				action:	'remove',
-				'type':		type,
-				'item':		idItem
+				type:	type,
+				item:	idItem
 			},
 			onComplete: onComplete
 		};

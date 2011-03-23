@@ -89,7 +89,7 @@ Todoyu.Ext.bookmark.Task = {
 	 * @method	refreshPanelWidget
 	 */
 	refreshPanelWidget: function() {
-		if( Todoyu.PanelWidget.isLoaded('bookmark', 'TaskBookmarks') ) {
+		if( Todoyu.PanelWidget.isLoaded('TaskBookmarks') ) {
 			this.ext.PanelWidget.TaskBookmarks.refresh();
 		}
 	}

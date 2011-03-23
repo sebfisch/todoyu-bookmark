@@ -181,6 +181,10 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 * @method	refresh
 	 */
 	refresh: function() {
+		if( ! this.isVisible() ) {
+			return false;
+		}
+
 		var url 	= Todoyu.getUrl('bookmark', 'refresh');	// ext, action
 		var options = {
 			parameters: {
@@ -328,6 +332,17 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 		var idItem	= 0;
 
 		this.ext.Preference.save(action, value, idItem);
+	},
+
+
+	/**
+	 * Check whether bookmark widget is loaded
+	 *
+	 * @method	isVisible
+	 * @return	{Boolean}
+	 */
+	isVisible: function() {
+		return Todoyu.PanelWidget.isLoaded('TaskBookmarks');
 	}
 
 };
