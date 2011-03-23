@@ -129,7 +129,40 @@ class TodoyuBookmarkBookmarkManager {
 			'id_item'		=> $idItem
 		);
 
-		return TodoyuRecordManager::addRecord(self::TABLE , $data);
+		$idBookmark	= TodoyuRecordManager::addRecord(self::TABLE , $data);
+
+		self::setBookmarkSorting($idBookmark, $type);
+
+		return $idBookmark;
+	}
+
+
+
+	/**
+	 * Set sorting index for new bookmark
+	 *
+	 * @param	Integer		$idBookmark
+	 * @param	Integer		$type
+	 */
+	private static function setBookmarkSorting($idBookmark, $type) {
+		$idBookmark	= intval($idBookmark);
+		$type		= intval($type);
+
+			// Get max sorting
+		$fields	= 'MAX(`sorting`) as sorting';
+		$where	= '		deleted	= 0'
+				. ' AND `type`	= ' . $type;
+		$group	= '`type`';
+		$field	= 'sorting';
+
+		$max	= Todoyu::db()->getFieldValue($fields, self::TABLE, $where, $group, '', '', $field);
+
+			// Update
+		$data	= array(
+			'sorting'	=> intval($max) + 1
+		);
+
+		TodoyuRecordManager::updateRecord(self::TABLE, $idBookmark, $data);
 	}
 
 
