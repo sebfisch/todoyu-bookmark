@@ -32,11 +32,12 @@
  * @subpackage	Template
  *
  * @param	Dwoo 		$dwoo
- * @param	Integer		$idAsset
+ * @param	Integer		$idBookmark
+ * @param	String		$typeKey
  * @return	Boolean
  */
-function Dwoo_Plugin_isBookmarkRemoveAllowed(Dwoo $dwoo, $idBookmark, $idType) {
-	return TodoyuBookmarkRights::isRemoveAllowed($idBookmark, $idType);
+function Dwoo_Plugin_isBookmarkRemoveAllowed_compile(Dwoo_Compiler $compiler, $idBookmark, $typeKey) {
+	return 'TodoyuBookmarkRights::isRemoveAllowed(' . $idBookmark . ', TodoyuBookmarkBookmarkManager::getTypeIndex(' . $typeKey . '))';
 }
 
 ?>

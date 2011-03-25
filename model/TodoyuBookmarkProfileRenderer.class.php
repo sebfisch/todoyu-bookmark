@@ -113,7 +113,7 @@ class TodoyuBookmarkProfileRenderer {
 	public static function renderBookmarkActions($idBookmark) {
 		$tmpl	= 'ext/bookmark/view/bookmark-actions.tmpl';
 		$data	= array(
-			'id'	=> intval($idBookmark)
+			'idBookmark'	=> intval($idBookmark)
 		);
 
 		return render($tmpl, $data);

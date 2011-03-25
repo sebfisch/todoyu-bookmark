@@ -87,25 +87,21 @@ class TodoyuBookmarkRights {
 	 * Checks if remove of bookmark is allowed (inclusive visibility check on Element)
 	 *
 	 * @static
-	 * @param	Integer	$idItem
-	 * @param	Integer	$idType
+	 * @param	Integer		$idBookmark
+	 * @param	Integer		$type
 	 * @return	Boolean
 	 */
-	public static function isRemoveAllowed($idItem, $idType) {
-		$idItem	= intval($idItem);
-		$idType	= intval($idType);
+	public static function isRemoveAllowed($idBookmark, $type) {
+//		$idBookmark	= intval($idBookmark);
+		$type		= intval($type);
 
 		if( TodoyuAuth::isAdmin() ) {
 			return true;
 		}
 
-		switch( $idType ) {
+		switch( $type ) {
 			case BOOKMARK_TYPE_TASK:
-				if( TodoyuProjectTaskRights::isSeeAllowed($idItem) ) {
-					if( allowed('bookmark', 'task:remove')) {
-						return true;
-					}
-				}
+				return allowed('bookmark', 'task:remove');
 		}
 
 		return false;

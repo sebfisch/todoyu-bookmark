@@ -57,9 +57,9 @@ Todoyu.Ext.bookmark.Profile =  {
 		var url = Todoyu.getUrl('bookmark', 'profile');
 		var options = {
 			parameters: {
-				action:	'renameform',
-				'bookmark':	idBookmark,
-				'type':		type
+				action:		'renameform',
+				bookmark:	idBookmark,
+				type:		type
 			}
 		};
 
@@ -92,10 +92,10 @@ Todoyu.Ext.bookmark.Profile =  {
 			var url = Todoyu.getUrl('bookmark', 'bookmark');
 			var options = {
 				parameters: {
-					action:	'remove',
-					'item':		0,
-					'bookmark':	idBookmark,
-					'type':		type
+					action:		'remove',
+					item:		0,
+					bookmark:	idBookmark,
+					type:		type
 				},
 				onComplete: this.onRemoved.bind(this, type, idBookmark)
 			};
