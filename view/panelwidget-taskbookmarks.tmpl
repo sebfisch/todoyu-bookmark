@@ -8,7 +8,7 @@
 				{/if}
 				<span class="info">
 					<div class="handle" id="bookmark-{$taskBookmark.id}-handle"></div>
-					<div class="bcStatus{if $taskBookmark.type == constant('TASK_TYPE_TASK')}{$taskBookmark.status}{else}0{/if} taskItem">
+					<div class="bcStatus{$taskBookmark.status}{if $taskBookmark.type == constant('TASK_TYPE_CONTAINER')} container{/if} taskItem">
 
 						<div class="title" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})">
 							{$taskBookmark.id_project}.{$taskBookmark.tasknumber} -
