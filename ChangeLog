@@ -1,11 +1,10 @@
 todoyu bookmark extension changelog
 
-bookmark 1.1.0 (requires core >= 2.1) - not released yet
-	* Feature: Cleanup of Rights Management
-	* Feature: Cleanup (topical order and readability) of extension config (init.php) file
-	* Feature: Forms restyled
-	* Changed: Updated loading structure: (core: boot.php, init: request,) extensions: init.php
-	* Feature: Changed locale format
+bookmark 1.1.0 - beta release
+	* Changed: Requires core 2.1
+	* Changed: Structure for 2.1
+	* Changed: All classes are prefixed with extension name
+	* Changed: Cleanup of Rights Management
 
 
 bookmark 1.0.7 - not released yet
