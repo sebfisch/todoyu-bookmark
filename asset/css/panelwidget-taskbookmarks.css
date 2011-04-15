@@ -13,8 +13,8 @@
 #panelwidget-taskbookmarks .taskItem {
 	border-left-width:4px;
 	border-left-style:solid;
-	padding:5px 10px 5px 9px;
-	margin:-2px 30px 0 0;
+	padding:5px 5px 5px 9px;
+	margin:-2px 0 0 0;
 	position:relative;
 	z-index:100;
 	overflow:hidden;
@@ -22,7 +22,10 @@
 }
 #panelwidget-taskbookmarks .container.taskItem {
 	border-left-width:8px;
+	border-right-width:4px;
+	border-right-style:solid;
 	padding-left:5px;
+	padding-right: 24px;
 }
 
 #panelwidget-taskbookmarks .taskItem .title,
