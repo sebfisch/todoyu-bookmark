@@ -51,7 +51,9 @@ class TodoyuBookmarkBookmarkActionController extends TodoyuActionController {
 			TodoyuRightsManager::deny('bookmark', $type . ':add');
 		}
 
-		TodoyuBookmarkBookmarkManager::addItemToBookmarks($idType, $idItem);
+		if ( ! TodoyuBookmarkBookmarkManager::isItemBookmarked($type, $idItem) ) {
+			TodoyuBookmarkBookmarkManager::addItemToBookmarks($idType, $idItem);
+		}
 	}
 
 
