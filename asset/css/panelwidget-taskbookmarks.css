@@ -6,7 +6,7 @@
 #panelwidget-taskbookmarks div.bookmarks ul li {
 	min-height:32px;
 	padding:0;
-	border-bottom:1px dotted #AAAAAA;
+	border-bottom:1px dotted #aaa;
 	margin-bottom:2px;
 }
 
@@ -25,7 +25,7 @@
 	border-right-width:4px;
 	border-right-style:solid;
 	padding-left:5px;
-	padding-right: 24px;
+	padding-right:24px;
 }
 
 #panelwidget-taskbookmarks .taskItem .title,
