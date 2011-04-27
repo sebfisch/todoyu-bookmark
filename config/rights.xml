@@ -5,13 +5,4 @@
 		<right name="use" />
 	</section>
 
-	<section name="task" require="general:use">
-		<right name="add" />
-		<right name="remove" />
-	</section>
-
-	<section name="panelwidgets" require="general:use">
-		<right name="taskbookmarks" />
-	</section>
-
 </rights>
