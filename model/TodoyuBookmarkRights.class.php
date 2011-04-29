@@ -28,29 +28,23 @@
 class TodoyuBookmarkRights {
 
 	/**
-	 * Checks if add of bookmark is allowed (inclusive visibility check on Element)
+	 * Checks whether adding of bookmark is allowed (including visibility check on Element)
 	 *
-	 * @static
-	 * @param	Integer	$idItem
-	 * @param	Integer	$idType
+	 * @param	Integer		$idItem
+	 * @param	Integer		$idType
 	 * @return	Boolean
 	 */
 	public static function isAddAllowed($idItem, $idType) {
 		$idItem	= intval($idItem);
 
-		if( TodoyuAuth::isAdmin() ) {
-			return true;
-		}
-
-		return self::isSeeAllowed($idItem, $idType);
+		return TodoyuAuth::isAdmin() ? true : self::isSeeAllowed($idItem, $idType);
 	}
 
 
 
 	/**
-	 * Checks if add of bookmark is allowed (inclusive visibility check on Element)
+	 * Checks if seeing of bookmark is allowed (including visibility check on Element)
 	 *
-	 * @static
 	 * @param	Integer	$idItem
 	 * @param	Integer	$idType
 	 * @return	Boolean
@@ -75,9 +69,8 @@ class TodoyuBookmarkRights {
 
 
 	/**
-	 * Checks if remove of bookmark is allowed (inclusive visibility check on Element)
+	 * Checks whether removing of bookmark is allowed (inclusive visibility check on Element)
 	 *
-	 * @static
 	 * @param	Integer		$idBookmark
 	 * @param	Integer		$type
 	 * @return	Boolean
