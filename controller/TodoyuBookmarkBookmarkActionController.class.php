@@ -32,7 +32,7 @@ class TodoyuBookmarkBookmarkActionController extends TodoyuActionController {
 	 * @param	Array	$params
 	 */
 	public function init(array $params) {
-		restrict('bookmark', 'general:use');
+		Todoyu::restrict('bookmark', 'general:use');
 	}
 
 
@@ -78,7 +78,7 @@ class TodoyuBookmarkBookmarkActionController extends TodoyuActionController {
 			$idItem		= TodoyuBookmarkBookmarkManager::getItemID($idBookmark);
 		}
 
-		$idPersonCreate	= personid();
+		$idPersonCreate	= Todoyu::personid();
 
 		TodoyuBookmarkBookmarkManager::removeItemFromBooksmarks($idType, $idItem, $idPersonCreate);
 	}

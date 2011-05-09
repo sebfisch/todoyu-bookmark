@@ -59,7 +59,7 @@ class TodoyuBookmarkRights {
 		switch( $idType ) {
 			case BOOKMARK_TYPE_TASK:
 				if( TodoyuProjectTaskRights::isSeeAllowed($idItem) ) {
-					return allowed('bookmark', 'general:use');
+					return Todoyu::allowed('bookmark', 'general:use');
 				}
 		}
 
@@ -85,7 +85,7 @@ class TodoyuBookmarkRights {
 
 		switch( $type ) {
 			case BOOKMARK_TYPE_TASK:
-				return allowed('bookmark', 'general:use');
+				return Todoyu::allowed('bookmark', 'general:use');
 		}
 
 		return false;

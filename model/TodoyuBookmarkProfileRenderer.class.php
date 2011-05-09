@@ -81,7 +81,7 @@ class TodoyuBookmarkProfileRenderer {
 			'bookmarksList'	=> self::renderBookmarkList('task')
 		);
 
-		return render($tmpl, $data);
+		return Todoyu::render($tmpl, $data);
 	}
 
 
@@ -116,7 +116,7 @@ class TodoyuBookmarkProfileRenderer {
 			'idBookmark'	=> intval($idBookmark)
 		);
 
-		return render($tmpl, $data);
+		return Todoyu::render($tmpl, $data);
 	}
 
 
@@ -164,7 +164,7 @@ class TodoyuBookmarkProfileRenderer {
 			'projectTitle'	=> $task->getProject()->getFullTitle()
 		);
 
-		return render('ext/bookmark/view/task-form.tmpl', $data);
+		return Todoyu::render('ext/bookmark/view/task-form.tmpl', $data);
 	}
 
 }

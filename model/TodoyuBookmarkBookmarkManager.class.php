@@ -61,7 +61,7 @@ class TodoyuBookmarkBookmarkManager {
 		$idType		= self::getTypeIndex($typeKey);
 
 		if( $idPersonCreate === 0 ) {
-			$idPersonCreate	= personid();
+			$idPersonCreate	= Todoyu::personid();
 		}
 
 		$field	= 'id';
@@ -320,7 +320,7 @@ class TodoyuBookmarkBookmarkManager {
 		$type		= intval($type);
 
 		$where	= '		deleted				= 0'
-				. ' AND	id_person_create	= ' . personid()
+				. ' AND	id_person_create	= ' . Todoyu::personid()
 				. ' AND	`type` 				= ' . $type;
 		$order	= 'sorting';
 
@@ -347,7 +347,7 @@ class TodoyuBookmarkBookmarkManager {
 	 */
 	public static function saveOrder(array $items) {
 		foreach($items as $sorting => $idItem) {
-			$where	= 'id_item	= ' . $idItem . ' AND id_person_create = ' . personid();
+			$where	= 'id_item	= ' . $idItem . ' AND id_person_create = ' . Todoyu::personid();
 			$data	= array('sorting'	=> $sorting);
 
 			Todoyu::db()->doUpdate(self::TABLE, $where, $data);

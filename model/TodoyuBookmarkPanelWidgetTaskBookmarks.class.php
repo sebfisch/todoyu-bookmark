@@ -84,11 +84,11 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 			}
 
 				// Get label
-			$bookmark	= TodoyuBookmarkBookmarkManager::getBookmarkByItemId($task['id'], 'task', personid());
+			$bookmark	= TodoyuBookmarkBookmarkManager::getBookmarkByItemId($task['id'], 'task', Todoyu::personid());
 			$taskBookmarks[$index]['label']	= $bookmark->getLabel();
 
 				// Add timetracking function if enable
-			if( TodoyuExtensions::isInstalled('timetracking') && allowed('timetracking', 'general:use') ) {
+			if( TodoyuExtensions::isInstalled('timetracking') && Todoyu::allowed('timetracking', 'general:use') ) {
 				$taskBookmarks[$index]['isTrackable']	= TodoyuTimetracking::isTrackable($task['type'], $task['status'], $task['id']);
 
 				if( TodoyuTimetracking::isTaskRunning($task['id']) ) {
@@ -124,7 +124,7 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 			$data['runningTask'] = TodoyuTimetracking::getTaskID();
 		}
 
-		return render($tmpl, $data);
+		return Todoyu::render($tmpl, $data);
 	}
 
 
@@ -159,7 +159,7 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 		$allowed['showinproject']	= $ownItems['showinproject'];
 
 			// Remove bookmark
-		if( allowed('bookmark', 'task:remove') ) {
+		if( Todoyu::allowed('bookmark', 'task:remove') ) {
 			$allowed['removebookmark'] = $ownItems['removebookmark'];
 		}
 
@@ -177,7 +177,7 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 			// Check if timetrack extension is installed
 		if( TodoyuExtensions::isInstalled('timetracking') ) {
 				// Check if task has a trackable status
-			if( TodoyuTimetracking::isTrackable($task->getType(), $task->getStatus(), $idTask) && allowed('timetracking', 'task:track') ) {
+			if( TodoyuTimetracking::isTrackable($task->getType(), $task->getStatus(), $idTask) && Todoyu::allowed('timetracking', 'task:track') ) {
 					// Add stop or start button
 				if( TodoyuTimetracking::isTaskRunning($idTask) ) {
 					$allowed['timetrackstop'] = Todoyu::$CONFIG['EXT']['timetracking']['ContextMenu']['Task']['timetrackstop'];
@@ -198,7 +198,7 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 	 * @return	Boolean
 	 */
 	public static function isAllowed() {
-		return allowed('bookmark', 'panelwidgets:taskbookmarks');
+		return Todoyu::allowed('bookmark', 'panelwidgets:taskbookmarks');
 	}
 
 }

@@ -32,7 +32,7 @@ class TodoyuBookmarkProfileActionController extends TodoyuActionController {
 	 * @param	Array	$params
 	 */
 	public function init(array $params) {
-		restrict('bookmark', 'general:use');
+		Todoyu::restrict('bookmark', 'general:use');
 	}
 
 

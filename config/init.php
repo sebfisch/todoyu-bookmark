@@ -40,7 +40,7 @@ if( TodoyuExtensions::isInstalled('timetracking') ) {
 /* -------------------------------------
 	Add bookmarks module to profile
    ------------------------------------- */
-if( TodoyuExtensions::isInstalled('profile') && allowed('bookmark', 'general:use') ) {
+if( TodoyuExtensions::isInstalled('profile') && Todoyu::allowed('bookmark', 'general:use') ) {
 	TodoyuProfileManager::addModule('bookmark', array(
 		'position'	=> 10,
 		'tabs'		=> 'TodoyuBookmarkProfileRenderer::renderTabs',
