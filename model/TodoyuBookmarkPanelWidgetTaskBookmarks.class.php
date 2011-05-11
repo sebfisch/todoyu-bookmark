@@ -159,7 +159,7 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 		$allowed['showinproject']	= $ownItems['showinproject'];
 
 			// Remove bookmark
-		if( Todoyu::allowed('bookmark', 'task:remove') ) {
+		if( Todoyu::allowed('bookmark', 'general:use') ) {
 			$allowed['removebookmark'] = $ownItems['removebookmark'];
 		}
 
@@ -198,7 +198,7 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 	 * @return	Boolean
 	 */
 	public static function isAllowed() {
-		return Todoyu::allowed('bookmark', 'panelwidgets:taskbookmarks');
+		return Todoyu::allowed('bookmark', 'general:use');
 	}
 
 }

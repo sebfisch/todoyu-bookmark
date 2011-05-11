@@ -76,7 +76,6 @@ class TodoyuBookmarkRights {
 	 * @return	Boolean
 	 */
 	public static function isRemoveAllowed($idBookmark, $type) {
-//		$idBookmark	= intval($idBookmark);
 		$type		= intval($type);
 
 		if( TodoyuAuth::isAdmin() ) {

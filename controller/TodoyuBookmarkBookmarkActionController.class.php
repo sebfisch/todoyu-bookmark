@@ -69,7 +69,7 @@ class TodoyuBookmarkBookmarkActionController extends TodoyuActionController {
 		$idItem	= intval($params['item']);
 
 		if( ! TodoyuBookmarkRights::isRemoveAllowed($idItem, $idType) ) {
-			TodoyuRightsManager::deny('bookmark', 'task:remove');
+			TodoyuRightsManager::deny('bookmark', 'general:use');
 		}
 
 			// No item ID given? get from bookmark ID
