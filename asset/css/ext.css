@@ -54,7 +54,7 @@ h1.extIconBookmark .title {
 
 	/* Column configs */
 .bookmarkListing span.icon {
-	background:url(../img/icons.png) no-repeat 2px -32px;
+	background:url(../img/icons.png) no-repeat 2px -30px;
 }
 .bookmarkListing td.icon.person {
 	background:url(../img/icons.png) no-repeat 6px -116px;
@@ -68,10 +68,10 @@ h1.extIconBookmark .title {
 }
 
 .bookmarkListing td.actions span.rename {
-	background-position:0 -58px;
+	background:url(../../../../core/asset/img/icons.png)no-repeat 0 -148px;
 }
 .bookmarkListing td.actions span.delete {
-	background-position:0 -90px;
+	background:url(../../../../core/asset/img/icons.png)no-repeat 0 -358px;
 }
 
 
@@ -97,9 +97,3 @@ div.bookmark.details {
 			width:100px;
 			padding-right:20px;
 		}
-
-
-
-/*ul#bookmark-tabs li.tabkey-tasks p span.icon {*/
-	/*background:url("../../../project/asset/img/icons.png") no-repeat scroll 0 2px transparent !important;*/
-/*}*/
