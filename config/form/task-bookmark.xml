@@ -11,7 +11,7 @@
 	<fieldsets>
 
 		<fieldset name="main">
-			<legend>Main task bookmark data</legend>
+			<legend>bookmark.form.legend.basics</legend>
 			<elements>
 
 				<field type="text" name="title">

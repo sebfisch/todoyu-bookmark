@@ -6,5 +6,4 @@
 	<label index="task.add">Bookmark a Tarefa</label>
 	<label index="task.remove">Remover Bookmarks</label>
 	<label index="panelwidgets">Painel de Widgets</label>
-	<label index="panelwidgets.taskbookmarks">Exibir o Widget de Bookmark</label>
 </labels>

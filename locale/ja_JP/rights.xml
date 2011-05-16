@@ -6,5 +6,4 @@
 	<label index="task.add">タスクをブックマークする</label>
 	<label index="task.remove">ブックマークを削除する</label>
 	<label index="panelwidgets">パネルウィジェット</label>
-	<label index="panelwidgets.taskbookmarks">ブックマークウィジェットの表示</label>
 </labels>

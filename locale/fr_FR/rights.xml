@@ -6,5 +6,4 @@
 	<label index="task.add">Crer un raccourcis de tâche</label>
 	<label index="task.remove">Effacer les raccourcis</label>
 	<label index="panelwidgets">Panneau de Widgets</label>
-	<label index="panelwidgets.taskbookmarks">Voir le Widget de raccourcis</label>
 </labels>

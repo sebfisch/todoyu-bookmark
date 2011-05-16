@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <labels>
 	<label index="general">General</label>
-	<label index="general.use">Use Bookmarks</label>
+	<label index="general.use">Use Bookmarks Functionality</label>
 	<label index="task">Task Bookmarks</label>
 	<label index="task.add">Bookmark Task</label>
 	<label index="task.remove">Remove Bookmarks</label>
 	<label index="panelwidgets">Panel Widgets</label>
-	<label index="panelwidgets.taskbookmarks">See Bookmark Widget</label>
 </labels>

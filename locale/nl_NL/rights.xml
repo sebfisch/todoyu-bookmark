@@ -6,5 +6,4 @@
 	<label index="task.add">Taak toevoegen aan favorieten</label>
 	<label index="task.remove">Favorieten verwijderen</label>
 	<label index="panelwidgets">Stuurelementen</label>
-	<label index="panelwidgets.taskbookmarks">Zie favorieten-element</label>
 </labels>
