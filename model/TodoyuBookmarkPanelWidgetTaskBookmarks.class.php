@@ -135,7 +135,7 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 	 * @return	String
 	 */
 	public function render() {
-		TodoyuPage::addJsOnloadedFunction('Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.init.bind(Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks)', 100);
+		TodoyuPage::addJsOnloadedFunction('Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.init', 100, true);
 
 		return parent::render();
 	}
