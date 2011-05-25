@@ -146,6 +146,7 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 	 * Get context menu items for bookmark panel widget
 	 *
 	 * @param	Integer		$idTask
+	 * @param	Array		$items
 	 * @return	Arrays
 	 */
 	public static function getContextMenuItems($idTask, array $items) {

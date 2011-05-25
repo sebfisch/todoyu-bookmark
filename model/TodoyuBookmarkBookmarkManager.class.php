@@ -82,7 +82,7 @@ class TodoyuBookmarkBookmarkManager {
 	/**
 	 * Get type index of a type string
 	 *
-	 * @param	String		$key
+	 * @param	String		$typeKey
 	 * @return	Integer
 	 */
 	public static function getTypeIndex($typeKey) {
@@ -172,6 +172,7 @@ class TodoyuBookmarkBookmarkManager {
 	 *
 	 * @param	Integer		$type
 	 * @param	Integer		$idItem
+	 * @param	Integer		$idPersonCreate
 	 * @return	Boolean
 	 */
 	public static function removeItemFromBooksmarks($type, $idItem, $idPersonCreate = 0) {
@@ -266,6 +267,7 @@ class TodoyuBookmarkBookmarkManager {
 	 * Check whether task is bookmarked
 	 *
 	 * @param	Integer	$idTask
+	 * @return	Boolean
 	 */
 	public static function isTaskBookmarked($idTask) {
 		$idTask	= intval($idTask);
@@ -276,9 +278,10 @@ class TodoyuBookmarkBookmarkManager {
 
 
 	/**
-	 * Get the contexmenu part of the bookmarks, depending on the task already exists as a bookmark
+	 * Get the contextmenu part of the bookmarks, depending on the task already exists as a bookmark
 	 *
 	 * @param	Integer	$idTask
+	 * @param	Array	$items
 	 * @return	Array
 	 */
 	public static function getTaskContextMenuItems($idTask, array $items) {
@@ -314,6 +317,7 @@ class TodoyuBookmarkBookmarkManager {
 	/**
 	 * Gets Bookmarks of current person
 	 *
+	 * @param	Integer		$type
 	 * @return	Array
 	 */
 	public static function getPersonBookmarks($type) {

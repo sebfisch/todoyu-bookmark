@@ -36,7 +36,7 @@ class TodoyuBookmarkBookmark extends TodoyuBaseObject {
 	/**
 	 * Constructor of the class
 	 *
-	 * @param	Integer	$bookmarkId
+	 * @param	Integer	$idBookmark
 	 */
 	public function __construct($idBookmark) {
 		parent::__construct($idBookmark, 'ext_bookmark_bookmark');
