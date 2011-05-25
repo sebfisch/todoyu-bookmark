@@ -31,9 +31,9 @@
  * @package		Todoyu
  * @subpackage	Template
  *
- * @param	Dwoo 		$dwoo
- * @param	Integer		$idBookmark
- * @param	String		$typeKey
+ * @param	Dwoo_Compiler 		$compiler
+ * @param	Integer				$idBookmark
+ * @param	String				$typeKey
  * @return	Boolean
  */
 function Dwoo_Plugin_isBookmarkRemoveAllowed_compile(Dwoo_Compiler $compiler, $idBookmark, $typeKey) {
