@@ -41,6 +41,7 @@ class TodoyuBookmarkProfileActionController extends TodoyuActionController {
 	 * Get rename bookmark form
 	 *
 	 * @param	Array		$params
+	 * @return	String
 	 */
 	public function renameformAction(array $params) {
 		$idBookmark	= intval($params['bookmark']);
