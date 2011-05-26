@@ -11,11 +11,11 @@
 	<label index="profile.module.tasks.bookmarksOf">Aufgaben-Favoriten von</label>
 	<label index="profile.module.tasks.listing.task">Aufgabe</label>
 	<label index="profile.module.tasks.listing.title">Titel</label>
-	<label index="profile.module.tasks.listing.label">Label</label>
+	<label index="profile.module.tasks.listing.label">Bezeichnung</label>
 	<label index="bookmark.rename">Favorit umbenennen</label>
 	<label index="bookmark.delete.confirm">Favorit wirklich entfernen?</label>
 	<label index="bookmark.attr.title">Bezeichnung</label>
 	<label index="bookmark.type.task">Aufgabe</label>
 	<label index="bookmark.saved">Der Favorit wurde gespeichert</label>
-	<label index="bookmark.saved.error">Bei Speicherung des Favoriten ist ein Fehler aufgetreten</label>
+	<label index="bookmark.saved.error">Beim Speichen des Favoriten ist ein Fehler aufgetreten</label>
 </labels>
