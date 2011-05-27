@@ -80,7 +80,7 @@ class TodoyuBookmarkBookmarkActionController extends TodoyuActionController {
 
 		$idPersonCreate	= Todoyu::personid();
 
-		TodoyuBookmarkBookmarkManager::removeItemFromBooksmarks($idType, $idItem, $idPersonCreate);
+		TodoyuBookmarkBookmarkManager::removeItemFromBookmarks($idType, $idItem, $idPersonCreate);
 	}
 
 

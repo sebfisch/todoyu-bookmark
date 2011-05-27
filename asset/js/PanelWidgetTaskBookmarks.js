@@ -213,7 +213,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 
 	/**
-	 * Set taskbookmarks widget content, reinit associated extras
+	 * Set taskbookmarks widget content, re-init associated extras
 	 *
 	 * @method	setContent
 	 * @param	{String}	html

@@ -175,7 +175,7 @@ class TodoyuBookmarkBookmarkManager {
 	 * @param	Integer		$idPersonCreate
 	 * @return	Boolean
 	 */
-	public static function removeItemFromBooksmarks($type, $idItem, $idPersonCreate = 0) {
+	public static function removeItemFromBookmarks($type, $idItem, $idPersonCreate = 0) {
 		$type			= intval($type);
 		$idItem			= intval($idItem);
 		$idPersonCreate	= intval($idPersonCreate);
@@ -235,7 +235,7 @@ class TodoyuBookmarkBookmarkManager {
 	public static function removeTaskFromBookmarks($idTask) {
 		$idTask	= intval($idTask);
 
-		return self::removeItemFromBooksmarks('task', $idTask);
+		return self::removeItemFromBookmarks('task', $idTask);
 	}
 
 

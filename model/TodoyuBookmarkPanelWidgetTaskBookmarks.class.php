@@ -47,7 +47,7 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 
 
 	/**
-	 * Get task booksmarks data array
+	 * Get task bookmarks data array
 	 *
 	 * @return	Array
 	 */
