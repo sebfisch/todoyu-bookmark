@@ -42,7 +42,8 @@ Todoyu::$CONFIG['EXT']['bookmark']['info'] = array(
 		'suggests'	=> array(
 			'timetracking'	=> '1.1.0'
 		)
-	)
+	),
+	'urlDocumentation'	=> 'http://doc.todoyu.com/?bookmark'
 );
 
 ?>
