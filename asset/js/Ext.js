@@ -29,8 +29,16 @@
  */
 Todoyu.Ext.bookmark = {
 
+	/**
+	 * @property	PanelWidget
+	 * @type		Object
+	 */
 	PanelWidget: {},
 
+	/**
+	 * @property	Headlet
+	 * @type		Object
+	 */
 	Headlet: {},
 
 	/**
