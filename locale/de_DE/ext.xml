@@ -12,6 +12,7 @@
 	<label index="profile.module.tasks.listing.task">Aufgabe</label>
 	<label index="profile.module.tasks.listing.title">Titel</label>
 	<label index="profile.module.tasks.listing.label">Bezeichnung</label>
+	<label index="bookmark.edit">Favorit bearbeiten</label>
 	<label index="bookmark.rename">Favorit umbenennen</label>
 	<label index="bookmark.delete.confirm">Favorit wirklich entfernen?</label>
 	<label index="bookmark.attr.title">Bezeichnung</label>

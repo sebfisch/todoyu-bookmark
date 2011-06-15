@@ -12,6 +12,7 @@
 	<label index="profile.module.tasks.listing.task">Task</label>
 	<label index="profile.module.tasks.listing.title">Title</label>
 	<label index="profile.module.tasks.listing.label">Label</label>
+	<label index="bookmark.edit">Edit Bookmark</label>
 	<label index="bookmark.rename">Rename Bookmark</label>
 	<label index="bookmark.delete.confirm">Really delete this bookmark?</label>
 	<label index="bookmark.attr.title">Label</label>
