@@ -22,8 +22,8 @@
 /**
  * Rights manager for the bookmark extension
  *
- * @package		todoyu
- * @subpackage	bookmark
+ * @package		Todoyu
+ * @subpackage	Bookmark
  */
 class TodoyuBookmarkRights {
 
