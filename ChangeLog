@@ -1,7 +1,6 @@
 todoyu bookmark extension changelog
 
-bookmark 1.1.0 - not released yet
-	* Feature: 
+bookmark 1.1.0 - 2011-06-17
 	* Changed: Rights cleanup
 	* Changed: Requires core 2.1
 	* Changed: Structure for 2.1
@@ -9,7 +8,7 @@ bookmark 1.1.0 - not released yet
 	* Changed: Cleanup of Rights Management
 
 
-bookmark 1.0.7 - released 2011-06-17
+bookmark 1.0.7 - 2011-06-17
 	* Bugfix: Deleted tasks were still listed in bookmarks widget
 	* Feature: Added placeholders for to-be spanish locale files
 	* Feature: Added changelog
