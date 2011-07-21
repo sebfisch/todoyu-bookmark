@@ -60,6 +60,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.ContextMenu = {
 	},
 
 
+
 	/**
 	 * Extract ID of clicked bookmark from event
 	 *

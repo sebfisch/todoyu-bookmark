@@ -212,6 +212,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	},
 
 
+
 	/**
 	 * Set taskbookmarks widget content, re-init associated extras
 	 *
@@ -333,6 +334,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 		this.ext.Preference.save(action, value, idItem);
 	},
+
 
 
 	/**
