@@ -51,7 +51,7 @@ Todoyu.Ext.bookmark.Profile =  {
 	 *
 	 * @method	initRenameForm
 	 * @param	{String}		type
-	 * @param	{Integer}		idBookmark
+	 * @param	{Number}		idBookmark
 	 */
 	initRenameForm: function(type, idBookmark) {
 		var url = Todoyu.getUrl('bookmark', 'profile');
