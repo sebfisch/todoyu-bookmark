@@ -1,5 +1,8 @@
 todoyu bookmark extension changelog
 
+bookmark 1.1.1 - not released yet
+	* Add: Hooks: bookmark.add, bookmark.delete, bookmark.update
+
 bookmark 1.1.0 - 2011-06-17
 	* Changed: Rights cleanup
 	* Changed: Requires core 2.1

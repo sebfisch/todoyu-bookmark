@@ -50,31 +50,42 @@ class TodoyuBookmarkBookmarkManager {
 	/**
 	 * Get bookmark of given item id, type, creator person
 	 *
-	 * @param	Integer		$idIem
-	 * @param	String		$typeKey
-	 * @param	Integer		$idPersonCreate
+	 * @param	Integer				$idItem
+	 * @param	String|Integer		$typeKey
+	 * @param	Integer				$idPersonCreate
 	 * @return	TodoyuBookmarkBookmark
 	 */
-	public static function getBookmarkByItemId($idIem, $typeKey, $idPersonCreate = 0) {
-		$idItem		= intval($idIem);
-		$idPersonCreate	= intval($idPersonCreate);
-		$idType		= self::getTypeIndex($typeKey);
+	public static function getBookmarkByItemId($idItem, $typeKey, $idPersonCreate = 0) {
+		$idBookmark	= self::getBookmarkIdByItem($idItem, $typeKey, $idPersonCreate);
+		
+		return self::getBookmark($idBookmark);
+	}
 
-		if( $idPersonCreate === 0 ) {
-			$idPersonCreate	= Todoyu::personid();
-		}
+
+
+	/**
+	 * Get bookmark ID by type and item iD
+	 *
+	 * @param	Integer			$idItem
+	 * @param	String|Integer	$type
+	 * @param	Integer			$idPerson
+	 * @return	Integer
+	 */
+	public static function getBookmarkIdByItem($idItem, $type, $idPerson) {
+		$idItem		= intval($idItem);
+		$idPerson	= Todoyu::personid($idPerson);
+		$idType		= is_numeric($type) ? intval($type) : self::getTypeIndex($type);
 
 		$field	= 'id';
 		$table	= self::TABLE;
 		$where	= '		id_item				= ' . $idItem
 				. ' AND	type				= ' . $idType
-				. ' AND	id_person_create	= ' . $idPersonCreate
+				. ' AND	id_person_create	= ' . $idPerson
 				. ' AND	deleted				= 0';
 
-		$res		= Todoyu::db()->getColumn($field, $table, $where);
-		$idBookmark	= intval($res[0]);
+		$idBookmark	= Todoyu::db()->getFieldValue($field, $table, $where);
 
-		return self::getBookmark($idBookmark);
+		return intval($idBookmark);
 	}
 
 
@@ -133,6 +144,8 @@ class TodoyuBookmarkBookmarkManager {
 
 		self::setBookmarkSorting($idBookmark, $type);
 
+		TodoyuHookManager::callHook('bookmark', 'bookmark.add', array($idBookmark, $type, $idItem));
+
 		return $idBookmark;
 	}
 
@@ -172,27 +185,16 @@ class TodoyuBookmarkBookmarkManager {
 	 *
 	 * @param	Integer		$type
 	 * @param	Integer		$idItem
-	 * @param	Integer		$idPersonCreate
-	 * @return	Boolean
+	 * @param	Integer		$idPerson
 	 */
-	public static function removeItemFromBookmarks($type, $idItem, $idPersonCreate = 0) {
-		$type			= intval($type);
-		$idItem			= intval($idItem);
-		$idPersonCreate	= intval($idPersonCreate);
+	public static function removeItemFromBookmarks($type, $idItem, $idPerson = 0) {
+		$type		= intval($type);
+		$idItem		= intval($idItem);
+		$idPerson	= Todoyu::personid($idPerson);
+		
+		$idBookmark	= self::getBookmarkIdByItem($idItem, $type, $idPerson);
 
-		$table	= self::TABLE;
-		$where	= '		`type`				= ' . $type
-				. ' AND	id_item				= ' . $idItem;
-
-		if( $idPersonCreate !== 0 ) {
-			$where .= ' AND	id_person_create	= ' . $idPersonCreate;
-		}
-
-		$update	= array(
-			'deleted'	=> 1
-		);
-
-		return Todoyu::db()->doUpdate($table, $where, $update) === 1;
+		self::removeBookmark($idBookmark);
 	}
 
 
@@ -208,6 +210,8 @@ class TodoyuBookmarkBookmarkManager {
 		);
 
 		TodoyuRecordManager::updateRecord(self::TABLE, $idBookmark, $update);
+
+		TodoyuHookManager::callHook('bookmark', 'bookmark.delete', array($idBookmark));
 	}
 
 
@@ -230,12 +234,11 @@ class TodoyuBookmarkBookmarkManager {
 	 * Remove task from bookmarks
 	 *
 	 * @param	Integer		$idTask
-	 * @return	Boolean
 	 */
 	public static function removeTaskFromBookmarks($idTask) {
 		$idTask	= intval($idTask);
 
-		return self::removeItemFromBookmarks('task', $idTask);
+		self::removeItemFromBookmarks(BOOKMARK_TYPE_TASK, $idTask);
 	}
 
 
@@ -423,12 +426,13 @@ class TodoyuBookmarkBookmarkManager {
 	 *
 	 * @param	Integer		$idBookmark
 	 * @param	Array		$data
-	 * @return	Integer
 	 */
 	public static function updateBookmark($idBookmark, array $data) {
 		$idBookmark			= intval($idBookmark);
 
-		return TodoyuRecordManager::updateRecord(self::TABLE, $idBookmark, $data);
+		TodoyuRecordManager::updateRecord(self::TABLE, $idBookmark, $data);
+
+		TodoyuHookManager::callHook('bookmark', 'bookmark.update', array($idBookmark, $data));
 	}
 
 
