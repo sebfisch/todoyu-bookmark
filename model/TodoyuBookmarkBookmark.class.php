@@ -19,7 +19,7 @@
 *****************************************************************************/
 
 /**
- * todoyu Bookmark class
+ * Todoyu bookmark object
  *
  * @package		Todoyu
  * @subpackage	Bookmark
