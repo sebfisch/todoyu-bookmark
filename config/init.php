@@ -53,7 +53,7 @@ if( TodoyuExtensions::isInstalled('profile') && Todoyu::allowed('bookmark', 'gen
 Todoyu::$CONFIG['EXT']['profile']['bookmarkTabs'] = array(
 	array(
 		'id'			=> 'tasks',
-		'label'			=> 'LLL:bookmark.ext.profile.module.tasks.tab',
+		'label'			=> 'bookmark.ext.profile.module.tasks.tab',
 //		'require'		=> 'bookmark.settings:editbookmarks'
 	)
 );
@@ -70,9 +70,9 @@ Todoyu::$CONFIG['EXT']['bookmark']['listing']['bookmark'] = array(
 	'size'		=> Todoyu::$CONFIG['LIST']['size'],
 	'columns'	=> array(
 		'icon'		=> '',
-		'task'		=> 'LLL:bookmark.ext.profile.module.tasks.listing.task',
-		'title'		=> 'LLL:bookmark.ext.profile.module.tasks.listing.title',
-		'label'		=> 'LLL:bookmark.ext.profile.module.tasks.listing.label',
+		'task'		=> 'bookmark.ext.profile.module.tasks.listing.task',
+		'title'		=> 'bookmark.ext.profile.module.tasks.listing.title',
+		'label'		=> 'bookmark.ext.profile.module.tasks.listing.label',
 		'actions'	=> '',
 	),
 	'truncate'	=> array(
