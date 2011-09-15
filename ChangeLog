@@ -1,7 +1,7 @@
 todoyu bookmark extension changelog
 
-bookmark 1.1.1 - not released yet
-	* Add: Hooks: bookmark.add, bookmark.delete, bookmark.update
+bookmark 1.1.1 - 2011-09-15
+	* Added: Hooks: bookmark.add, bookmark.delete, bookmark.update
 
 bookmark 1.1.0 - 2011-06-17
 	* Changed: Rights cleanup
@@ -14,7 +14,6 @@ bookmark 1.1.0 - 2011-06-17
 bookmark 1.0.7 - 2011-06-17
 	* Bugfix: Deleted tasks were still listed in bookmarks widget
 	* Feature: Added placeholders for to-be spanish locale files
-	* Feature: Added changelog
 
 
 bookmark 1.0.1 to 1.0.6 - 1.0.6 released 2011-01-17
