@@ -1,5 +1,8 @@
 todoyu bookmark extension changelog
 
+bookmark 1.1.2 - not released yet
+	* Translation: Polish
+
 bookmark 1.1.1 - 2011-09-15
 	* Added: Hooks: bookmark.add, bookmark.delete, bookmark.update
 
