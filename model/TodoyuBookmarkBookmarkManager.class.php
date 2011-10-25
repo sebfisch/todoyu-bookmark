@@ -48,7 +48,7 @@ class TodoyuBookmarkBookmarkManager {
 
 
 	/**
-	 * Get bookmark of given item id, type, creator person
+	 * Get bookmark of given item ID, type, creator person
 	 *
 	 * @param	Integer				$idItem
 	 * @param	String|Integer		$typeKey
