@@ -38,11 +38,13 @@
 	color:#999;
 }
 
-
 #panelwidget-taskbookmarks li.running .taskItem .title {
 	font-weight:bold;
 }
 
+#panelwidget-taskbookmarks div.bookmarks ul li {
+	z-index: 1;
+}
 #panelwidget-taskbookmarks div.bookmarks ul li a.timetracking {
 	display:block;
 	float:right;
