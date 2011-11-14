@@ -171,12 +171,12 @@ Todoyu.Ext.bookmark.Profile =  {
 		var type	= 'task';
 
 		if( response.hasTodoyuError() ) {
-			Todoyu.notifyError('[LLL:bookmark.ext.bookmark.saved.error]');
+			Todoyu.notifyError('[LLL:bookmark.ext.bookmark.saved.error]', 'bookmark.saved');
 			$('bookmark-form-content').update(response.responseText);
 			var idBookmark	= parseInt(response.request.parameters['bookmark[id]'], 10);
 			this.initEditForm(idBookmark);
 		} else {
-			Todoyu.notifySuccess('[LLL:bookmark.ext.bookmark.saved]');
+			Todoyu.notifySuccess('[LLL:bookmark.ext.bookmark.saved]', 'bookmark.saved');
 
 			this.updateContent(type);
 		}
