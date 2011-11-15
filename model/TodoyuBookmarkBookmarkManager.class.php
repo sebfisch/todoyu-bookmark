@@ -295,8 +295,6 @@ class TodoyuBookmarkBookmarkManager {
 			return $items;
 		}
 
-//		$task	= TodoyuProjectTaskManager::getTask($idTask);
-
 		$ownItems	= Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['Task'];
 		$allowed	= array();
 
@@ -407,7 +405,6 @@ class TodoyuBookmarkBookmarkManager {
 	 * @return	Integer		Bookmark ID
 	 */
 	public static function saveBookmark(array $data) {
-//		$xmlPath	= 'ext/bookmark/config/form/task-bookmark.xml';
 		$idBookmark	= intval($data['id']);
 
 			// Update bookmark data
@@ -428,7 +425,7 @@ class TodoyuBookmarkBookmarkManager {
 	 * @param	Array		$data
 	 */
 	public static function updateBookmark($idBookmark, array $data) {
-		$idBookmark			= intval($idBookmark);
+		$idBookmark	= intval($idBookmark);
 
 		TodoyuRecordManager::updateRecord(self::TABLE, $idBookmark, $data);
 
@@ -459,9 +456,7 @@ class TodoyuBookmarkBookmarkManager {
 	 * @return	String		Content of the panelwidget
 	 */
 	public static function callbackTrackingToggle($idTask, $info) {
-		/**
-		 * @var	TodoyuBookmarkPanelWidgetTaskBookmarks $panelWidget
-		 */
+		/** @var	TodoyuBookmarkPanelWidgetTaskBookmarks $panelWidget */
 		$panelWidget = TodoyuPanelWidgetManager::getPanelWidget('bookmark', 'TaskBookmarks');
 
 		return $panelWidget->renderContent();

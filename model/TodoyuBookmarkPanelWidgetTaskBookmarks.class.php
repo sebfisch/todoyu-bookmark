@@ -151,7 +151,6 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 	 */
 	public static function getContextMenuItems($idTask, array $items) {
 		$idTask	= intval($idTask);
-		$task	= TodoyuProjectTaskManager::getTask($idTask);
 
 		$ownItems	= Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget'];
 		$allowed	= array();
@@ -175,17 +174,9 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 			$allowed['status'] = $status;
 		}
 
-			// Check if timetrack extension is installed
+			// Add timetracking options (if extension installed)
 		if( TodoyuExtensions::isInstalled('timetracking') ) {
-				// Check if task has a trackable status
-			if( TodoyuTimetracking::isTrackable($task->getType(), $task->getStatus(), $idTask) && Todoyu::allowed('timetracking', 'task:track') ) {
-					// Add stop or start button
-				if( TodoyuTimetracking::isTaskRunning($idTask) ) {
-					$allowed['timetrackstop'] = Todoyu::$CONFIG['EXT']['timetracking']['ContextMenu']['Task']['timetrackstop'];
-				} else {
-					$allowed['timetrackstart'] = Todoyu::$CONFIG['EXT']['timetracking']['ContextMenu']['Task']['timetrackstart'];
-				}
-			}
+			$items = array_merge_recursive($items, TodoyuTimetrackingManager::getContextMenuItemStartStop($idTask));
 		}
 
 		return array_merge_recursive($items, $allowed);

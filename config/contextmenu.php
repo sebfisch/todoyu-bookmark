@@ -27,7 +27,7 @@
 
 	// Copy identical context menu items from project/task
 Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget'] = array(
-	'status'		=> Todoyu::$CONFIG['EXT']['project']['ContextMenu']['Task']['status']
+	'status'	=> Todoyu::$CONFIG['EXT']['project']['ContextMenu']['Task']['status']
 );
 
 	// Modify status actions

@@ -54,7 +54,6 @@ Todoyu::$CONFIG['EXT']['profile']['bookmarkTabs'] = array(
 	array(
 		'id'			=> 'tasks',
 		'label'			=> 'bookmark.ext.profile.module.tasks.tab',
-//		'require'		=> 'bookmark.settings:editbookmarks'
 	)
 );
 
