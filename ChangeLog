@@ -1,6 +1,7 @@
 todoyu bookmark extension changelog
 
 bookmark 1.1.2 - not released yet
+	* Changed: Bookmark does not add anymore contextmenu items to deleted tasks
 	* Translation: Polish
 
 bookmark 1.1.1 - 2011-09-15

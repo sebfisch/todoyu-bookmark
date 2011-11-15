@@ -290,8 +290,8 @@ class TodoyuBookmarkBookmarkManager {
 	public static function getTaskContextMenuItems($idTask, array $items) {
 		$idTask		= intval($idTask);
 
-			// Ignore 0-task
-		if( $idTask === 0 ) {
+			// Ignore 0-task and deleted tasks
+		if( $idTask === 0 || TodoyuProjectTaskManager::isDeleted($idTask) ) {
 			return $items;
 		}
 
@@ -324,12 +324,22 @@ class TodoyuBookmarkBookmarkManager {
 	public static function getPersonBookmarks($type) {
 		$type		= intval($type);
 
-		$where	= '		deleted				= 0'
-				. ' AND	id_person_create	= ' . Todoyu::personid()
-				. ' AND	`type` 				= ' . $type;
-		$order	= 'sorting';
+		$tables	= self::TABLE;
+		$where	= self::TABLE . '.deleted						= 0'
+				. ' AND	' . self::TABLE .  '.id_person_create	= ' . Todoyu::personid()
+				. ' AND	' . self::TABLE . '.type				= ' . $type;
 
-		return TodoyuRecordManager::getAllRecords(self::TABLE, $where, $order);
+			// Dont get bookmarks of deleted tasks
+		if( $type	=== TASK_TYPE_TASK ) {
+			$tables	.= ', ext_project_task';
+
+			$where .= ' AND ext_project_task.id			= ' . self::TABLE . '.id_item '
+					. ' AND ext_project_task.deleted	= 0';
+		}
+
+		$order	= self::TABLE . '.sorting';
+
+		return TodoyuRecordManager::getAllRecords($tables, $where, $order);
 	}
 
 
