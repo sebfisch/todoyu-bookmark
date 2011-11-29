@@ -324,6 +324,8 @@ class TodoyuBookmarkBookmarkManager {
 	public static function getPersonBookmarks($type) {
 		$type		= intval($type);
 
+		$fields		= self::TABLE.'.*';
+
 		$tables	= self::TABLE;
 		$where	= self::TABLE . '.deleted						= 0'
 				. ' AND	' . self::TABLE .  '.id_person_create	= ' . Todoyu::personid()
@@ -339,7 +341,7 @@ class TodoyuBookmarkBookmarkManager {
 
 		$order	= self::TABLE . '.sorting';
 
-		return TodoyuRecordManager::getAllRecords($tables, $where, $order);
+		return Todoyu::db()->getArray($fields, $tables, $where, $order);
 	}
 
 
