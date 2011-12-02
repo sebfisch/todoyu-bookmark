@@ -34,11 +34,11 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 	 */
 	public function __construct(array $config, array $params = array()) {
 		parent::__construct(
-			'bookmark',								// ext key
-			'taskbookmarks',						// panel widget ID
-			'bookmark.ext.title',				// widget title text
-			$config,								// widget config array
-			$params									// widget parameters
+			'bookmark',				// ext key
+			'taskbookmarks',		// panel widget ID
+			'bookmark.ext.title',	// widget title text
+			$config,				// widget config array
+			$params					// widget parameters
 		);
 
 		$this->addHasIconClass();
