@@ -1,7 +1,7 @@
 todoyu bookmark extension changelog
 
 bookmark 1.1.3 - not released yet
-	* Bugfix: Fixed wrong Bookmark ids in profile
+	* Bugfix: Fixed wrong Bookmark IDs in profile
 
 bookmark 1.1.2 - 2011-11-17
 	* Changed: Bookmark does not add anymore contextmenu items to deleted tasks
