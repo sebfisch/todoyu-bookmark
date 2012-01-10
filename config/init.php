@@ -50,7 +50,7 @@ if( TodoyuExtensions::isInstalled('profile') && Todoyu::allowed('bookmark', 'gen
 	));
 }
 	// Tabs for bookmark section in profile
-Todoyu::$CONFIG['EXT']['profile']['bookmarkTabs'] = array(
+Todoyu::$CONFIG['EXT']['profile']['bookmarkTabs']	= array(
 	array(
 		'id'			=> 'tasks',
 		'label'			=> 'bookmark.ext.profile.module.tasks.tab',
@@ -62,7 +62,7 @@ Todoyu::$CONFIG['EXT']['profile']['bookmarkTabs'] = array(
 /* ------------------------------------
 	Configure listings for bookmarks
    ------------------------------------ */
-Todoyu::$CONFIG['EXT']['bookmark']['listing']['bookmark'] = array(
+Todoyu::$CONFIG['EXT']['bookmark']['listing']['bookmark']	= array(
 	'name'		=> 'bookmark',
 	'update'	=> 'bookmark/bookmark/listing',
 	'dataFunc'	=> 'TodoyuBookmarkBookmarkManager::getTaskBookmarkListingData',

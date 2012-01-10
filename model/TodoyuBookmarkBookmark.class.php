@@ -29,7 +29,7 @@ class TodoyuBookmarkBookmark extends TodoyuBaseObject {
 	/**
 	 * @var String		Default table for database requests
 	 */
-	const TABLE = 'ext_bookmark_bookmark';
+	const TABLE	= 'ext_bookmark_bookmark';
 
 
 

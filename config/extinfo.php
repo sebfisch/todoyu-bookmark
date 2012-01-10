@@ -22,7 +22,7 @@
  * Various bookmark extension info data
  */
 
-Todoyu::$CONFIG['EXT']['bookmark']['info'] = array(
+Todoyu::$CONFIG['EXT']['bookmark']['info']	= array(
 	'title'			=> 'Bookmark',
 	'description' 	=> 'Bookmark Your Tasks',
 	'author' 		=> array(
@@ -30,12 +30,12 @@ Todoyu::$CONFIG['EXT']['bookmark']['info'] = array(
 		'email'		=> 'team@todoyu.com',
 		'company'	=> 'snowflake productions GmbH, Zurich'
 	),
-	'state' 		=> 'stable',
-	'version' 		=> '1.1.2',
-	'constraints' 	=> array(
-		'depends' 	=> array(
+	'state'			=> 'stable',
+	'version'		=> '1.1.2',
+	'constraints'	=> array(
+		'depends'	=> array(
 			'contact'	=> '1.1.0',
-			'project' 	=> '1.1.0',
+			'project'	=> '1.1.0',
 		),
 		'suggests'	=> array(
 			'timetracking'	=> '1.1.0'

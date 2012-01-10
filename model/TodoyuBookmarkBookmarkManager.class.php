@@ -29,7 +29,7 @@ class TodoyuBookmarkBookmarkManager {
 	/**
 	 * @var String		Default table for database requests
 	 */
-	const TABLE = 'ext_bookmark_bookmark';
+	const TABLE	= 'ext_bookmark_bookmark';
 
 
 
@@ -300,11 +300,11 @@ class TodoyuBookmarkBookmarkManager {
 
 		if( self::isTaskBookmarked($idTask) ) {
 			if( TodoyuBookmarkRights::isRemoveAllowed($idTask, BOOKMARK_TYPE_TASK) ) {
-				$allowed['removebookmark'] = $ownItems['removebookmark'];
+				$allowed['removebookmark']	= $ownItems['removebookmark'];
 			}
 		} else {
 			if( TodoyuBookmarkRights::isAddAllowed($idTask, BOOKMARK_TYPE_TASK) ) {
-				$allowed['addbookmark'] = $ownItems['addbookmark'];
+				$allowed['addbookmark']	= $ownItems['addbookmark'];
 			}
 		}
 
@@ -469,7 +469,7 @@ class TodoyuBookmarkBookmarkManager {
 	 */
 	public static function callbackTrackingToggle($idTask, $info) {
 		/** @var	TodoyuBookmarkPanelWidgetTaskBookmarks $panelWidget */
-		$panelWidget = TodoyuPanelWidgetManager::getPanelWidget('bookmark', 'TaskBookmarks');
+		$panelWidget	= TodoyuPanelWidgetManager::getPanelWidget('bookmark', 'TaskBookmarks');
 
 		return $panelWidget->renderContent();
 	}

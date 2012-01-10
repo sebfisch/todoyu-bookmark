@@ -26,30 +26,30 @@
 
 
 	// Copy identical context menu items from project/task
-Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget'] = array(
+Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']	= array(
 	'status'	=> Todoyu::$CONFIG['EXT']['project']['ContextMenu']['Task']['status']
 );
 
 	// Modify status actions
-Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['planning']['jsAction'] 	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_PLANNING . ')';
-Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['open']['jsAction'] 		= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_OPEN . ')';
-Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['progress']['jsAction'] 	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_PROGRESS . ')';
-Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['confirm']['jsAction'] 	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_CONFIRM . ')';
+Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['planning']['jsAction']	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_PLANNING . ')';
+Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['open']['jsAction']		= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_OPEN . ')';
+Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['progress']['jsAction']	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_PROGRESS . ')';
+Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['confirm']['jsAction']	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_CONFIRM . ')';
 Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['done']['jsAction'] 		= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_DONE . ')';
-Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['accepted']['jsAction'] 	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_ACCEPTED . ')';
-Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['rejected']['jsAction'] 	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_REJECTED . ')';
-Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['cleared']['jsAction'] 	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_CLEARED . ')';
+Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['accepted']['jsAction']	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_ACCEPTED . ')';
+Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['rejected']['jsAction']	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_REJECTED . ')';
+Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['cleared']['jsAction']	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_CLEARED . ')';
 
 
 	// Add own context menu items
-Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['showinproject'] = array(
+Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['showinproject']	= array(
 	'key'		=> 'showinproject',
 	'label'		=> 'project.task.contextmenu.showinproject',
 	'jsAction'	=> 'Todoyu.Ext.project.goToTaskInProject(#ID#)',
 	'class'		=> 'taskContextMenu task-showinproject',
 	'position'	=> 10
 );
-Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['removebookmark'] = array(
+Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['removebookmark']	= array(
 	'key'		=> 'removebookmark',
 	'label'		=> 'bookmark.ext.contextmenu.removebookmark',
 	'jsAction'	=> 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.removeTask(#ID#)',
@@ -62,15 +62,15 @@ Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['removebookmark
 ### CONTEXT MENU FOR TASK ###
 
 	// Extend general context menu of tasks (e.g portal, project)
-Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['Task'] = array(
-	'addbookmark' => array(
+Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['Task']	= array(
+	'addbookmark'	=> array(
 		'key'		=> 'addbookmark',
 		'label'		=> 'bookmark.ext.contextmenu.addbookmark',
 		'jsAction'	=> 'Todoyu.Ext.bookmark.Task.add(#ID#)',
 		'class'		=> 'taskContextMenu task-bookmark',
 		'position'	=> 90
 	),
-	'removebookmark' => array(
+	'removebookmark'	=> array(
 		'key'		=> 'removebookmark',
 		'label'		=> 'bookmark.ext.contextmenu.removebookmark',
 		'jsAction'	=> 'Todoyu.Ext.bookmark.Task.remove(#ID#)',

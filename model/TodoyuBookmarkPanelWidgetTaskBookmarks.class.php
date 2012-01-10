@@ -121,7 +121,7 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 		);
 
 		if( TodoyuExtensions::isInstalled('timetracking') ) {
-			$data['runningTask'] = TodoyuTimetracking::getTaskID();
+			$data['runningTask']	= TodoyuTimetracking::getTaskID();
 		}
 
 		return Todoyu::render($tmpl, $data);
@@ -160,23 +160,23 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 
 			// Remove bookmark
 		if( Todoyu::allowed('bookmark', 'general:use') ) {
-			$allowed['removebookmark'] = $ownItems['removebookmark'];
+			$allowed['removebookmark']	= $ownItems['removebookmark'];
 		}
 
 			// Change status
-		$taskItems = TodoyuProjectTaskManager::getContextMenuItems($idTask, array());
+		$taskItems	= TodoyuProjectTaskManager::getContextMenuItems($idTask, array());
 		if( array_key_exists('status', $taskItems) ) {
 			$status	= $taskItems['status'];
 			foreach($status['submenu'] as $key => $config) {
-				$status['submenu'][$key]['jsAction'] = str_replace('Todoyu.Ext.project.Task.updateStatus', 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus', $config['jsAction']);
+				$status['submenu'][$key]['jsAction']	= str_replace('Todoyu.Ext.project.Task.updateStatus', 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus', $config['jsAction']);
 			}
 
-			$allowed['status'] = $status;
+			$allowed['status']	= $status;
 		}
 
 			// Add timetracking options (if extension installed)
 		if( TodoyuExtensions::isInstalled('timetracking') ) {
-			$items = array_merge_recursive($items, TodoyuTimetrackingManager::getContextMenuItemStartStop($idTask));
+			$items	= array_merge_recursive($items, TodoyuTimetrackingManager::getContextMenuItemStartStop($idTask));
 		}
 
 		return array_merge_recursive($items, $allowed);
