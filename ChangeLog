@@ -17,11 +17,9 @@ bookmark 1.1.0 - 2011-06-17
 	* Changed: All classes are prefixed with extension name
 	* Changed: Cleanup of Rights Management
 
-
 bookmark 1.0.7 - 2011-06-17
 	* Bugfix: Deleted tasks were still listed in bookmarks widget
 	* Feature: Added placeholders for to-be spanish locale files
-
 
 bookmark 1.0.1 to 1.0.6 - 1.0.6 released 2011-01-17
 	* Bugfix: Removed left-over debug output
@@ -64,7 +62,6 @@ bookmark 1.0.1 to 1.0.6 - 1.0.6 released 2011-01-17
 	* Changed: Moved the global $CONFIG variable to Todoyu class. Is now a public static member variable
 	* Changed: Asset handling (load all in one merge file)
 	* Changed: Moved page config to own config/page.php which is loaded only on page rendering
-
 
 bookmark 1.0.0 - released 2010-10-05
 	* Changed: Declared state stable
