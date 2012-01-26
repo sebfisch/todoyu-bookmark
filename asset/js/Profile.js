@@ -130,8 +130,8 @@ Todoyu.Ext.bookmark.Profile =  {
 		var options = {
 			parameters: {
 				action:	'module',
-				'area':		'profile',
-				'module':	'bookmark'
+				area:	'profile',
+				module:	'bookmark'
 			}
 		};
 

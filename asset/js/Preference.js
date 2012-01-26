@@ -73,7 +73,7 @@ Todoyu.Ext.bookmark.Preference = {
 		var options = {
 			parameters: {
 				action:	action,
-				'value':	value
+				value:	value
 			}
 		};
 

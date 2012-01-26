@@ -54,8 +54,8 @@ Todoyu.Ext.bookmark = {
 		var options = {
 			parameters: {
 				action:	'add',
-				'type':		type,
-				'item':		idItem
+				type:	type,
+				item:	idItem
 			},
 			onComplete: onComplete
 		};

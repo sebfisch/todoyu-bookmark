@@ -233,7 +233,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 * @param	{Number}		idTask
 	 */
 	showTaskInProject: function(idTask) {
-		Todoyu.goTo('project', 'ext', {'task':idTask}, 'task-' + idTask);
+		Todoyu.goTo('project', 'ext', {task:idTask}, 'task-' + idTask);
 	},
 
 
@@ -327,8 +327,8 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	saveBookmarksOrder: function(type, items) {
 		var action		= 'bookmarksOrder';
 		var value	= Object.toJSON({
-			'type':		type,
-			'items':	items
+			type:	type,
+			items:	items
 		});
 		var idItem	= 0;
 
