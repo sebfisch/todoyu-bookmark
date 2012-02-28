@@ -61,7 +61,7 @@ class TodoyuBookmarkBookmark extends TodoyuBaseObject {
 	 * @return	Integer
 	 */
 	public function getItemID() {
-		return 	intval($this->get('id_item'));
+		return $this->getInt('id_item');
 	}
 
 
@@ -72,7 +72,7 @@ class TodoyuBookmarkBookmark extends TodoyuBaseObject {
 	 * @return	Integer
 	 */
 	public function getItemType() {
-		return intval($this->get('type'));
+		return $this->getInt('type');
 	}
 
 

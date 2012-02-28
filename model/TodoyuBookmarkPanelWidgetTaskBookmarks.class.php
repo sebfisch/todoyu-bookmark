@@ -165,7 +165,7 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 
 			// Change status
 		$taskItems	= TodoyuProjectTaskManager::getContextMenuItems($idTask, array());
-		if( array_key_exists('status', $taskItems) ) {
+		if( isset($taskItems['status']) ) {
 			$status	= $taskItems['status'];
 			foreach($status['submenu'] as $key => $config) {
 				$status['submenu'][$key]['jsAction']	= str_replace('Todoyu.Ext.project.Task.updateStatus', 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus', $config['jsAction']);
