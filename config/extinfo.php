@@ -24,8 +24,8 @@
 
 Todoyu::$CONFIG['EXT']['bookmark']['info']	= array(
 	'title'			=> 'Bookmark',
-	'description' 	=> 'Bookmark Your Tasks',
-	'author' 		=> array(
+	'description'	=> 'Bookmark Your Tasks',
+	'author'		=> array(
 		'name'		=> 'todoyu Core Developer Team',
 		'email'		=> 'team@todoyu.com',
 		'company'	=> 'snowflake productions GmbH, Zurich'

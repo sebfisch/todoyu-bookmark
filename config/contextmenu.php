@@ -35,7 +35,7 @@ Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['subm
 Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['open']['jsAction']		= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_OPEN . ')';
 Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['progress']['jsAction']	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_PROGRESS . ')';
 Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['confirm']['jsAction']	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_CONFIRM . ')';
-Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['done']['jsAction'] 		= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_DONE . ')';
+Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['done']['jsAction']		= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_DONE . ')';
 Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['accepted']['jsAction']	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_ACCEPTED . ')';
 Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['rejected']['jsAction']	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_REJECTED . ')';
 Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['status']['submenu']['cleared']['jsAction']	= 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.updateTaskStatus(#ID#, ' . STATUS_CLEARED . ')';

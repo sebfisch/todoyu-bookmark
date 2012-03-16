@@ -31,7 +31,7 @@
  * @package		Todoyu
  * @subpackage	Template
  *
- * @param	Dwoo_Compiler 		$compiler
+ * @param	Dwoo_Compiler		$compiler
  * @param	Integer				$idBookmark
  * @param	String				$typeKey
  * @return	Boolean

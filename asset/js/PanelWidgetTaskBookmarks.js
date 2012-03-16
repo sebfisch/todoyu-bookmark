@@ -185,7 +185,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 			return false;
 		}
 
-		var url 	= Todoyu.getUrl('bookmark', 'refresh');	// ext, action
+		var url	= Todoyu.getUrl('bookmark', 'refresh');	// ext, action
 		var options = {
 			parameters: {
 				action: 'update'

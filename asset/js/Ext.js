@@ -42,7 +42,7 @@ Todoyu.Ext.bookmark = {
 	Headlet: {},
 
 	/**
-	 * 	Add bookmark
+	 * Add bookmark
 	 *
 	 * @method	add
 	 * @param	{String}	type

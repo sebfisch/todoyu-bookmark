@@ -25,9 +25,9 @@
  * @subpackage	Bookmark
  */
 
-define('BOOKMARK_TYPE_TASK', 	1);
-define('BOOKMARK_TYPE_PROJECT', 2);
-define('BOOKMARK_TYPE_EVENT', 	3);
-define('BOOKMARK_TYPE_PERSON', 	4);
+define('BOOKMARK_TYPE_TASK',	1);
+define('BOOKMARK_TYPE_PROJECT',	2);
+define('BOOKMARK_TYPE_EVENT',	3);
+define('BOOKMARK_TYPE_PERSON',	4);
 
 ?>

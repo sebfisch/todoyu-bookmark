@@ -23,7 +23,7 @@ bookmark 1.0.7 - 2011-06-17
 
 bookmark 1.0.1 to 1.0.6 - 1.0.6 released 2011-01-17
 	* Bugfix: Removed left-over debug output
- 	* Bugfix: Fixed problem with extension dependency in bookmark
+	* Bugfix: Fixed problem with extension dependency in bookmark
 	* Bugfix: Fixed bookmark task number (was task id)
 	* Bugfix: Fixed bookmark items sorting, saved order
 	* Bugfix: Fixed content menu icons of bookmarks
