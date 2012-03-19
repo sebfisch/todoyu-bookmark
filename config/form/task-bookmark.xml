@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form>
 	<attributes>
-		<attribute name="action">?ext=bookmark&amp;controller=profile</attribute>
+		<attribute name="action">index.php?ext=bookmark&amp;controller=profile</attribute>
 		<attribute name="name">taskbookmark</attribute>
 
 	</attributes>
