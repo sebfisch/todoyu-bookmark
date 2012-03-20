@@ -17,6 +17,6 @@
 	<label index="bookmark.delete.confirm">Favorit wirklich entfernen?</label>
 	<label index="bookmark.attr.title">Bezeichnung</label>
 	<label index="bookmark.type.task">Aufgabe</label>
-	<label index="bookmark.saved">Der Favorit wurde gespeichert</label>
-	<label index="bookmark.saved.error">Beim Speichen des Favoriten ist ein Fehler aufgetreten</label>
+	<label index="bookmark.saved">Der Favorit wurde gespeichert.</label>
+	<label index="bookmark.saved.error">Beim Speichen des Favoriten ist ein Fehler aufgetreten.</label>
 </labels>

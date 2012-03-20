@@ -17,6 +17,6 @@
 	<label index="bookmark.delete.confirm">Really delete this bookmark?</label>
 	<label index="bookmark.attr.title">Label</label>
 	<label index="bookmark.type.task">Task</label>
-	<label index="bookmark.saved">The bookmark has been saved</label>
-	<label index="bookmark.saved.error">There has been an error while saving the bookmark</label>
+	<label index="bookmark.saved">The bookmark has been saved.</label>
+	<label index="bookmark.saved.error">There has been an error while saving the bookmark.</label>
 </labels>
