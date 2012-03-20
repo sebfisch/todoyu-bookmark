@@ -1,8 +1,8 @@
 <div id="{$id}-list" class="bookmarks">
 	{if $bookmarks}
-		<ul class="contextmenutaskbookmarks ulListDotted withMouseHover sortable">
+		<ul id="{$id}-listitems" class="contextmenutaskbookmarks withMouseHover sortable">
 		{foreach $bookmarks taskBookmark}
-			<li id="{$id}-task-{$taskBookmark.id}" class="{cycle values="odd,even"} listItem sortable bcStatus{$taskBookmark.status} {if $taskBookmark.isRunning}running{/if}" title="{if taskBookmark.type === constant('TASK_TYPE_TASK')}{Label project.task.task}{else}{Label project.task.type.container}{/if} {$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {htmlencode $taskBookmark.title}">
+			<li id="{$id}-task-{$taskBookmark.id}" class="{cycle values="even,odd"} listItem sortable bcStatus{$taskBookmark.status} {if $taskBookmark.isRunning}running{/if}" title="{if taskBookmark.type === constant('TASK_TYPE_TASK')}{Label project.task.task}{else}{Label project.task.type.container}{/if} {$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {htmlencode $taskBookmark.title}">
 				{if $taskBookmark.isTrackable || $taskBookmark.isRunning}
 					<a id="{$id}-task-{$taskBookmark.id}-btn" class="icon timetracking {$taskBookmark.btnClass}" href="javascript:void(0)" onclick="Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.{$taskBookmark.jsFunction}({$taskBookmark.id});this.onclick=''" title="{if $taskBookmark.id == $runningTask}{Label timetracking.ext.stop}{else}{Label timetracking.ext.start}{/if}"><!-- button --></a>
 				{/if}

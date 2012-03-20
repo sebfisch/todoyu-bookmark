@@ -258,8 +258,44 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 * @param	{Number}		idTask
 	 */
 	removeTask: function(idTask) {
+		Effect.Fade('taskbookmarks-task-' + idTask, {
+			duration: 0.5,
+			afterFinish: this.onTaskRemoved.bind(this)
+		});
+
 		this.ext.remove('task', idTask);
-		Effect.SlideUp('taskbookmarks-task-' + idTask);
+	},
+
+
+
+	/**
+	 * After task remove effect is done
+	 * Remove element and fix even/odd
+	 *
+	 * @param	{Number}	idTask
+	 */
+	onTaskRemoved: function(idTask) {
+		$('taskbookmarks-task-' + idTask).remove();
+		this.fixEventOdd();
+	},
+
+
+
+	/**
+	 * Fix event odd after a task was removed
+	 *
+	 */
+	fixEventOdd: function() {
+		var items = $('taskbookmarks-listitems').select('li.listItem');
+
+		if( items ) {
+			items.invoke('removeClassName', 'even');
+			items.invoke('removeClassName', 'odd');
+
+			items.each(function(item, index){
+				item.addClassName(index%2?'odd':'event');
+			});
+		}
 	},
 
 

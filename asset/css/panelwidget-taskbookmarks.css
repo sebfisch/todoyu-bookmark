@@ -42,10 +42,10 @@
 	font-weight:bold;
 }
 
-#panelwidget-taskbookmarks div.bookmarks ul li {
+#panelwidget-taskbookmarks .bookmarks ul li {
 	z-index:1;
 }
-#panelwidget-taskbookmarks div.bookmarks ul li a.timetracking {
+#panelwidget-taskbookmarks .bookmarks ul li a.timetracking {
 	display:block;
 	float:right;
 	clear:none;
@@ -56,7 +56,7 @@
 	background:url(../../../timetracking/asset/img/icons.png) no-repeat 0 -22px;
 }
 
-#panelwidget-taskbookmarks div.bookmarks ul li.running a {
+#panelwidget-taskbookmarks .bookmarks ul li.running a {
 	background-position:0 8px !important;
 }
 
