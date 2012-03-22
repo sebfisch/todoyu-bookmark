@@ -15,6 +15,7 @@
 	<label index="bookmark.edit">Favorit bearbeiten</label>
 	<label index="bookmark.rename">Favorit umbenennen</label>
 	<label index="bookmark.delete.confirm">Favorit wirklich entfernen?</label>
+	<label index="bookmark.removed">Favorit wurde entfernt</label>
 	<label index="bookmark.attr.title">Bezeichnung</label>
 	<label index="bookmark.type.task">Aufgabe</label>
 	<label index="bookmark.saved">Der Favorit wurde gespeichert.</label>

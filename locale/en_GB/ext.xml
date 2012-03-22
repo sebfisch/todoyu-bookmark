@@ -15,6 +15,7 @@
 	<label index="bookmark.edit">Edit Bookmark</label>
 	<label index="bookmark.rename">Rename Bookmark</label>
 	<label index="bookmark.delete.confirm">Really delete this bookmark?</label>
+	<label index="bookmark.removed">Bookmark removed</label>
 	<label index="bookmark.attr.title">Label</label>
 	<label index="bookmark.type.task">Task</label>
 	<label index="bookmark.saved">The bookmark has been saved.</label>

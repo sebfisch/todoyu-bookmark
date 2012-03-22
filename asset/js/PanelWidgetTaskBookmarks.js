@@ -276,6 +276,9 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 */
 	onTaskRemoved: function(idTask) {
 		$('taskbookmarks-task-' + idTask).remove();
+
+		Todoyu.notifySuccess('[LLL:bookmark.ext.bookmark.removed]');
+
 		this.fixEventOdd();
 	},
 
