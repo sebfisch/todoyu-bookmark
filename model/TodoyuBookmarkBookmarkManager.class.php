@@ -71,7 +71,7 @@ class TodoyuBookmarkBookmarkManager {
 	 * @param	Integer			$idPerson
 	 * @return	Integer
 	 */
-	public static function getBookmarkIdByItem($idItem, $type, $idPerson) {
+	public static function getBookmarkIdByItem($idItem, $type, $idPerson = 0) {
 		$idItem		= intval($idItem);
 		$idPerson	= Todoyu::personid($idPerson);
 		$idType		= is_numeric($type) ? intval($type) : self::getTypeIndex($type);
@@ -442,6 +442,34 @@ class TodoyuBookmarkBookmarkManager {
 		TodoyuRecordManager::updateRecord(self::TABLE, $idBookmark, $data);
 
 		TodoyuHookManager::callHook('bookmark', 'bookmark.update', array($idBookmark, $data));
+	}
+
+
+
+	/**
+	 * Update bookmark label
+	 *
+	 * @param	Integer		$idBookmark
+	 * @param	String		$label
+	 */
+	public static function updateBookmarkTitle($idBookmark, $label) {
+		self::updateBookmark($idBookmark, array(
+			'title'	=> $label
+		));
+	}
+
+
+
+	/**
+	 * Update task bookmark label
+	 *
+	 * @param	Integer		$idTask
+	 * @param	String		$label
+	 */
+	public static function updateTaskBookmarkTitle($idTask, $label) {
+		$idBookmark = TodoyuBookmarkBookmarkManager::getBookmarkIdByItem($idTask, BOOKMARK_TYPE_TASK);
+
+		TodoyuBookmarkBookmarkManager::updateBookmarkTitle($idBookmark, $label);
 	}
 
 

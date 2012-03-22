@@ -4,6 +4,7 @@
 	<label index="title">Aufgaben Favoriten</label>
 	<label index="info.nobookmarks">Sie haben noch keine Favoriten</label>
 	<label index="contextmenu.removebookmark">Aus Favoriten entfernen</label>
+	<label index="contextmenu.renamebookmark">Favorit umbenennen</label>
 	<label index="contextmenu.editbookmarks">Favoriten Editieren</label>
 	<label index="contextmenu.addbookmark">Zu Favoriten hinzufügen</label>
 	<label index="profile.module">Favoriten</label>
@@ -14,6 +15,7 @@
 	<label index="profile.module.tasks.listing.label">Bezeichnung</label>
 	<label index="bookmark.edit">Favorit bearbeiten</label>
 	<label index="bookmark.rename">Favorit umbenennen</label>
+	<label index="bookmark.renamePrompt">Neuer Favoriten Text (leer = original Text)</label>
 	<label index="bookmark.delete.confirm">Favorit wirklich entfernen?</label>
 	<label index="bookmark.removed">Favorit wurde entfernt</label>
 	<label index="bookmark.attr.title">Bezeichnung</label>

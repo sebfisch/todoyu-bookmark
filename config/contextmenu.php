@@ -56,6 +56,13 @@ Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['removebookmark
 	'class'		=> 'taskContextMenu task-bookmark',
 	'position'	=> 90
 );
+Todoyu::$CONFIG['EXT']['bookmark']['ContextMenu']['PanelWidget']['renamebookmark']	= array(
+	'key'		=> 'renamebookmark',
+	'label'		=> 'bookmark.ext.contextmenu.renamebookmark',
+	'jsAction'	=> 'Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.renameBookmark(#ID#)',
+	'class'		=> 'taskContextMenu renamebookmark',
+	'position'	=> 95
+);
 
 
 

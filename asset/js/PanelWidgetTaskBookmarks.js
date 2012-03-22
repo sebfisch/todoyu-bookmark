@@ -285,6 +285,54 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 
 	/**
+	 * Rename bookmark
+	 *
+	 * @param	{Number}	idTask
+	 */
+	renameBookmark: function(idTask) {
+		var titleElem	= $('taskbookmarks-task-' + idTask).down('.title');
+		var currentElem	= titleElem.up('li').down('.currentLabel');
+		var title		= currentElem.innerHTML.strip();
+		var displayLabel;
+
+		var newTitle= prompt('[LLL:bookmark.ext.bookmark.renamePrompt]', title);
+
+		if( newTitle !== null ) {
+			displayLabel = newTitle.strip() === '' ? titleElem.title : newTitle;
+
+			newTitle = newTitle.stripScripts().stripTags();
+			titleElem.update(displayLabel.substr(0, 40));
+			currentElem.update(displayLabel);
+
+			this.saveBookmarkLabel(idTask, newTitle);
+		}
+	},
+
+
+
+	/**
+	 * Save new bookmark label
+	 *
+	 * @param	{Number}	idTask
+	 * @param	{String}	label
+	 */
+	saveBookmarkLabel: function(idTask, label) {
+		var url		= Todoyu.getUrl('bookmark', 'bookmark');
+		var options	= {
+			parameters: {
+				action:	'rename',
+				task:	idTask,
+				label:	label
+			}
+		};
+
+		Todoyu.send(url, options);
+		Todoyu.notifySuccess('Renamed bookmark');
+	},
+
+
+
+	/**
 	 * Fix event odd after a task was removed
 	 *
 	 */

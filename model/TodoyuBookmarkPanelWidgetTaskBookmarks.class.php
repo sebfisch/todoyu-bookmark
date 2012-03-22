@@ -49,20 +49,20 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 	/**
 	 * Get task bookmarks data array
 	 *
+	 * @param	Integer		$idPerson
 	 * @return	Array
 	 */
-	private function getTaskBookmarks() {
-		$idPerson	= TodoyuAuth::getPersonID();
+	private function getTaskBookmarks($idPerson = 0) {
+		$idPerson	= Todoyu::personid($idPerson);
 
 			// Get bookmarked tasks
 		$fields	= '	t.*,
 					b.date_create as date_create_bookmark,
+					b.title as bookmarktitle,
 					p.title as projecttitle';
-
 		$tables	= ' ext_project_task t,
 					ext_project_project p,
 					ext_bookmark_bookmark b';
-
 		$where	= '		b.id_item	= t.id
 					AND	t.id_project= p.id
 					AND	t.deleted	= 0
@@ -70,11 +70,10 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 					AND	p.deleted	= 0
 					AND	b.type		= ' . BOOKMARK_TYPE_TASK .
 				  ' AND	b.id_person_create = ' . $idPerson;
-
 		$order	= ' b.sorting';
 
 		$taskBookmarks	= Todoyu::db()->getArray($fields, $tables, $where, '', $order);
-
+		
 			// Prepare for rendering
 		foreach($taskBookmarks as $index => $task) {
 				// Remove bookmark if not allowed
@@ -82,10 +81,6 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 				unset($taskBookmarks[$index]);
 				continue;
 			}
-
-				// Get label
-			$bookmark	= TodoyuBookmarkBookmarkManager::getBookmarkByItemId($task['id'], 'task', Todoyu::personid());
-			$taskBookmarks[$index]['label']	= $bookmark->getLabel();
 
 				// Add timetracking function if enable
 			if( TodoyuExtensions::isInstalled('timetracking') && Todoyu::allowed('timetracking', 'general:use') ) {
@@ -147,7 +142,7 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 	 *
 	 * @param	Integer		$idTask
 	 * @param	Array		$items
-	 * @return	Arrays
+	 * @return	Array
 	 */
 	public static function getContextMenuItems($idTask, array $items) {
 		$idTask	= intval($idTask);
@@ -157,11 +152,10 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 
 			// Show in project
 		$allowed['showinproject']	= $ownItems['showinproject'];
-
 			// Remove bookmark
-		if( Todoyu::allowed('bookmark', 'general:use') ) {
-			$allowed['removebookmark']	= $ownItems['removebookmark'];
-		}
+		$allowed['removebookmark']	= $ownItems['removebookmark'];
+			// Rename bookmark
+		$allowed['renamebookmark']	= $ownItems['renamebookmark'];
 
 			// Change status
 		$taskItems	= TodoyuProjectTaskManager::getContextMenuItems($idTask, array());

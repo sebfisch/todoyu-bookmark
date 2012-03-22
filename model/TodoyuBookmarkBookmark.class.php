@@ -82,7 +82,7 @@ class TodoyuBookmarkBookmark extends TodoyuBaseObject {
 	 *
 	 * @return	Integer
 	 */
-	public function getLabel() {
+	public function getTitle() {
 		return $this->get('title');
 	}
 

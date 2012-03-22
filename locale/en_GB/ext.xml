@@ -4,6 +4,7 @@
 	<label index="title">Task Bookmarks</label>
 	<label index="info.nobookmarks">No Bookmarks Yet</label>
 	<label index="contextmenu.removebookmark">Remove From Bookmarks</label>
+	<label index="contextmenu.renamebookmark">Change bookmark label</label>
 	<label index="contextmenu.editbookmarks">Edit Bookmarks</label>
 	<label index="contextmenu.addbookmark">Add To Bookmarks</label>
 	<label index="profile.module">Bookmarks</label>
@@ -14,6 +15,7 @@
 	<label index="profile.module.tasks.listing.label">Label</label>
 	<label index="bookmark.edit">Edit Bookmark</label>
 	<label index="bookmark.rename">Rename Bookmark</label>
+	<label index="bookmark.renamePrompt">New bookmark label (empty = original label)</label>
 	<label index="bookmark.delete.confirm">Really delete this bookmark?</label>
 	<label index="bookmark.removed">Bookmark removed</label>
 	<label index="bookmark.attr.title">Label</label>

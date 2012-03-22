@@ -139,7 +139,7 @@ class TodoyuBookmarkProfileRenderer {
 		$xmlPath	= 'ext/bookmark/config/form/task-bookmark.xml';
 		$form		= TodoyuFormManager::getForm($xmlPath, $idBookmark);
 
-		$label	= $bookmark->getLabel();
+		$label	= $bookmark->getTitle();
 		if( is_null($label) ) {
 			$label	= $task->getTitle();
 		}

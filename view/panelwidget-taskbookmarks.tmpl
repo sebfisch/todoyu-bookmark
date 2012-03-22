@@ -10,17 +10,24 @@
 					<div class="handle" id="bookmark-{$taskBookmark.id}-handle"></div>
 					<div class="bcStatus{$taskBookmark.status}{if $taskBookmark.type == constant('TASK_TYPE_CONTAINER')} container{/if} taskItem">
 
-						<div class="title" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})">
-							{$taskBookmark.id_project}.{$taskBookmark.tasknumber} -
-							{if empty($taskBookmark.label)}
-								{htmlencode(truncate($taskBookmark.title,40))}
+						<div class="title" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})" title="{$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {htmlencode $taskBookmark.title}">
+							{if $taskBookmark.bookmarktitle}
+								{htmlencode(truncate($taskBookmark.bookmarktitle,40))}
 							{else}
-								{htmlencode(truncate($taskBookmark.label,40))}
+								{$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {htmlencode(truncate($taskBookmark.title,40))}
 							{/if}
 						</div>
 
 						<div class="project" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})">
 							{htmlencode $taskBookmark.projecttitle}
+						</div>
+
+						<div class="currentLabel" style="display:none">
+							{if $taskBookmark.bookmarktitle}
+								{htmlencode $taskBookmark.bookmarktitle}
+							{else}
+								{$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {htmlencode $taskBookmark.title}
+							{/if}
 						</div>
 					</div>
 				</span>
