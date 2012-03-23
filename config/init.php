@@ -40,15 +40,15 @@ if( TodoyuExtensions::isInstalled('timetracking') ) {
 /* -------------------------------------
 	Add bookmarks module to profile
    ------------------------------------- */
-if( TodoyuExtensions::isInstalled('profile') && Todoyu::allowed('bookmark', 'general:use') ) {
-	TodoyuProfileManager::addModule('bookmark', array(
-		'position'	=> 10,
-		'tabs'		=> 'TodoyuBookmarkProfileRenderer::renderTabs',
-		'content'	=> 'TodoyuBookmarkProfileRenderer::renderContent',
-		'label'		=> 'bookmark.ext.profile.module',
-		'class'		=> 'bookmark'
-	));
-}
+//if( TodoyuExtensions::isInstalled('profile') && Todoyu::allowed('bookmark', 'general:use') ) {
+//	TodoyuProfileManager::addModule('bookmark', array(
+//		'position'	=> 10,
+//		'tabs'		=> 'TodoyuBookmarkProfileRenderer::renderTabs',
+//		'content'	=> 'TodoyuBookmarkProfileRenderer::renderContent',
+//		'label'		=> 'bookmark.ext.profile.module',
+//		'class'		=> 'bookmark'
+//	));
+//}
 	// Tabs for bookmark section in profile
 Todoyu::$CONFIG['EXT']['profile']['bookmarkTabs']	= array(
 	array(
