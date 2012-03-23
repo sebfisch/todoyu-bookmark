@@ -394,12 +394,15 @@ class TodoyuBookmarkBookmarkManager {
 
 			if( TodoyuBookmarkRights::isSeeAllowed($task->getID(), BOOKMARK_TYPE_TASK) ) {
 				$data['rows'][] = array(
-					'icon'		=> '',
-					'iconClass'	=> intval($bookmark['active']) === 1 ? 'login' : '',
-					'task'		=> $task->getTaskNumber(),
-					'title'		=> $task->getTitle(),
-					'label'		=> $bookmark['title'],
-					'actions'	=> TodoyuBookmarkProfileRenderer::renderBookmarkActions($bookmark['id'])
+					'id'		=> $bookmark['id'],
+					'columns'	=> array(
+						'icon'		=> '',
+						'iconClass'	=> intval($bookmark['active']) === 1 ? 'login' : '',
+						'task'		=> $task->getTaskNumber(),
+						'title'		=> $task->getTitle(),
+						'label'		=> $bookmark['title'],
+						'actions'	=> TodoyuBookmarkProfileRenderer::renderBookmarkActions($bookmark['id'])
+					)
 				);
 			}
 		}
