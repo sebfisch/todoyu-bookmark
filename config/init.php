@@ -35,49 +35,4 @@ if( TodoyuExtensions::isInstalled('timetracking') ) {
 	TodoyuTimetrackingCallbackManager::add('bookmarks', 'TodoyuBookmarkBookmarkManager::callbackTrackingToggle');
 }
 
-
-
-/* -------------------------------------
-	Add bookmarks module to profile
-   ------------------------------------- */
-//if( TodoyuExtensions::isInstalled('profile') && Todoyu::allowed('bookmark', 'general:use') ) {
-//	TodoyuProfileManager::addModule('bookmark', array(
-//		'position'	=> 10,
-//		'tabs'		=> 'TodoyuBookmarkProfileRenderer::renderTabs',
-//		'content'	=> 'TodoyuBookmarkProfileRenderer::renderContent',
-//		'label'		=> 'bookmark.ext.profile.module',
-//		'class'		=> 'bookmark'
-//	));
-//}
-	// Tabs for bookmark section in profile
-Todoyu::$CONFIG['EXT']['profile']['bookmarkTabs']	= array(
-	array(
-		'id'			=> 'tasks',
-		'label'			=> 'bookmark.ext.profile.module.tasks.tab',
-	)
-);
-
-
-
-/* ------------------------------------
-	Configure listings for bookmarks
-   ------------------------------------ */
-Todoyu::$CONFIG['EXT']['bookmark']['listing']['bookmark']	= array(
-	'name'		=> 'bookmark',
-	'update'	=> 'bookmark/bookmark/listing',
-	'dataFunc'	=> 'TodoyuBookmarkBookmarkManager::getTaskBookmarkListingData',
-	'size'		=> Todoyu::$CONFIG['LIST']['size'],
-	'columns'	=> array(
-		'icon'		=> '',
-		'task'		=> 'bookmark.ext.profile.module.tasks.listing.task',
-		'title'		=> 'bookmark.ext.profile.module.tasks.listing.title',
-		'label'		=> 'bookmark.ext.profile.module.tasks.listing.label',
-		'actions'	=> '',
-	),
-	'truncate'	=> array(
-		'title'	=> 30,
-		'label'	=> 70,
-	)
-);
-
 ?>

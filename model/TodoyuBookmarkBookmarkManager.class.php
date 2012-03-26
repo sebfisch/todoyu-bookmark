@@ -374,46 +374,6 @@ class TodoyuBookmarkBookmarkManager {
 
 
 	/**
-	 * Get listing data for task bookmarks
-	 * Keys: [total,rows]
-	 *
-	 * @param	Integer		$size
-	 * @param	Integer		$offset
-	 * @param	String		$searchWord
-	 * @return	Array
-	 */
-	public static function getTaskBookmarkListingData($size, $offset = 0, $searchWord = '') {
-		$bookmarks	= self::getTaskBookmarks();
-		$data		= array(
-			'rows'	=> array(),
-			'total'	=> Todoyu::db()->getTotalFoundRows()
-		);
-
-		foreach($bookmarks as $bookmark) {
-			$task	= TodoyuProjectTaskManager::getTask($bookmark['id_item']);
-
-			if( TodoyuBookmarkRights::isSeeAllowed($task->getID(), BOOKMARK_TYPE_TASK) ) {
-				$data['rows'][] = array(
-					'id'		=> $bookmark['id'],
-					'columns'	=> array(
-						'icon'		=> '',
-						'iconClass'	=> intval($bookmark['active']) === 1 ? 'login' : '',
-						'task'		=> $task->getTaskNumber(),
-						'title'		=> $task->getTitle(),
-						'label'		=> $bookmark['title'],
-						'actions'	=> TodoyuBookmarkProfileRenderer::renderBookmarkActions($bookmark['id'])
-					)
-				);
-			}
-		}
-
-		return $data;
-	}
-
-
-
-
-	/**
 	 * Save bookmark data as record
 	 *
 	 * @param	Array		$data
