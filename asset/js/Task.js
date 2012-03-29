@@ -19,8 +19,9 @@
 
 /**
  * @module	Bookmark
+ * @class		Task
+ * @namespace	Todoyu.Ext.bookmark
  */
-
 Todoyu.Ext.bookmark.Task = {
 
 	/**
@@ -78,6 +79,8 @@ Todoyu.Ext.bookmark.Task = {
 	 * @param	{Ajax.Response}		response
 	 */
 	onRemoved: function(idTask, response) {
+		Todoyu.notifySuccess('[LLL:bookmark.ext.bookmark.removed]');
+
 		this.refreshPanelWidget();
 	},
 

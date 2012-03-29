@@ -18,12 +18,9 @@
 *****************************************************************************/
 
 /**
- * @module	Bookmark
- */
-
-/**
  * Bookmark main object
  *
+ * @module		Bookmark
  * @class		bookmark
  * @namespace	Todoyu.Ext
  */

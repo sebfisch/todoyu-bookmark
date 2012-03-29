@@ -18,12 +18,9 @@
 *****************************************************************************/
 
 /**
- * @module	Bookmark
- */
-
-/**
  *	Task bookmarks panelwidget
  *
+ * @module		Bookmark
  * @class		TaskBookmarks
  * @namespace	Todoyu.Ext.bookmark.PanelWidget
  */
@@ -258,28 +255,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 * @param	{Number}		idTask
 	 */
 	removeTask: function(idTask) {
-		Effect.Fade('taskbookmarks-task-' + idTask, {
-			duration: 0.5,
-			afterFinish: this.onTaskRemoved.bind(this)
-		});
-
-		this.ext.remove('task', idTask);
-	},
-
-
-
-	/**
-	 * After task remove effect is done
-	 * Remove element and fix even/odd
-	 *
-	 * @param	{Number}	idTask
-	 */
-	onTaskRemoved: function(idTask) {
-		$('taskbookmarks-task-' + idTask).remove();
-
-		Todoyu.notifySuccess('[LLL:bookmark.ext.bookmark.removed]');
-
-		this.fixEventOdd();
+		this.ext.Task.remove(idTask);
 	},
 
 
@@ -287,6 +263,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Rename bookmark
 	 *
+	 * @method	renameBookmark
 	 * @param	{Number}	idTask
 	 */
 	renameBookmark: function(idTask) {
@@ -313,6 +290,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Save new bookmark label
 	 *
+	 * @method	saveBookmarkLabel
 	 * @param	{Number}	idTask
 	 * @param	{String}	label
 	 */
@@ -335,8 +313,9 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Fix event odd after a task was removed
 	 *
+	 * @method	fixEvenOdd
 	 */
-	fixEventOdd: function() {
+	fixEvenOdd: function() {
 		var items = $('taskbookmarks-listitems').select('li.listItem');
 
 		if( items ) {
@@ -425,7 +404,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 
 	/**
-	 * Check whether bookmark widget is loaded
+	 * Check whether bookmarks widget is loaded
 	 *
 	 * @method	isVisible
 	 * @return	{Boolean}
