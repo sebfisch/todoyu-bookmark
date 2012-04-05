@@ -89,10 +89,11 @@ class TodoyuBookmarkBookmarkActionController extends TodoyuActionController {
 	 * @param	Array	$params
 	 */
 	public function renameAction(array $params) {
-		$idTask	= intval($params['task']);
+		$type	= trim($params['type']);
+		$idItem	= intval($params['item']);
 		$label	= trim($params['label']);
 
-		TodoyuBookmarkBookmarkManager::updateTaskBookmarkTitle($idTask, $label);
+		TodoyuBookmarkBookmarkManager::updateItemBookmarkTitle($type, $idItem, $label);
 	}
 
 

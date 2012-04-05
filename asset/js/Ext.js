@@ -38,6 +38,8 @@ Todoyu.Ext.bookmark = {
 	 */
 	Headlet: {},
 
+
+
 	/**
 	 * Add bookmark
 	 *
@@ -54,10 +56,30 @@ Todoyu.Ext.bookmark = {
 				type:	type,
 				item:	idItem
 			},
-			onComplete: onComplete
+			onComplete: this.onAdded.bind(this, type, idItem, onComplete)
 		};
 
 		Todoyu.send(url, options);
+	},
+
+
+
+	/**
+	 * Handle bookmark added
+	 *
+	 * @param	{String}		type
+	 * @param	{Number}		idItem
+	 * @param	{Function}		onComplete
+	 * @param	{Ajax.Response}	response
+	 */
+	onAdded: function(type, idItem, onComplete, response) {
+		Todoyu.notifySuccess('[LLL:bookmark.ext.bookmark.added]');
+
+		this.refreshPanelWidget();
+
+		if( onComplete ) {
+			onComplete(type, idItem, response);
+		}
 	},
 
 
@@ -78,10 +100,74 @@ Todoyu.Ext.bookmark = {
 				type:	type,
 				item:	idItem
 			},
-			onComplete: onComplete
+			onComplete: this.onRemoved.bind(this, type, idItem, onComplete)
 		};
 
 		Todoyu.send(url, options);
+	},
+
+
+
+	/**
+	 * Handle bookmark removed
+	 *
+	 * @param	{String}		type
+	 * @param	{Number}		idItem
+	 * @param	{Function}		onComplete
+	 * @param	{Ajax.Response}	response
+	 */
+	onRemoved: function(type, idItem, onComplete, response) {
+		Todoyu.notifySuccess('[LLL:bookmark.ext.bookmark.removed]');
+
+		this.refreshPanelWidget();
+
+		if( onComplete ) {
+			onComplete(type, idItem, response);
+		}
+	},
+
+
+
+	/**
+	 * Rename bookmark
+	 *
+	 * @param	{String}	type
+	 * @param	{Number}	idItem
+	 * @param	{String}	newLabel
+	 * @param	{Function}	onComplete
+	 */
+	rename: function(type, idItem, newLabel, onComplete) {
+		var url		= Todoyu.getUrl('bookmark', 'bookmark');
+		var options	= {
+			parameters: {
+				action:	'rename',
+				type:	type,
+				item:	idItem,
+				label:	newLabel
+			},
+			onComplete: this.onRenamed.bind(this, type, idItem, newLabel, onComplete)
+		};
+
+		Todoyu.send(url, options);
+	},
+
+
+
+	/**
+	 * Handle bookmark renamed
+	 *
+	 * @param	{String}			type
+	 * @param	{Number}			idItem
+	 * @param	{String}			newLabel
+	 * @param	{Function}			onComplete
+	 * @param	{Ajax.Response}		response
+	 */
+	onRenamed: function(type, idItem, newLabel, onComplete, response) {
+		Todoyu.notifySuccess('[LLL:bookmark.ext.bookmark.renamed]');
+
+		if( onComplete ) {
+			onComplete(type, idItem, newLabel, response);
+		}
 	},
 
 
@@ -109,6 +195,19 @@ Todoyu.Ext.bookmark = {
 	stop: function(idTask) {
 		if( idTask > 0 ) {
 			Todoyu.Ext.timetracking.Task.stop(idTask);
+		}
+	},
+
+
+
+	/**
+	 * Refresh bookmarks panel widget
+	 *
+	 * @method	refreshPanelWidget
+	 */
+	refreshPanelWidget: function() {
+		if( Todoyu.PanelWidget.isLoaded('TaskBookmarks') ) {
+			this.PanelWidget.TaskBookmarks.refresh();
 		}
 	}
 

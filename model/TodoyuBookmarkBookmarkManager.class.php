@@ -430,9 +430,23 @@ class TodoyuBookmarkBookmarkManager {
 	 * @param	String		$label
 	 */
 	public static function updateTaskBookmarkTitle($idTask, $label) {
-		$idBookmark = TodoyuBookmarkBookmarkManager::getBookmarkIdByItem($idTask, BOOKMARK_TYPE_TASK);
+		self::updateItemBookmarkTitle('task', $idTask, $label);
+	}
 
-		TodoyuBookmarkBookmarkManager::updateBookmarkTitle($idBookmark, $label);
+
+
+	/**
+	 * Update title of bookmark item
+	 *
+	 * @param	String		$type
+	 * @param	Integer		$idItem
+	 * @param	String		$label
+	 */
+	public static function updateItemBookmarkTitle($type, $idItem, $label) {
+		$typeIndex	= self::getTypeIndex($type);
+		$idBookmark = self::getBookmarkIdByItem($idItem, $typeIndex);
+
+		self::updateBookmarkTitle($idBookmark, $label);
 	}
 
 

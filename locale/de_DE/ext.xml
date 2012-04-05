@@ -18,6 +18,8 @@
 	<label index="bookmark.renamePrompt">Neuer Favoriten Text (leer = original Text)</label>
 	<label index="bookmark.delete.confirm">Favorit wirklich entfernen?</label>
 	<label index="bookmark.removed">Favorit wurde entfernt</label>
+	<label index="bookmark.renamed">Favorit umbenannt</label>
+	<label index="bookmark.added">Favorit wurde erstellt</label>
 	<label index="bookmark.attr.title">Bezeichnung</label>
 	<label index="bookmark.type.task">Aufgabe</label>
 	<label index="bookmark.saved">Der Favorit wurde gespeichert.</label>

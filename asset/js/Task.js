@@ -41,7 +41,7 @@ Todoyu.Ext.bookmark.Task = {
 	 * @param	{Number}		idTask
 	 */
 	add: function(idTask) {
-		this.ext.add('task', idTask, this.onAdded.bind(this, idTask));
+		this.ext.add('task', idTask, this.onAdded.bind(this));
 	},
 
 
@@ -50,11 +50,12 @@ Todoyu.Ext.bookmark.Task = {
 	 * Event handler being evoked after having added task bookmark
 	 *
 	 * @method	onAdded
-	 * @param	{Number}		idTask
+	 * @param	{String}			type
+	 * @param	{Number}			idTask
 	 * @param	{Ajax.Response}		response
 	 */
-	onAdded: function(idTask, response) {
-		this.refreshPanelWidget();
+	onAdded: function(type, idTask, response) {
+
 	},
 
 
@@ -66,7 +67,7 @@ Todoyu.Ext.bookmark.Task = {
 	 * @param	{Number}		idTask
 	 */
 	remove: function(idTask) {
-		this.ext.remove('task', idTask, this.onRemoved.bind(this, idTask));
+		this.ext.remove('task', idTask, this.onRemoved.bind(this));
 	},
 
 
@@ -75,26 +76,12 @@ Todoyu.Ext.bookmark.Task = {
 	 * Event handler being evoked after removal of task bookmark
 	 *
 	 * @method	onRemoved
+	 * @param	{String}			type
 	 * @param	{Number}			idTask
 	 * @param	{Ajax.Response}		response
 	 */
-	onRemoved: function(idTask, response) {
-		Todoyu.notifySuccess('[LLL:bookmark.ext.bookmark.removed]');
+	onRemoved: function(type, idTask, response) {
 
-		this.refreshPanelWidget();
-	},
-
-
-
-	/**
-	 * Refresh bookmarks panel widget
-	 *
-	 * @method	refreshPanelWidget
-	 */
-	refreshPanelWidget: function() {
-		if( Todoyu.PanelWidget.isLoaded('TaskBookmarks') ) {
-			this.ext.PanelWidget.TaskBookmarks.refresh();
-		}
 	}
 
 };

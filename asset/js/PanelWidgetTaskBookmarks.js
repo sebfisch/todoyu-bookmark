@@ -281,7 +281,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 			titleElem.update(displayLabel.substr(0, 40));
 			currentElem.update(displayLabel);
 
-			this.saveBookmarkLabel(idTask, newTitle);
+			this.saveRename(idTask, newTitle);
 		}
 	},
 
@@ -292,20 +292,24 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 *
 	 * @method	saveBookmarkLabel
 	 * @param	{Number}	idTask
-	 * @param	{String}	label
+	 * @param	{String}	newLabel
 	 */
-	saveBookmarkLabel: function(idTask, label) {
-		var url		= Todoyu.getUrl('bookmark', 'bookmark');
-		var options	= {
-			parameters: {
-				action:	'rename',
-				task:	idTask,
-				label:	label
-			}
-		};
+	saveRename: function(idTask, newLabel) {
+		this.ext.rename('task', idTask, newLabel, this.onRenamed.bind(this))
+	},
 
-		Todoyu.send(url, options);
-		Todoyu.notifySuccess('Renamed bookmark');
+
+
+	/**
+	 * Handle renamed for panelwidget
+	 *
+	 * @param	{String}		type
+	 * @param	{Number}		idItem
+	 * @param	{String}		newLabel
+	 * @param	{Ajax.Response}	response
+	 */
+	onRenamed: function(type, idItem, newLabel, response) {
+
 	},
 
 
@@ -379,6 +383,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	onSortableUpdate: function(listElement) {
 		var items	= Sortable.sequence(listElement);
 		this.saveBookmarksOrder('task', items);
+		this.fixEvenOdd();
 	},
 
 
