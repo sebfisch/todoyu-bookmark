@@ -96,26 +96,6 @@ class TodoyuBookmarkBookmarkActionController extends TodoyuActionController {
 		TodoyuBookmarkBookmarkManager::updateItemBookmarkTitle($type, $idItem, $label);
 	}
 
-
-
-	/**
-	 * Show bookmarks list of given type
-	 *
-	 * @param	Array		$params
-	 * @return	String
-	 */
-	public function updatecontentAction(array $params) {
-		$type	= $params['type'];
-
-		switch( $type ) {
-			case 'task':
-				$params['tab']	= 'tasks';
-				break;
-		}
-
-		TodoyuBookmarkProfileRenderer::renderContent($params);
-	}
-
 }
 
 ?>

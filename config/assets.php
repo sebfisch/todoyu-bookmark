@@ -40,10 +40,6 @@ Todoyu::$CONFIG['EXT']['bookmark']['assets']	= array(
 			'position'	=> 102
 		),
 		array(
-			'file'		=> 'ext/bookmark/asset/js/Profile.js',
-			'position'	=> 103
-		),
-		array(
 			'file'		=> 'ext/bookmark/asset/js/PanelWidgetTaskBookmarks.js',
 			'position'	=> 110,
 		),
