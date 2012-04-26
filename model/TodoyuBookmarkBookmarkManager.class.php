@@ -419,6 +419,8 @@ class TodoyuBookmarkBookmarkManager {
 		self::updateBookmark($idBookmark, array(
 			'title'	=> $label
 		));
+
+		TodoyuHookManager::callHook('bookmark', 'bookmark.rename', array($idBookmark, $label));
 	}
 
 

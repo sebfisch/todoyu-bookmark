@@ -20,3 +20,9 @@ Event Hooks
 	Update a bookmark
 	@param	Integer		$idBookmark
 	@param	Array		$data
+
+
+#bookmark.bookmark.rename
+	Bookmark was renamed (new label)
+	@param	Integer		$idBookmark
+	@param	String		$newLabel
