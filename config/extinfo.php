@@ -31,15 +31,15 @@ Todoyu::$CONFIG['EXT']['bookmark']['info']	= array(
 		'company'	=> 'snowflake productions GmbH, Zurich'
 	),
 	'state'			=> 'stable',
-	'version'		=> '1.2.0b',
+	'version'		=> '1.2.0',
 	'constraints'	=> array(
-		'core'		=> '2.2.0b',
+		'core'		=> '2.2.0',
 		'depends'	=> array(
-			'contact'	=> '1.2.0b',
-			'project'	=> '1.3.0b',
+			'contact'	=> '1.2.0',
+			'project'	=> '1.3.0',
 		),
 		'suggests'	=> array(
-			'timetracking'	=> '1.2.0b'
+			'timetracking'	=> '1.2.0'
 		)
 	),
 	'urlDocumentation'	=> 'http://doc.todoyu.com/?bookmark'
