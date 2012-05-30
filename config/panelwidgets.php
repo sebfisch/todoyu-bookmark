@@ -21,7 +21,6 @@
 /**
  * Bookmarks panel widgets' configuration
  */
-
 if( Todoyu::allowed('bookmark', 'general:use') ) {
 	TodoyuPanelWidgetManager::addPanelWidget('portal', 'bookmark', 'TaskBookmarks', 50);
 	TodoyuPanelWidgetManager::addPanelWidget('project', 'bookmark', 'TaskBookmarks', 50);
