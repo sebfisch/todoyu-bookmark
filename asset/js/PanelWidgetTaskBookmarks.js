@@ -89,7 +89,9 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 * @method	registerTimetracking
 	 */
 	registerTimetracking: function() {
-		Todoyu.Ext.timetracking.addToggle('bookmarks', this.onTrackingToggle.bind(this), this.onTrackingToggleUpdate.bind(this));
+		if( Todoyu.Ext.timetracking ) {
+			Todoyu.Ext.timetracking.addToggle('bookmarks', this.onTrackingToggle.bind(this), this.onTrackingToggleUpdate.bind(this));
+		}
 	},
 
 
