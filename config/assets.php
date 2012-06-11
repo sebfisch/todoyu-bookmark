@@ -56,7 +56,7 @@ Todoyu::$CONFIG['EXT']['bookmark']['assets']	= array(
 			'position'	=> 100
 		),
 		array(
-			'file'		=> 'ext/bookmark/asset/css/panelwidget-taskbookmarks.css',
+			'file'		=> 'ext/bookmark/asset/css/panelwidget-taskbookmarks.scss',
 			'position'	=> 110,
 		)
 	)
