@@ -10,7 +10,7 @@
 #panelwidget-taskbookmarks div.bookmarks ul li {
 	min-height:32px;
 	padding:0;
-	border-bottom:1px solid $grey02;
+	border-bottom:1px solid $colorNeutral02;
 	margin-bottom:2px;
 }
 
@@ -39,7 +39,7 @@
 }
 
 #panelwidget-taskbookmarks .taskItem .project {
-	color:$grey06;
+	color:$colorNeutral06;
 }
 
 #panelwidget-taskbookmarks li.running .taskItem .title {
