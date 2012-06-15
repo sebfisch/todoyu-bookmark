@@ -52,7 +52,7 @@ Todoyu::$CONFIG['EXT']['bookmark']['assets']	= array(
 
 	'css'	=> array(
 		array(
-			'file'		=> 'ext/bookmark/asset/css/ext.css',
+			'file'		=> 'ext/bookmark/asset/css/ext.scss',
 			'position'	=> 100
 		),
 		array(
