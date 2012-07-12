@@ -9,13 +9,20 @@ h1.extIconBookmark .title {
 	background:url(../img/exticon.png) no-repeat 0 5px;
 }
 
-#contextmenu .taskContextMenu.task-bookmark {
-	background-image:url(../img/icons.png);
-	background-repeat:no-repeat;
-	background-position:3px 2px;
-}
-#contextmenu .taskContextMenu.renamebookmark {
-	background-image:url(../img/icons.png);
-	background-repeat:no-repeat;
-	background-position:3px -58px;
+#contextmenu {
+	.taskContextMenu {
+		&.task-bookmark {
+			background: {
+				image:url(../img/icons.png);
+				repeat:no-repeat;
+				position:3px 2px;
+			}
+		}
+
+		&.renamebookmark {
+			background-image:url(../img/icons.png);
+			background-repeat:no-repeat;
+			background-position:3px -58px;
+		}
+	}
 }
