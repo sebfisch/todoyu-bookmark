@@ -67,6 +67,7 @@ Todoyu.Ext.bookmark = {
 	/**
 	 * Handle bookmark added
 	 *
+	 * @method	onAdded
 	 * @param	{String}		type
 	 * @param	{Number}		idItem
 	 * @param	{Function}		onComplete
@@ -111,6 +112,7 @@ Todoyu.Ext.bookmark = {
 	/**
 	 * Handle bookmark removed
 	 *
+	 * @method	onRemoved
 	 * @param	{String}		type
 	 * @param	{Number}		idItem
 	 * @param	{Function}		onComplete
@@ -131,6 +133,7 @@ Todoyu.Ext.bookmark = {
 	/**
 	 * Rename bookmark
 	 *
+	 * @method	rename
 	 * @param	{String}	type
 	 * @param	{Number}	idItem
 	 * @param	{String}	newLabel
@@ -156,6 +159,7 @@ Todoyu.Ext.bookmark = {
 	/**
 	 * Handle bookmark renamed
 	 *
+	 * @method	onRenamed
 	 * @param	{String}			type
 	 * @param	{Number}			idItem
 	 * @param	{String}			newLabel
@@ -173,7 +177,7 @@ Todoyu.Ext.bookmark = {
 
 
 	/**
-	 * Start timetracking of given task in the bookmark box
+	 * Start time tracking of given task in the bookmark box
 	 *
 	 * @method	start
 	 * @param	{Number}	idTask
@@ -187,7 +191,7 @@ Todoyu.Ext.bookmark = {
 
 
 	/*
-	 * Stop timetracking of given task in the bookmark box
+	 * Stop time tracking of given task in the bookmark box
 	 *
 	 * @method	stop
 	 * @param	{Number}	idTask

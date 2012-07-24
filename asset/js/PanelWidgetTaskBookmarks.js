@@ -84,7 +84,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 
 	/**
-	 * Register to timetracking callbacks
+	 * Register to time tracking callbacks
 	 *
 	 * @method	registerTimetracking
 	 */
@@ -97,7 +97,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 
 	/**
-	 * Callback if timetracking is toggled
+	 * Callback if time tracking is toggled
 	 *
 	 * @method	onTrackingToggle
 	 * @param	{Number}	idTask
@@ -110,7 +110,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 
 	/**
-	 * Update bookmark panelwidget with data from tracking request
+	 * Update bookmark panel widget with data from tracking request
 	 *
 	 * @method	onTrackingToggleUpdate
 	 * @param	{Number}		idTask
@@ -137,7 +137,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 
 	/**
-	 * Start task timetracking
+	 * Start task time tracking
 	 *
 	 * @method	startTask
 	 * @param	{Number}		idTask
@@ -149,7 +149,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 
 	/**
-	 * Stop task timetracking
+	 * Stop task time tracking
 	 *
 	 * @method	stopTask
 	 * @param	{Number}		idTask
@@ -199,7 +199,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 
 
 	/**
-	 * Set taskbookmarks widget content, re-init associated extras
+	 * Set task bookmarks widget content, re-init associated extras
 	 *
 	 * @method	setContent
 	 * @param	{String}	html
@@ -291,6 +291,7 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	/**
 	 * Handle renamed for panelwidget
 	 *
+	 * @method	onRenamed
 	 * @param	{String}		type
 	 * @param	{Number}		idItem
 	 * @param	{String}		newLabel
