@@ -12,9 +12,9 @@
 
 						<div class="title" onclick="Todoyu.Ext.project.goToTaskInProject({$taskBookmark.id}, {$taskBookmark.id_project})" title="{$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {htmlencode $taskBookmark.title}">
 							{if $taskBookmark.bookmarktitle}
-								{htmlencode(truncate($taskBookmark.bookmarktitle,40))}
+								{htmlencode($taskBookmark.bookmarktitle)}
 							{else}
-								{$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {htmlencode(truncate($taskBookmark.title,40))}
+								{$taskBookmark.id_project}.{$taskBookmark.tasknumber} - {htmlencode($taskBookmark.title)}
 							{/if}
 						</div>
 
