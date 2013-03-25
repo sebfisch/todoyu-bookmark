@@ -263,9 +263,9 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 		var newTitle= prompt('[LLL:bookmark.ext.bookmark.renamePrompt]', title);
 
 		if( newTitle !== null ) {
-			displayLabel = newTitle.strip() === '' ? titleElem.title : newTitle;
+			newTitle	= newTitle.stripScripts().stripTags().strip();
+			displayLabel= newTitle || titleElem.title;
 
-			newTitle = newTitle.stripScripts().stripTags();
 			titleElem.update(displayLabel.substr(0, 40));
 			currentElem.update(displayLabel);
 
