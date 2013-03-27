@@ -1,6 +1,9 @@
 todoyu bookmark extension changelog
 
-bookmark 1.2.1 - 2013-03-27
+bookmark 1.2.2 - 2013-03-27
+	* Changed: Adaption to core 2.3
+
+bookmark 1.2.1 - 2012-07-30
 	* Changed: Text-cropping over css and css clean-up
 	* Bugfix: Fixed hidden dependency handling
 
