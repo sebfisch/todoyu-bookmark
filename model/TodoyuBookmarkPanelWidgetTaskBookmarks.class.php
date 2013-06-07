@@ -86,7 +86,7 @@ class TodoyuBookmarkPanelWidgetTaskBookmarks extends TodoyuPanelWidget {
 			if( TodoyuExtensions::isInstalled('timetracking') && Todoyu::allowed('timetracking', 'general:use') ) {
 				$taskBookmarks[$index]['isTrackable']	= TodoyuTimetracking::isTrackable($task['type'], $task['status'], $task['id']);
 
-				if( TodoyuTimetracking::isTaskRunning($task['id']) ) {
+				if( TodoyuTimetracking::isTaskTrackedByMe($task['id']) ) {
 					$taskBookmarks[$index]['isRunning']	= true;
 					$taskBookmarks[$index]['btnClass']		= 'stopButton';
 					$taskBookmarks[$index]['jsFunction']	= 'stopTask';
