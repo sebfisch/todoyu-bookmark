@@ -72,4 +72,21 @@
 		left:0;
 		margin-left: -5px;
 	}
+
+	form {
+		display: inline-block;
+		width: 95%;
+		padding: 1px 5px;
+		margin-top: 3px;
+		margin-bottom: 5px;
+
+		.fField {
+			width: 160px;
+		}
+
+		.fLabel {
+			width: 70px;
+		}
+	}
+
 }

@@ -36,7 +36,7 @@ Todoyu::$CONFIG['EXT']['bookmark']['info']	= array(
 		'core'		=> '2.3.0',
 		'depends'	=> array(
 			'contact'	=> '1.3.0',
-			'project'	=> '1.3.0',
+			'project'	=> '1.5.1',
 		),
 		'suggests'	=> array(
 			'timetracking'	=> '1.2.0'

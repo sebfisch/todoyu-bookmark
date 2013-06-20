@@ -1,3 +1,20 @@
+<div id="{$id}-quicksearch" class="taskQuickSearch">
+	<form id="bookark-task-quicksearch-form" class="fForm" onsubmit="return false">
+		<div class="fElement typeText fieldnameSearch odd">
+			<div class="fElement fLabel">
+				<label for="bookmark-task-quicksearch">{Label LLL:project.task.number}</label>
+			</div>
+			<div class="fField">
+				<input type="text" id="bookmark-task-quicksearch" />
+			</div>
+		</div>
+	</form>
+
+	<script type="text/javascript">
+		Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks.initQuickSearch();
+	</script>
+</div>
+
 <div id="{$id}-list" class="bookmarks">
 	{if $bookmarks}
 		<ul id="{$id}-listitems" class="contextmenutaskbookmarks withMouseHover sortable">

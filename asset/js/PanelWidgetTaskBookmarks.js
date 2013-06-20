@@ -405,6 +405,37 @@ Todoyu.Ext.bookmark.PanelWidget.TaskBookmarks = {
 	 */
 	isVisible: function() {
 		return Todoyu.PanelWidget.isLoaded('TaskBookmarks');
-	}
+	},
 
+
+
+	/**
+	 *
+	 */
+	initQuickSearch: function() {
+		var input = $('bookmark-task-quicksearch');
+		if( input ) {
+			input.stopObserving();
+			input.on('keydown', this.handleSearchKeyInput.bind(this));
+		}
+	},
+
+
+
+	/**
+	 *
+	 * @param	{Event}		event
+	 * @param	{Element}	element
+	 * @returns {boolean}
+	 */
+	handleSearchKeyInput: function(event, element) {
+		if( event.keyCode === Event.KEY_RETURN ) {
+			var searchValue = element.getValue();
+			var searchValueArr = searchValue.split('.');
+
+			Todoyu.Ext.project.quickSearch(searchValueArr[0], searchValueArr[1]);
+		}
+
+		return false;
+	}
 };
