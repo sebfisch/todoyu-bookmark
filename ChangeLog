@@ -2,6 +2,7 @@ todoyu bookmark extension changelog
 
 bookmark 1.2.3 - not released yet
 	* Added: Task-quick-search in bookmark-panel-widget
+	* Added: Catalan language. Credits to Carles Baiges Camprubí LaCol (www.lacol.org)
 
 bookmark 1.2.2 - 2013-03-27
 	* Changed: Adaption to core 2.3
