@@ -3,7 +3,7 @@
 * todoyu is published under the BSD License:
 * http://www.opensource.org/licenses/bsd-license.php
 *
-* Copyright (c) 2012, snowflake productions GmbH, Switzerland
+* Copyright (c) 2013, snowflake productions GmbH, Switzerland
 * All rights reserved.
 *
 * This script is part of the todoyu project.
@@ -33,13 +33,13 @@ Todoyu::$CONFIG['EXT']['bookmark']['info']	= array(
 	'state'			=> 'stable',
 	'version'		=> '1.2.3',
 	'constraints'	=> array(
-		'core'		=> '2.3.0',
+		'core'		=> '2.3.1',
 		'depends'	=> array(
-			'contact'	=> '1.3.0',
+			'contact'	=> '1.3.1',
 			'project'	=> '1.5.1',
 		),
 		'suggests'	=> array(
-			'timetracking'	=> '1.2.0'
+			'timetracking'	=> '1.3.1'
 		)
 	),
 	'urlDocumentation'	=> 'http://doc.todoyu.com/?bookmark'
