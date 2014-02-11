@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="general">Umum</label>
+	<label index="general.use">Gunakan Fungsi Penanda</label>
+	<label index="task">Penanda Tugas</label>
+	<label index="task.add">Penanda Tugas</label>
+	<label index="task.remove">Hapus Penanda</label>
+	<label index="panelwidgets">Panel Widgets</label>
+</labels>

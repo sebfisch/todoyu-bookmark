@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<label index="ext.title">Penanda Tugas</label>
+	<label index="title">Penanda Tugas</label>
+	<label index="info.nobookmarks">Tidal ada penanda samasekali</label>
+	<label index="contextmenu.removebookmark">Hapus Dari Penanda</label>
+	<label index="contextmenu.renamebookmark">Mengubah label Penanda</label>
+	<label index="contextmenu.editbookmarks">Ubah Penanda</label>
+	<label index="contextmenu.addbookmark">Tambahkan Ke Penanda</label>
+	<label index="profile.module">Penanda</label>
+	<label index="profile.module.tasks.tab">Tugas</label>
+	<label index="profile.module.tasks.bookmarksOf">Penanda Tugas dari</label>
+	<label index="profile.module.tasks.listing.task">Tugas</label>
+	<label index="profile.module.tasks.listing.title">Judul</label>
+	<label index="profile.module.tasks.listing.label">Label</label>
+	<label index="bookmark.edit">Ubah Penanda</label>
+	<label index="bookmark.rename">Ganti Nama Penanda</label>
+	<label index="bookmark.renamePrompt">Label baru penanda (kosong = label asli)</label>
+	<label index="bookmark.delete.confirm">Benar-benar menghapus penanda ini?</label>
+	<label index="bookmark.removed">Penanda telah dihapus</label>
+	<label index="bookmark.renamed">Penanda telah berganti nama</label>
+	<label index="bookmark.added">Penanda telah dibuat</label>
+	<label index="bookmark.attr.title">Label</label>
+	<label index="bookmark.type.task">Tugas</label>
+	<label index="bookmark.saved">Penanda telah disimpan.</label>
+	<label index="bookmark.saved.error">Ada kesalahan saat menyimpan penanda.</label>
+</labels>
